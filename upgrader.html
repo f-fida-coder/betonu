@@ -1,0 +1,3681 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<!--  META  -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Upgrader | Betonu.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+        <meta name="keywords" content="jackpot,coinflip,csgo,cs,go,global,offensive,cs:go,vgo,csgocoinflip,csgocoinflip,csgosite,vgocoinflip,vgocoinflip,vgosite,site,vgokingdom,kingdom,bet,gambling,gamble,fair,best,great,csgoempire,csgoatse,csgo500,crypto,btc,eth,roulette,experience">
+        <meta name="description" content="Betonu.com - The best crypto place to win money!">
+        <meta name="author" content="">
+        <meta name="theme-color" content="#9370db">
+
+        <meta property="og:url" content="#">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Betonu.com">
+        <meta property="og:title" content="Betonu.com">
+        <meta property="og:description" content="Betonu.com - The best crypto place to win money!">
+        <meta property="og:image" content="#">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+        <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
+
+        <!--  CSS  -->
+        <link href="ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css?family=Roboto:400,300,500,400italic,500italic,700,700italic" rel="stylesheet">
+        <link href="ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+
+        <link href="css%20%281%29/globals.css" rel="stylesheet">
+        <link href="css%20%281%29/bouncer.css" rel="stylesheet">
+
+        <!--  JAVASCRIPT  -->
+        <script src="ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+        <script src="ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+        <script src="ajax/libs/tinysort/2.3.6/tinysort.min.js"></script>
+        <script src="ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="gh/davidshimjs/qrcodejs%40gh-pages/qrcode.min.js"></script>
+
+        <script src="ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+        <script src='recaptcha/api.js'></script>
+        <script src="analytics.js"></script>
+
+        <script>var app = {
+    "page": "upgrader",
+    "url": "#",
+    "name": "Betonu.com",
+    "paths": [
+        "upgrader"
+    ],
+    "port": "443",
+    "secure": true,
+    "recaptcha": {
+        "public_key": "6LfUgowlAAAAAIKSFYErAiQdB7yvIK786O21ZW41"
+    }
+};</script>
+
+        <script type="text/javascript" src="js/components.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+	</head>
+
+	<body>
+        
+
+
+
+
+
+
+
+<div class="modal large" id="modal_user_inventory">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Inventory</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="flex flex-col gap-2 h-full overflow-hidden">
+					<div class="flex flex-row justify-between items-center gap-2 py-2 border-b-2 border-card">
+						<div class="bg-card p-2 rounded-1">Inventory value: <span id="inventory_value">0.00</span>$</div>
+
+						<button class="button button-primary shadow-2" id="inventory_sell_all">Sell All</button>
+					</div>
+
+					<div id="inventory_list">
+						<div class="in-grid flex justify-center items-center text-base p-4 history_message">No items found</div>
+					</div>
+
+					<div class="flex items-center justify-center bg-secondary p-2 border-t-2 border-card">
+						<div class="pagination-content flex flex-row gap-2 w-full" id="pagination_inventory_items">
+							<div class="flex flex-row gap-2 justify-between items-center w-full">
+								<div class="pagination-item flex items-center justify-center" data-page="1">«</div>
+
+								<div class="bg-card rounded-2 border-2 border-card px-2 flex flex-row items-center justify-center h-full">1/1</div>
+
+								<div class="pagination-item flex items-center justify-center" data-page="1">»</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="modal small" id="modal_offers_pending">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Offer Pending Status</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="offers_pending_method hidden" data-method="p2p">
+					<div class="offers_pending_type hidden" data-type="deposit">
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="-1">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="text-base indent-1">This trade has expired, declined, canceled or rolled back. If you sent the trade offer to buyer, please cancel it now.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="0">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Waiting for <span class="counter">00d 00h 00m 00s</span></div>
+							</div>
+
+							<div class="text-base indent-1">Your deposit has been listed on the withdraw page. Please wait for another user to withdraw yout items. It could happen at any time so be ready!</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-accent shadow-2" id="cancel_p2p_listing" data-listing="0">Cancel Trade</button>
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="1">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Expire in <span class="counter">00:00</span></div>
+							</div>
+
+							<div class="bg-card rounded-2 border-2 border-card p-2 flex items-center justify-center w-full">
+                                <a class="offer_buyer_profile flex gap-2 justify-center items-center" href="" target="_blank">
+                                    <div class="avatar-field relative">
+                                        <img class="avatar icon-medium rounded-full" src="#">
+                                    </div>
+
+                                    <div class="text-base">None</div>
+                                </a>
+							</div>
+
+							<div class="flex flex-col gap-1">
+								<div class="text-base indent-1">A buyer has been found and you must to confirm to start the tracking. You will see the buyer's informations after your confirmation.</div>
+								<div class="text-base indent-1">Are you ready to start the trade?</div>
+							</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" id="confirm_p2p_listing" data-listing="0">Yes, I'm Ready</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="2">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Expire in <span class="counter">00:00</span></div>
+							</div>
+
+							<div class="bg-card rounded-2 border-2 border-card p-2 flex items-center justify-center w-full">
+                                <div class="flex flex-col gap-2">
+                                    <a class="offer_buyer_profile flex gap-2 justify-center items-center" href="" target="_blank">
+                                        <div class="avatar-field relative">
+                                            <img class="avatar icon-medium rounded-full" src="#">
+                                        </div>
+
+                                        <div class="text-base">None</div>
+                                    </a>
+
+									<a class="trade_link_offer" href="" target="_blank"><button type="button" class="button button-primary shadow-2">Trade Link</button></a>
+								</div>
+							</div>
+
+							<div class="text-base indent-1">A buyer has been found. Please send the items to buyer.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="3">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Expire in <span class="counter">00:00</span></div>
+							</div>
+
+							<div class="bg-card rounded-2 border-2 border-card p-2 flex items-center justify-center w-full">
+                                <div class="flex flex-col gap-2">
+                                    <a class="offer_buyer_profile flex gap-2 justify-center items-center" href="" target="_blank">
+                                        <div class="avatar-field relative">
+                                            <img class="avatar icon-medium rounded-full" src="#">
+                                        </div>
+
+                                        <div class="text-base">None</div>
+                                    </a>
+
+									<a class="trade_link_offer" href="" target="_blank"><button type="button" class="button button-primary shadow-2">Trade Link</button></a>
+								</div>
+							</div>
+
+							<div class="text-base indent-1">Trade offer successfully sent. To complete the withdraw please wait until the buyer accept the offer.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="4">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Clearing in <span class="counter">00d 00h 00m 00s</span></div>
+							</div>
+
+							<div class="flex flex-col gap-1">
+								<div class="text-base indent-1">Trade offer successfully accepted and the items have been delivered, but the trade is now locked while the status of the trade is still in the Trade Protection window.</div>
+								<div class="text-base indent-1">While the trade is under the 7-day protection period, your balance won't be credited right away to keep things secure. Once that week is up, your coins will be automatically credited ready to use like normal.</div>
+							</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="5">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="text-base indent-1">Trade offer successfully completed and the items have been delivered.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="flex flex-col gap-2 offers_pending_type hidden" data-type="withdraw">
+						<div class="offers_pending_status hidden" data-status="-1">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="text-base indent-1">This trade has declined, canceled or rolled back. Your coins was refunded.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="0">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="text-base indent-1">This trade has expired. Your coins was refunded.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="1">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Expire in <span class="counter">00:00</span></div>
+							</div>
+
+							<div class="flex flex-col gap-1">
+								<div class="text-base indent-1">Your withdrawl request has bees sent to seller.</div>
+								<div class="text-base indent-1">The seller must to confirm the request!</div>
+							</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="2">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Expire in <span class="counter">00:00</span></div>
+							</div>
+
+							<div class="text-base indent-1">Wait for a trade offer, always check the Steam offers to see if you received new offers from seller and check if the offer contain the correct items.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="3">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Expire in <span class="counter">00:00</span></div>
+							</div>
+
+							<div class="text-base indent-1">The seller successfully sent a trade offer with your items. To complete the withdraw please accept the offer.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<a class="trade_link_offer" href="" target="_blank"><button type="button" class="button button-accent shadow-2">Trade Offer</button></a>
+                                <button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="4">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Clearing in <span class="counter">00d 00h 00m 00s</span></div>
+							</div>
+
+							<div class="flex flex-col gap-1">
+								<div class="text-base indent-1">Trade offer successfully accepted and the items have been delivered, but the trade is now locked while the status of the trade is still in the Trade Protection window.</div>
+								<div class="text-base indent-1">While the trade is under the 7-day protection period, you are covered to keep things secure. If, for any reason, the trade gets reversed during the protection window, your coins will be sent back to your account. Once that week is up, the withdraw will be marked as completed.</div>
+							</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="5">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="text-base indent-1">Trade offer successfully completed and the items have been delivered.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="offers_pending_method hidden" data-method="steam">
+					<div class="flex flex-col gap-2 offers_pending_type hidden" data-type="deposit">
+						<div class="offers_pending_status hidden" data-status="-1">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="text-base indent-1">Your deposit trade offer with id <span class="text-primary">#<span class="offer_id"></span></span> was declined, canceled or rolled back.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">OK</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="1">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Expire in <span class="counter">00:00</span></div>
+							</div>
+
+							<div class="text-base indent-1">Your deposit trade offer with id <span class="text-primary">#<span class="offer_id"></span></span> and with security code <span class="text-primary offer_code"></span> was sent. Please accept the trade offer until the time expires.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<a class="offer_trade" href="" target="_blank"><button type="button" class="button button-accent shadow-2">Trade Offer</button></a>
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="2">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Clearing in <span class="counter">00d 00h 00m 00s</span></div>
+							</div>
+
+							<div class="flex flex-col gap-1">
+								<div class="text-base indent-1">Your deposit trade offer with id <span class="text-primary">#<span class="offer_id"></span></span> was successfully accepted, but the trade is now locked while the status of the trade is still in the Trade Protection window.</div>
+								<div class="text-base indent-1">While the trade is under the 7-day protection period, your balance won't be credited right away to keep things secure. Once that week is up, your coins will be automatically credited ready to use like normal.</div>
+							</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">OK</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="3">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="text-base indent-1">Your deposit trade offer with id <span class="text-primary">#<span class="offer_id"></span></span> was successfully accepted and completed. <span class="offer_got_coins">You received <span class="offer_coins"></span> coins.</span></div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">OK</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="flex flex-col gap-2 offers_pending_type hidden" data-type="withdraw">
+						<div class="offers_pending_status hidden" data-status="-1">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="text-base indent-1">Your withdraw trade offer with id <span class="text-primary">#<span class="offer_id"></span></span> was declined, canceled or rolled back. You received <span class="offer_coins"></span> coins refund.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">OK</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="0">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="text-base indent-1">Your withdraw trade offer with id <span class="text-primary">#<span class="offer_id"></span></span> and with security code <span class="text-primary offer_code"></span> was created and must Steam Guard confirmation. Please wait for bot Steam Guard confirmation.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="1">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Expire in <span class="counter">00:00</span></div>
+							</div>
+
+							<div class="text-base indent-1">Your withdraw trade offer with id <span class="text-primary">#<span class="offer_id"></span></span> and with security code <span class="text-primary offer_code"></span> was sent. Please accept the trade offer until the time expires.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<a class="offer_trade" href="" target="_blank"><button type="button" class="button button-accent shadow-2">Trade Offer</button></a>
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="2">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="bg-primary bg-opacity-50 rounded-2 border-2 border-card p-2 flex items-center justify-center text-base w-full">
+								<div class="counter_content m-1">Clearing in <span class="counter">00d 00h 00m 00s</span></div>
+							</div>
+
+							<div class="flex flex-col gap-1">
+								<div class="text-base indent-1">Your withdraw trade offer with id <span class="text-primary">#<span class="offer_id"></span></span> was successfully accepted, but the trade is now locked while the status of the trade is still in the Trade Protection window.</div>
+								<div class="text-base indent-1">While the trade is under the 7-day protection period, you are covered to keep things secure. If, for any reason, the trade gets reversed during the protection window, your coins will be sent back to your account. Once that week is up, the withdraw will be marked as completed.</div>
+							</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">OK</button>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2 offers_pending_status hidden" data-status="3">
+							<div class="order-skins-list bundle_items_pending">
+                                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+							</div>
+
+							<div class="text-base indent-1">Your withdraw trade offer with id <span class="text-primary">#<span class="offer_id"></span></span> was successfully accepted and completed.</div>
+
+							<div class="flex flex-row justify-center gap-1">
+								<button type="button" class="button button-primary shadow-2" data-modal="hide">OK</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="offers_pending_method hidden" data-method="currency">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal medium" id="modal_view_bundle">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">View Bundle</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="view-skins-list overflow-auto" id="view-offers">
+                    
+                        <div class="item unselectable flex flex-col justify-between gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col gap-2">
+        <div class="name flex flex-col justify-between gap-1 overflow-hidden">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="item unselectable flex flex-col justify-between gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col gap-2">
+        <div class="name flex flex-col justify-between gap-1 overflow-hidden">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="item unselectable flex flex-col justify-between gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col gap-2">
+        <div class="name flex flex-col justify-between gap-1 overflow-hidden">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="item unselectable flex flex-col justify-between gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col gap-2">
+        <div class="name flex flex-col justify-between gap-1 overflow-hidden">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="item unselectable flex flex-col justify-between gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col gap-2">
+        <div class="name flex flex-col justify-between gap-1 overflow-hidden">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="item unselectable flex flex-col justify-between gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col gap-2">
+        <div class="name flex flex-col justify-between gap-1 overflow-hidden">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+                    
+                </div>
+			</div>
+			<div class="modal-footer text-center">
+				<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal large" id="modal_dailycases_cases">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Daily Cases</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div id="dailycases_cases">
+					<div class="in-grid flex justify-center items-center text-base p-4 history_message">No daily cases found</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal large" id="modal_dailycases_case">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Daily Cases - <span id="dailycases_case_name">none</span></div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="dailycases-case relative mt-2 transition duration-500" id="dailycases_case">
+					<div class="group-reel flex" id="dailycases_spinner">
+						<div class="flex" id="dailycases_field"></div>
+					</div>
+
+					<div class="shadow shadow-left"></div>
+					<div class="shadow shadow-right"></div>
+
+					<div class="absolute top-0 bottom-0 left-0 right-0 flex justify-center">
+						<div class="pointer flex items-center"></div>
+					</div>
+				</div>
+
+				<div class="mt-2 text-center">
+					<button class="button button-pink shadow-2" id="dailycases_open" data-id="">OPEN CASE (LVL. <span id="dailycases_case_level">0</span>)</button>
+				</div>
+
+				<div class="mt-2 p-2">
+					<div class="text-left text-lg">This case contains:</div>
+
+					<div class="dailycases-list" id="dailycases_list"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal small" id="modal_confirm_action">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Confirmation</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="text-center mb-2">Do you confirm your next action?</div>
+
+				<div class="grid split-column-2 gap-1">
+					<button class="button button-accent shadow-2" id="confirm_action_no" data-modal="hide">Cancel</button>
+					<button class="button button-primary shadow-2" id="confirm_action_yes" data-modal="hide">Confirm</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal small" id="modal_confirm_identity">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Confirmation</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="text-center mb-2">Confirm your identity by providing a secret code!</div>
+
+                <div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="password" class="field_element_input " id="confirm_identity_secret">
+
+            
+                <div class="field_label transition duration-500">Secret</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="required">This field is required</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+    </div>
+</div>
+
+				<div class="grid split-column-2 gap-1 mt-2">
+					<button class="button button-accent shadow-2" id="confirm_identity_no" data-modal="hide">Cancel</button>
+					<button class="button button-primary shadow-2" id="confirm_identity_yes" data-modal="hide">Confirm</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal small" id="modal_error_insufficient_balance">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Oops, your balance is too low</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="text-left mb-2">You need <span class="amount">0.00</span> coins more to continue your action.</div>
+
+                
+				<div class="flex justify-center items-center">
+					<a href="deposit.html"><button class="button button-primary shadow-2">Deposit</button></a>
+				</div>
+                
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="modal small" id="modal_error_withdraw_rollover">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Play through required</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+                <div class="flex flex-col gap-1 mb-2">
+                    <div class="text-left text-muted-foreground">You have recently deposited or claimed a reward. We require you to play through this amount one time before withdrawing to prevent abuse.</div>
+				    <div class="text-left">You must play through with <span class="amount">0.00</span> coins more to unlock the withdraw.</div>
+                </div>
+
+				<div class="flex justify-center items-center">
+					<a href="index.htm"><button class="button button-primary shadow-2">Play</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="modal small" id="modal_error_auth">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Sign in</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="text-left mb-2">Please sign in to start playing!</div>
+
+				<div class="flex justify-center items-center">
+					<a href="login-10.html?returnUrl=/upgrader"><button class="button button-primary shadow-2">Sign In</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal medium" id="modal_command_online">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Online list</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div id="online_list">
+					<div class="in-grid flex justify-center items-center text-base p-4 history_message">No players online</div>
+				</div>
+			</div>
+			<div class="modal-footer text-center">
+				<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal medium" id="modal_command_help">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Help</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="acordeon w-full rounded-2 overflow-auto" id="chat_commands">
+					<div class="in-grid flex justify-center items-center text-base p-4 history_message">No commands available</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal medium" id="modal_command_tip">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Tip to Player</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="flex flex-row gap-2 items-center responsive">
+					<div class="bg-card p-2 rounded-2 w-4 h-full responsive">
+						<div class="flex flex-row gap-2 items-center">
+							<div id="tip_player_avatar"></div>
+
+							<div class="truncate" id="tip_player_name">none</div>
+						</div>
+					</div>
+
+					<div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " id="tip_player_amount" data-amount="tip_player" value="0.01">
+
+            
+                <div class="field_label transition duration-500">Tip Amount</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="required">This field is required</div>
+            <div class="field_error" data-error="number">This field must be a number</div>
+            
+            <div class="field_error" data-error="greater">You must enter a greater value</div>
+            <div class="field_error" data-error="lesser">You must enter a lesser value</div>
+            
+            
+            
+            
+            
+            
+            
+        
+    </div>
+</div>
+				</div>
+			</div>
+			<div class="modal-footer text-center">
+				<button type="button" class="button button-primary shadow-2" data-modal="hide" id="send_tip_player" data-userid="">Send</button>
+				<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal medium" id="modal_command_mute">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Mute Player</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left overflow-unset">
+				<div class="flex flex-col gap-2">
+					<div class="flex flex-row gap-2 items-center responsive">
+						<div class="bg-card p-2 rounded-2 w-4 h-full responsive">
+							<div class="flex flex-row gap-2 items-center">
+								<div id="mute_player_avatar"></div>
+
+								<div class="truncate" id="mute_player_name">none</div>
+							</div>
+						</div>
+
+						<div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " id="mute_player_reason">
+
+            
+                <div class="field_label transition duration-500">Reason</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="required">This field is required</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+    </div>
+</div>
+					</div>
+
+					<div class="flex flex-row gap-2">
+                        <div class="dropdown_field bottom transition duration-500 ">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " id="mute_player_date" value="minutes">
+            <div class="field_dropdown">Minutes</div>
+
+            <div class="field_element_dropdowns">
+                
+                    
+                        <div class="field_element_dropdown" value="minutes" data-index="0">Minutes</div>
+                    
+                        <div class="field_element_dropdown" value="hours" data-index="1">Hours</div>
+                    
+                        <div class="field_element_dropdown" value="days" data-index="2">Days</div>
+                    
+                        <div class="field_element_dropdown" value="months" data-index="3">Months</div>
+                    
+                        <div class="field_element_dropdown" value="years" data-index="4">Years</div>
+                    
+                
+            </div>
+
+           
+                <div class="field_label active transition duration-500">Format Date</div>
+            
+        </div>
+
+        <div class="field_extra">
+            <div class="field_caret">
+                <i class="fa fa-caret-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="field_bottom"></div>
+</div>
+
+                        <div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " id="mute_player_amount" value="5">
+
+            
+                <div class="field_label transition duration-500">Amount</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="required">This field is required</div>
+            <div class="field_error" data-error="number">This field must be a number</div>
+            
+            
+            
+            <div class="field_error" data-error="positive_integer">This field must be a positive integer number</div>
+            
+            
+            
+            
+            
+            
+        
+    </div>
+</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer text-center">
+				<button type="button" class="button button-primary shadow-2" data-modal="hide" id="mute_player_set" data-userid="">Mute</button>
+				<button type="button" class="button button-primary shadow-2" data-modal="hide" id="mute_player_permanently" data-userid="">Permanently</button>
+				<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal large" id="modal_command_ignorelist">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Ignore List</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="chat-ignorelist overflow-auto" id="chat_ignorelist">
+					<div class="in-grid flex justify-center items-center text-base p-4 history_message">No ignored players</div>
+				</div>
+			</div>
+			<div class="modal-footer text-center">
+				<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal medium" id="modal_tip_rain">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Tip to Rain</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+				<div class="flex flex-col gap-2 overflow-auto h-full">
+					<div class="flex flex-col gap-1">
+						<div class="text-left text-muted-foreground indent-1">Rain is a unique, free-to-play rewards feature. Users who have minimum level 1 can solve a captcha to join and receive a share of a coins pot, which is funded by community tips during that period. Players can tip rains for added fun and rewards.</div>
+						<div class="text-left text-muted-foreground indent-1">You can choose to donate your balance towards the rain pot. Everyone will see your tip in chat. Minimum tip is 0.01 coins. Tipping rain doesn't make you eligible to join.</div>
+					</div>
+
+                    <div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " id="chat_rain_tip_amount" data-amount="tip_rain" value="0.01">
+
+            
+                <div class="field_label transition duration-500">Tip Amount</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="required">This field is required</div>
+            <div class="field_error" data-error="number">This field must be a number</div>
+            
+            <div class="field_error" data-error="greater">You must enter a greater value</div>
+            <div class="field_error" data-error="lesser">You must enter a lesser value</div>
+            
+            
+            
+            
+            
+            
+            
+        
+    </div>
+</div>
+				</div>
+			</div>
+			<div class="modal-footer text-center">
+				<button type="button" class="button button-primary shadow-2" data-modal="hide" id="chat_rain_tip">Send</button>
+				<button type="button" class="button button-primary shadow-2" data-modal="hide">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal medium" id="modal_auth_change_password">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Change Password</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+
+			<div class="modal-body text-left">
+				<form class="form_auth" method="POST" action="/auth/change-password">
+					<div class="flex flex-col items-center gap-2">
+						<div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="password" class="field_element_input " name="current_password">
+
+            
+                <div class="field_label transition duration-500">Current password</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+                
+                    <button type="button" class="button field_element_password" data-type="show"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                
+                    <button type="button" class="button field_element_password" data-type="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="required">This field is required</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="password">At least 8 characters, maximum 64 characters, one uppercase, one lowercase, one number and one symbol</div>
+            
+            
+        
+    </div>
+</div>
+
+                        <div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="password" class="field_element_input " name="password">
+
+            
+                <div class="field_label transition duration-500">New password</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+                
+                    <button type="button" class="button field_element_password" data-type="show"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                
+                    <button type="button" class="button field_element_password" data-type="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="required">This field is required</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="password">At least 8 characters, maximum 64 characters, one uppercase, one lowercase, one number and one symbol</div>
+            
+            
+        
+    </div>
+</div>
+
+                        <div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="password" class="field_element_input " name="confirm_password">
+
+            
+                <div class="field_label transition duration-500">Confirm new password</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+                
+                    <button type="button" class="button field_element_password" data-type="show"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                
+                    <button type="button" class="button field_element_password" data-type="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="required">This field is required</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="password">At least 8 characters, maximum 64 characters, one uppercase, one lowercase, one number and one symbol</div>
+            
+            
+        
+    </div>
+</div>
+
+						<button type="submit" class="button button-primary shadow-2 mt-1">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal small" id="modal_auth_logout">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Logout</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+
+			<div class="modal-body text-left">
+                <div class="flex flex-col items-center gap-2">
+                    <div class="text-center">Do you wish to log out?</div>
+
+                    <div class="grid split-column-2 gap-1 w-full">
+                        <button class="button button-accent shadow-2" data-modal="hide">Cancel</button>
+
+                        <a href="/auth/logout?returnUrl=/upgrader">
+                            <button class="button button-primary shadow-2 w-full">Logout</button>
+                        </a>
+                    </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal small" id="modal_twofa_email_verification">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Check Your Inbox</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-left">
+                <div class="flex flex-col items-center gap-2">
+                    <div class="text-left">Enter the 6-digit security code we sent on your email address.</div>
+
+                    <div class="flex flex-col items-center gap-2 w-full">
+                        <div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " id="email_verification_code">
+
+            
+                <div class="field_label transition duration-500">Security Code</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="required">This field is required</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+    </div>
+</div>
+
+                        <button class="button button-primary shadow-2 mt-1" id="activate_email_verification">Submit</button>
+                    </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="modal small" id="modal_recaptcha">
+	<div class="modal-dialog flex justify-center items-center">
+		<div class="modal-content rounded-2">
+			<div class="modal-header flex items-center justify-between">
+				<div class="modal-title">Verify Recaptcha</div>
+				<div class="modal-close flex justify-center items-center rounded-1" data-modal="hide"><i aria-hidden="true" class="fa fa-times"></i></div>
+			</div>
+			<div class="modal-body text-base">
+				<div class="flex justify-center" id="g-recaptcha"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div class="flex flex-col size-full">
+            <div class="header">
+    <a href="index.htm" class="logo flex justify-center items-center">
+        <img src="img/logo.png">
+    </a>
+
+    <div class="navigation flex flex-row items-center justify-between">
+        <div class="flex flex-row justify-center gap-2 h-full">
+            <a class="h-full" href="index.htm">
+                <button type="button" class="button button-card shadow-2 p-2 h-full flex flex-row gap-2 items-center justify-center">
+                    <img src="img/home.png">
+                </button>
+            </a>
+
+            <div class="games pointer">
+                <button type="button" class="button button-card shadow-2 p-2 h-full flex flex-row gap-2 items-center justify-center">
+                    <img src="img/games.png">
+
+                    <span>Games</span>
+
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </button>
+
+                <div class="select transition duration-200 hidden">
+                    <div class="list bg-secondary flex flex-col border-b-2 border-x-2 border-card">
+                        
+                            <a class="relative " href="casino/lobby.html">
+                                <div class="item casino flex flex-row items-center gap-2 transition duration-200">
+                                    <img src="img/menu/casino.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Casino</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">Play Slots &amp; Live Games</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+
+                        
+                            <a class="" href="roulette.html">
+                                <div class="item flex flex-row items-center gap-2">
+                                    <img src="img/menu/roulette.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Roulette</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">Spin the wheel</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                            <a class="" href="crash.html">
+                                <div class="item flex flex-row items-center gap-2">
+                                    <img src="img/menu/crash.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Crash</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">Reach the shy</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                            <a class="" href="jackpot.html">
+                                <div class="item flex flex-row items-center gap-2">
+                                    <img src="img/menu/jackpot.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Jackpot</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">The chosen one</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                            <a class="" href="coinflip.html">
+                                <div class="item flex flex-row items-center gap-2">
+                                    <img src="img/menu/coinflip.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Coinflip</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">Fate on a toss</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                            <a class="" href="dice.html">
+                                <div class="item flex flex-row items-center gap-2">
+                                    <img src="img/menu/dice.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Dice</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">Roll your luck</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                            <a class="" href="unboxing.html">
+                                <div class="item flex flex-row items-center gap-2">
+                                    <img src="img/menu/unboxing.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Unboxing</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">Unveil the mystery</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                            <a class="" href="casebattle/list/active.html">
+                                <div class="item flex flex-row items-center gap-2">
+                                    <img src="img/menu/casebattle.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Case Battle</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">Win the fight</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                            <a class="" href="upgrader.html">
+                                <div class="item flex flex-row items-center gap-2">
+                                    <img src="img/menu/upgrader.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Upgrader</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">Rise to fortune</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                            <a class="" href="minesweeper.html">
+                                <div class="item flex flex-row items-center gap-2">
+                                    <img src="img/menu/minesweeper.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Minesweeper</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">Hit or miss</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                            <a class="" href="tower.html">
+                                <div class="item flex flex-row items-center gap-2">
+                                    <img src="img/menu/tower.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Tower</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">Climb the top</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                            <a class="" href="plinko.html">
+                                <div class="item flex flex-row items-center gap-2">
+                                    <img src="img/menu/plinko.png">
+
+                                    <div class="flex flex-col justify-center">
+                                        <div class="flex flex-row items-end gap-2">
+                                            <span class="text-xs font-bold">Plinko</span>
+                                            <span class="info text-3xs font-bold text-danger">Disabled</span>
+                                        </div>
+
+                                        <span class="text-2xs text-muted-foreground">Bounce to win</span>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+            <button type="button" class="button button-success shadow-2 p-2 h-full flex flex-row gap-2 items-center justify-center" data-modal="show" data-id="#modal_dailycases_cases">
+                <img src="img/rewards.png">
+
+                <span>Rewards</span>
+            </button>
+            
+        </div>
+
+        <div class="bg-dark rounded-1 border-2 border-card px-2 flex flex-row items-center gap-4 relative h-full">
+            <div class="balances pointer flex flex-row gap-2 items-center justify-center h-full">
+                
+                
+                
+                    <div class="balance flex flex-row items-center justify-center gap-1" data-type="total">
+                        <div class="coin main"></div>
+                        <span class="amount">0.00</span>
+                    </div>
+
+                    <div class="flex flex-row items-center justify-center text-lg h-full">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="list bg-secondary flex flex-col border-b-2 border-x-2 border-card transition duration-200 hidden">
+                        <div class="balance flex flex-row items-center justify-between gap-2 w-full" data-type="main" data-balance="0.00">
+                            <div class="text-sm font-bold text-muted-foreground">Main</div>
+
+                            <div class="flex flex-row items-center justify-center gap-1">
+                                <div class="coin main"></div>
+                                <span class="amount">0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                
+            </div>
+        </div>
+
+        <div class="flex flex-row justify-center gap-2 h-full">
+            
+            <div class="flex flex-row justify-center gap-2 h-full">
+                <a class="h-full" href="deposit.html">
+                    <button type="button" class="button button-success shadow-2 p-2 h-full flex flex-row gap-2 items-center justify-center">
+                        <img src="img/deposit.png">
+
+                        <span>Deposit</span>
+                    </button>
+                </a>
+
+                
+                <a class="h-full" href="withdraw.html">
+                    <button type="button" class="button button-card shadow-2 p-2 h-full flex flex-row gap-2 items-center justify-center">
+                        <img src="img/withdraw.png">
+
+                        <span>Withdraw</span>
+                    </button>
+                </a>
+                
+            </div>
+            
+
+            <div class="flex flex-row justify-center gap-2 h-full pl-2 border-l-2 border-card">
+                
+                    <a class="h-full" href="login-10.html?returnUrl=/upgrader">
+                        <button type="button" class="button button-card shadow-2 h-full flex justify-center items-center">Sign In</button>
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="header mobile flex flex-row justify-between gap-2">
+    <a href="index.htm" class="logo flex justify-start items-center">
+        <img src="img/logo_mini.png">
+    </a>
+
+    <div class="navigation flex flex-row items-center justify-end gap-2 h-full">
+        
+            <a class="h-full" href="login-10.html?returnUrl=/upgrader">
+                <button type="button" class="button button-card shadow-2 h-full flex justify-center items-center">Sign In</button>
+            </a>
+        
+
+        <button class="button pullout_view" data-pullout="menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <button class="button pullout_view" data-pullout="chat"><i class="fa fa-times" aria-hidden="true"></i></button>
+        
+        <button class="button pullout_view" data-pullout="cart"><i class="fa fa-times" aria-hidden="true"></i></button>
+        
+    </div>
+</div>
+            <div class="wrapper-page flex flex-row" id="page">
+                
+<div class="slider right flex flex-row items-center justify-start p-2 pullout_view" data-pullout="cart">
+	<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+</div>
+
+<div class="pullout right flex flex-col gap-2 px-2" data-pullout="cart">
+    
+        <button class="button button-accent shadow-2 relative switch_panel w-full active" data-id="offers" data-panel="pending">Pending</button>
+    
+
+    <div class="switch_content flex flex-col gap-4 h-full overflow-hidden hidden" data-id="offers" data-panel="cart">
+        <div class="flex flex-row gap-1">
+            <button class="button button-primary shadow-2 w-full confirm-offer" data-confirm="order">Confirm</button>
+
+            
+        </div>
+
+        
+
+        <div class="flex flex-row gap-2 justify-between items-center pb-4 border-b-2 border-card">
+            <div class="font-bold">Skins: <span id="cart_items_count">0</span></div>
+            <div class="font-bold">Coins: <span id="cart_items_total">0.00</span></div>
+        </div>
+
+        <div class="cart-skins-list overflow-auto pb-1" id="cart-items">
+            
+                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+            
+                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+            
+                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+            
+                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+            
+                <div class="item flex flex-row gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-image-box"></div>
+
+    <div class="flex flex-col justify-between gap-2">
+        <div class="name flex flex-col justify-between gap-1">
+            <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+            <div class="skeleton skeleton-secondary item-title-box"></div>
+        </div>
+
+        <div class="skeleton skeleton-secondary item-price-box"></div>
+
+        <div class="wear flex flex-col justify-between gap-2">
+            <div class="skeleton skeleton-secondary item-wear-box"></div>
+            <div class="skeleton skeleton-secondary text-large-box"></div>
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+
+    <div class="switch_content flex flex-col gap-4 h-full overflow-hidden " data-id="offers" data-panel="pending">
+        <div class="flex flex-row gap-2 justify-between items-center p-2 pb-4 border-b-2 border-card">
+            <div class="font-bold">Skins: <span id="padding_items_count">0</span></div>
+            <div class="font-bold">Coins: <span id="padding_items_total">0.00</span></div>
+        </div>
+
+        <div class="pending-skins-list overflow-auto pb-1" id="pending-offers">
+            
+                <div class="item flex flex-col justify-between gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-header-box"></div>
+
+    <div class="flex flex-row gap-2">
+        <div class="skeleton skeleton-secondary item-image-box"></div>
+
+        <div class="flex flex-col justify-between gap-2">
+            <div class="name flex flex-col justify-between gap-1">
+                <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+                <div class="skeleton skeleton-secondary item-title-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-secondary item-price-box"></div>
+
+            <div class="wear flex flex-col justify-between gap-2">
+                <div class="skeleton skeleton-secondary item-wear-box"></div>
+                <div class="skeleton skeleton-secondary text-large-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-secondary item-fooder-box"></div>
+</div>
+            
+                <div class="item flex flex-col justify-between gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-header-box"></div>
+
+    <div class="flex flex-row gap-2">
+        <div class="skeleton skeleton-secondary item-image-box"></div>
+
+        <div class="flex flex-col justify-between gap-2">
+            <div class="name flex flex-col justify-between gap-1">
+                <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+                <div class="skeleton skeleton-secondary item-title-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-secondary item-price-box"></div>
+
+            <div class="wear flex flex-col justify-between gap-2">
+                <div class="skeleton skeleton-secondary item-wear-box"></div>
+                <div class="skeleton skeleton-secondary text-large-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-secondary item-fooder-box"></div>
+</div>
+            
+                <div class="item flex flex-col justify-between gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-header-box"></div>
+
+    <div class="flex flex-row gap-2">
+        <div class="skeleton skeleton-secondary item-image-box"></div>
+
+        <div class="flex flex-col justify-between gap-2">
+            <div class="name flex flex-col justify-between gap-1">
+                <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+                <div class="skeleton skeleton-secondary item-title-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-secondary item-price-box"></div>
+
+            <div class="wear flex flex-col justify-between gap-2">
+                <div class="skeleton skeleton-secondary item-wear-box"></div>
+                <div class="skeleton skeleton-secondary text-large-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-secondary item-fooder-box"></div>
+</div>
+            
+                <div class="item flex flex-col justify-between gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-header-box"></div>
+
+    <div class="flex flex-row gap-2">
+        <div class="skeleton skeleton-secondary item-image-box"></div>
+
+        <div class="flex flex-col justify-between gap-2">
+            <div class="name flex flex-col justify-between gap-1">
+                <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+                <div class="skeleton skeleton-secondary item-title-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-secondary item-price-box"></div>
+
+            <div class="wear flex flex-col justify-between gap-2">
+                <div class="skeleton skeleton-secondary item-wear-box"></div>
+                <div class="skeleton skeleton-secondary text-large-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-secondary item-fooder-box"></div>
+</div>
+            
+                <div class="item flex flex-col justify-between gap-2 rounded-1">
+    <div class="skeleton skeleton-secondary item-header-box"></div>
+
+    <div class="flex flex-row gap-2">
+        <div class="skeleton skeleton-secondary item-image-box"></div>
+
+        <div class="flex flex-col justify-between gap-2">
+            <div class="name flex flex-col justify-between gap-1">
+                <div class="skeleton skeleton-secondary item-subtitle-box"></div>
+                <div class="skeleton skeleton-secondary item-title-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-secondary item-price-box"></div>
+
+            <div class="wear flex flex-col justify-between gap-2">
+                <div class="skeleton skeleton-secondary item-wear-box"></div>
+                <div class="skeleton skeleton-secondary text-large-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-secondary item-fooder-box"></div>
+</div>
+            
+        </div>
+    </div>
+</div>
+
+
+<div class="slider left flex flex-row items-center justify-end p-2 pullout_view" data-pullout="chat">
+	<i class="fa fa-comments" aria-hidden="true"></i>
+</div>
+
+<div class="pullout left flex flex-col" data-pullout="chat">
+	<div class="chat-rain waiting rounded-2" id="chat_rain">
+    <div class="waiting flex flex-row gap-2 items-center justify-between">
+        <div class="border"></div>
+
+        <div class="flex flex-col gap-2 justify-between">
+            <div class="title">Live Rain</div>
+            <div class="description" id="chat_rain_timer"><span id="chat_rain_last">0 minutes ago</span></div>
+            <div class="description hidden" id="chat_rain_first">This is the first rain</div>
+        </div>
+
+        <div class="flex flex-row items-center gap-2 bg-secondary rounded-2 p-2">
+            <div class="info flex flex-row items-center justify-center gap-1">
+                <div class="coin main"></div>
+                <span class="amount">0.00</span>
+            </div>
+
+            <button type="button" class="button button-success shadow-2 flex items-center justify-center" data-modal="show" data-id="#modal_tip_rain">
+                <img src="img/medal.png">
+            </button>
+        </div>
+    </div>
+
+    <div class="started flex flex-col gap-2 items-center">
+        <div class="border"></div>
+
+        <div class="info flex flex-row items-center justify-center gap-1">
+            <div class="coin main"></div>
+            <span class="amount">0.00</span>
+        </div>
+
+        <div class="flex flex-col items-center gap-1">
+            <div class="title">It's about to Rain!</div>
+            <div class="description">Complete the captcha to join the rain!</div>
+        </div>
+
+        <div class="flex flex-row justify-center gap-1">
+            <button type="button" class="button button-primary shadow-2" id="chat_rain_join">Join</button>
+            <button type="button" class="button button-primary shadow-2 disabled" id="chat_rain_joined">Joined</button>
+
+            <button type="button" class="button button-danger shadow-2 flex items-center justify-center" data-modal="show" data-id="#modal_tip_rain">
+                <img src="img/medal.png">
+            </button>
+        </div>
+
+        <div class="progress">
+            <div class="bar" id="chat_rain_progress"></div>
+        </div>
+    </div>
+</div>
+
+	<div class="chat-group flex flex-col">
+		<div id="chat-area">
+            
+                <div class="chat-message flex flex-col gap-2 relative p-1">
+    <div class="flex flex-row items-center gap-1 relative w-full pl-1">
+        <div class="skeleton skeleton-card avatar-medium-box"></div>
+
+        <div class="chat-message-header flex flex-col justify-center gap-1">
+            <div class="flex flex-row gap-4 justify-between items-center">
+                <div class="skeleton skeleton-card text-large-box"></div>
+
+                <div class="skeleton skeleton-card text-small-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-card chat-message-box"></div>
+</div>
+            
+                <div class="chat-message flex flex-col gap-2 relative p-1">
+    <div class="flex flex-row items-center gap-1 relative w-full pl-1">
+        <div class="skeleton skeleton-card avatar-medium-box"></div>
+
+        <div class="chat-message-header flex flex-col justify-center gap-1">
+            <div class="flex flex-row gap-4 justify-between items-center">
+                <div class="skeleton skeleton-card text-large-box"></div>
+
+                <div class="skeleton skeleton-card text-small-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-card chat-message-box"></div>
+</div>
+            
+                <div class="chat-message flex flex-col gap-2 relative p-1">
+    <div class="flex flex-row items-center gap-1 relative w-full pl-1">
+        <div class="skeleton skeleton-card avatar-medium-box"></div>
+
+        <div class="chat-message-header flex flex-col justify-center gap-1">
+            <div class="flex flex-row gap-4 justify-between items-center">
+                <div class="skeleton skeleton-card text-large-box"></div>
+
+                <div class="skeleton skeleton-card text-small-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-card chat-message-box"></div>
+</div>
+            
+                <div class="chat-message flex flex-col gap-2 relative p-1">
+    <div class="flex flex-row items-center gap-1 relative w-full pl-1">
+        <div class="skeleton skeleton-card avatar-medium-box"></div>
+
+        <div class="chat-message-header flex flex-col justify-center gap-1">
+            <div class="flex flex-row gap-4 justify-between items-center">
+                <div class="skeleton skeleton-card text-large-box"></div>
+
+                <div class="skeleton skeleton-card text-small-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-card chat-message-box"></div>
+</div>
+            
+                <div class="chat-message flex flex-col gap-2 relative p-1">
+    <div class="flex flex-row items-center gap-1 relative w-full pl-1">
+        <div class="skeleton skeleton-card avatar-medium-box"></div>
+
+        <div class="chat-message-header flex flex-col justify-center gap-1">
+            <div class="flex flex-row gap-4 justify-between items-center">
+                <div class="skeleton skeleton-card text-large-box"></div>
+
+                <div class="skeleton skeleton-card text-small-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-card chat-message-box"></div>
+</div>
+            
+                <div class="chat-message flex flex-col gap-2 relative p-1">
+    <div class="flex flex-row items-center gap-1 relative w-full pl-1">
+        <div class="skeleton skeleton-card avatar-medium-box"></div>
+
+        <div class="chat-message-header flex flex-col justify-center gap-1">
+            <div class="flex flex-row gap-4 justify-between items-center">
+                <div class="skeleton skeleton-card text-large-box"></div>
+
+                <div class="skeleton skeleton-card text-small-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-card chat-message-box"></div>
+</div>
+            
+                <div class="chat-message flex flex-col gap-2 relative p-1">
+    <div class="flex flex-row items-center gap-1 relative w-full pl-1">
+        <div class="skeleton skeleton-card avatar-medium-box"></div>
+
+        <div class="chat-message-header flex flex-col justify-center gap-1">
+            <div class="flex flex-row gap-4 justify-between items-center">
+                <div class="skeleton skeleton-card text-large-box"></div>
+
+                <div class="skeleton skeleton-card text-small-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-card chat-message-box"></div>
+</div>
+            
+                <div class="chat-message flex flex-col gap-2 relative p-1">
+    <div class="flex flex-row items-center gap-1 relative w-full pl-1">
+        <div class="skeleton skeleton-card avatar-medium-box"></div>
+
+        <div class="chat-message-header flex flex-col justify-center gap-1">
+            <div class="flex flex-row gap-4 justify-between items-center">
+                <div class="skeleton skeleton-card text-large-box"></div>
+
+                <div class="skeleton skeleton-card text-small-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-card chat-message-box"></div>
+</div>
+            
+                <div class="chat-message flex flex-col gap-2 relative p-1">
+    <div class="flex flex-row items-center gap-1 relative w-full pl-1">
+        <div class="skeleton skeleton-card avatar-medium-box"></div>
+
+        <div class="chat-message-header flex flex-col justify-center gap-1">
+            <div class="flex flex-row gap-4 justify-between items-center">
+                <div class="skeleton skeleton-card text-large-box"></div>
+
+                <div class="skeleton skeleton-card text-small-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-card chat-message-box"></div>
+</div>
+            
+                <div class="chat-message flex flex-col gap-2 relative p-1">
+    <div class="flex flex-row items-center gap-1 relative w-full pl-1">
+        <div class="skeleton skeleton-card avatar-medium-box"></div>
+
+        <div class="chat-message-header flex flex-col justify-center gap-1">
+            <div class="flex flex-row gap-4 justify-between items-center">
+                <div class="skeleton skeleton-card text-large-box"></div>
+
+                <div class="skeleton skeleton-card text-small-box"></div>
+            </div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+
+    <div class="skeleton skeleton-card chat-message-box"></div>
+</div>
+            
+        </div>
+
+		<div class="flex flex-col gap-2 p-2 relative">
+			<div class="button button-accent shadow-2 p-2 flex flex-row gap-2 items-center justify-center hidden" id="chat_paused">
+                <i class="fa fa-pause" aria-hidden="true"></i>
+
+                <span>Chat is Paused</span>
+            </div>
+
+			<div class="emojis-panel flex flex-row justify-center items-center gap-2 bg-secondary border-2 border-card rounded-2 p-2 transition duration-200 hidden">
+				
+                    <img class="chat-emoji" title=":smile:" data-emoji=":smile:" src="img/emojis/smile.png">
+                
+                    <img class="chat-emoji" title=":smiley:" data-emoji=":smiley:" src="img/emojis/smiley.png">
+                
+                    <img class="chat-emoji" title=":grin:" data-emoji=":grin:" src="img/emojis/grin.png">
+                
+                    <img class="chat-emoji" title=":pensive:" data-emoji=":pensive:" src="img/emojis/pensive.png">
+                
+                    <img class="chat-emoji" title=":weary:" data-emoji=":weary:" src="img/emojis/weary.png">
+                
+                    <img class="chat-emoji" title=":astonished:" data-emoji=":astonished:" src="img/emojis/astonished.png">
+                
+                    <img class="chat-emoji" title=":rolling_eyes:" data-emoji=":rolling_eyes:" src="img/emojis/rolling_eyes.png">
+                
+                    <img class="chat-emoji" title=":relaxed:" data-emoji=":relaxed:" src="img/emojis/relaxed.png">
+                
+                    <img class="chat-emoji" title=":wink:" data-emoji=":wink:" src="img/emojis/wink.png">
+                
+                    <img class="chat-emoji" title=":woozy_face:" data-emoji=":woozy_face:" src="img/emojis/woozy_face.png">
+                
+                    <img class="chat-emoji" title=":zany_face:" data-emoji=":zany_face:" src="img/emojis/zany_face.png">
+                
+                    <img class="chat-emoji" title=":hugging:" data-emoji=":hugging:" src="img/emojis/hugging.png">
+                
+                    <img class="chat-emoji" title=":joy:" data-emoji=":joy:" src="img/emojis/joy.png">
+                
+                    <img class="chat-emoji" title=":sob:" data-emoji=":sob:" src="img/emojis/sob.png">
+                
+                    <img class="chat-emoji" title=":grimacing:" data-emoji=":grimacing:" src="img/emojis/grimacing.png">
+                
+                    <img class="chat-emoji" title=":rofl:" data-emoji=":rofl:" src="img/emojis/rofl.png">
+                
+                    <img class="chat-emoji" title=":face_monocle:" data-emoji=":face_monocle:" src="img/emojis/face_monocle.png">
+                
+                    <img class="chat-emoji" title=":thinking:" data-emoji=":thinking:" src="img/emojis/thinking.png">
+                
+                    <img class="chat-emoji" title=":pleading_face:" data-emoji=":pleading_face:" src="img/emojis/pleading_face.png">
+                
+                    <img class="chat-emoji" title=":sleeping:" data-emoji=":sleeping:" src="img/emojis/sleeping.png">
+                
+                    <img class="chat-emoji" title=":sunglasses:" data-emoji=":sunglasses:" src="img/emojis/sunglasses.png">
+                
+                    <img class="chat-emoji" title=":heart_eyes:" data-emoji=":heart_eyes:" src="img/emojis/heart_eyes.png">
+                
+                    <img class="chat-emoji" title=":smiling_hearts:" data-emoji=":smiling_hearts:" src="img/emojis/smiling_hearts.png">
+                
+                    <img class="chat-emoji" title=":kissing_heart:" data-emoji=":kissing_heart:" src="img/emojis/kissing_heart.png">
+                
+                    <img class="chat-emoji" title=":star_struck:" data-emoji=":star_struck:" src="img/emojis/star_struck.png">
+                
+                    <img class="chat-emoji" title=":nerd:" data-emoji=":nerd:" src="img/emojis/nerd.png">
+                
+                    <img class="chat-emoji" title=":innocent:" data-emoji=":innocent:" src="img/emojis/innocent.png">
+                
+                    <img class="chat-emoji" title=":face_vomiting:" data-emoji=":face_vomiting:" src="img/emojis/face_vomiting.png">
+                
+                    <img class="chat-emoji" title=":money_mouth:" data-emoji=":money_mouth:" src="img/emojis/money_mouth.png">
+                
+                    <img class="chat-emoji" title=":cold_sweat:" data-emoji=":cold_sweat:" src="img/emojis/cold_sweat.png">
+                
+                    <img class="chat-emoji" title=":partying_face:" data-emoji=":partying_face:" src="img/emojis/partying_face.png">
+                
+                    <img class="chat-emoji" title=":exploding_head:" data-emoji=":exploding_head:" src="img/emojis/exploding_head.png">
+                
+                    <img class="chat-emoji" title=":rage:" data-emoji=":rage:" src="img/emojis/rage.png">
+                
+                    <img class="chat-emoji" title=":hot_face:" data-emoji=":hot_face:" src="img/emojis/hot_face.png">
+                
+                    <img class="chat-emoji" title=":cold_face:" data-emoji=":cold_face:" src="img/emojis/cold_face.png">
+                
+                    <img class="chat-emoji" title=":smiling_imp:" data-emoji=":smiling_imp:" src="img/emojis/smiling_imp.png">
+                
+                    <img class="chat-emoji" title=":alien:" data-emoji=":alien:" src="img/emojis/alien.png">
+                
+                    <img class="chat-emoji" title=":clown:" data-emoji=":clown:" src="img/emojis/clown.png">
+                
+                    <img class="chat-emoji" title=":scream_cat:" data-emoji=":scream_cat:" src="img/emojis/scream_cat.png">
+                
+                    <img class="chat-emoji" title=":smiley_cat:" data-emoji=":smiley_cat:" src="img/emojis/smiley_cat.png">
+                
+                    <img class="chat-emoji" title=":robot:" data-emoji=":robot:" src="img/emojis/robot.png">
+                
+                    <img class="chat-emoji" title=":ghost:" data-emoji=":ghost:" src="img/emojis/ghost.png">
+                
+                    <img class="chat-emoji" title=":skull:" data-emoji=":skull:" src="img/emojis/skull.png">
+                
+                    <img class="chat-emoji" title=":poop:" data-emoji=":poop:" src="img/emojis/poop.png">
+                
+                    <img class="chat-emoji" title=":jack_o_lantern:" data-emoji=":jack_o_lantern:" src="img/emojis/jack_o_lantern.png">
+                
+                    <img class="chat-emoji" title=":100:" data-emoji=":100:" src="img/emojis/100.png">
+                
+                    <img class="chat-emoji" title=":bell:" data-emoji=":bell:" src="img/emojis/bell.png">
+                
+                    <img class="chat-emoji" title=":birthday:" data-emoji=":birthday:" src="img/emojis/birthday.png">
+                
+                    <img class="chat-emoji" title=":gift:" data-emoji=":gift:" src="img/emojis/gift.png">
+                
+                    <img class="chat-emoji" title=":first_place:" data-emoji=":first_place:" src="img/emojis/first_place.png">
+                
+                    <img class="chat-emoji" title=":trophy:" data-emoji=":trophy:" src="img/emojis/trophy.png">
+                
+                    <img class="chat-emoji" title=":tada:" data-emoji=":tada:" src="img/emojis/tada.png">
+                
+                    <img class="chat-emoji" title=":crown:" data-emoji=":crown:" src="img/emojis/crown.png">
+                
+                    <img class="chat-emoji" title=":fire:" data-emoji=":fire:" src="img/emojis/fire.png">
+                
+                    <img class="chat-emoji" title=":heart:" data-emoji=":heart:" src="img/emojis/heart.png">
+                
+                    <img class="chat-emoji" title=":broken_heart:" data-emoji=":broken_heart:" src="img/emojis/broken_heart.png">
+                
+                    <img class="chat-emoji" title=":wave:" data-emoji=":wave:" src="img/emojis/wave.png">
+                
+                    <img class="chat-emoji" title=":clap:" data-emoji=":clap:" src="img/emojis/clap.png">
+                
+                    <img class="chat-emoji" title=":raised_hands:" data-emoji=":raised_hands:" src="img/emojis/raised_hands.png">
+                
+                    <img class="chat-emoji" title=":thumbsup:" data-emoji=":thumbsup:" src="img/emojis/thumbsup.png">
+                
+                    <img class="chat-emoji" title=":peace:" data-emoji=":peace:" src="img/emojis/peace.png">
+                
+                    <img class="chat-emoji" title=":ok_hand:" data-emoji=":ok_hand:" src="img/emojis/ok_hand.png">
+                
+                    <img class="chat-emoji" title=":muscle:" data-emoji=":muscle:" src="img/emojis/muscle.png">
+                
+                    <img class="chat-emoji" title=":punch:" data-emoji=":punch:" src="img/emojis/punch.png">
+                
+                    <img class="chat-emoji" title=":moneybag:" data-emoji=":moneybag:" src="img/emojis/moneybag.png">
+                
+
+                
+                    <img class="chat-emoji" title=":crypepe:" data-emoji=":crypepe:" src="img/emojis/crypepe.png">
+                
+                    <img class="chat-emoji" title=":firinpepe:" data-emoji=":firinpepe:" src="img/emojis/firinpepe.png">
+                
+                    <img class="chat-emoji" title=":happepe:" data-emoji=":happepe:" src="img/emojis/happepe.png">
+                
+                    <img class="chat-emoji" title=":monkachrist:" data-emoji=":monkachrist:" src="img/emojis/monkachrist.png">
+                
+                    <img class="chat-emoji" title=":okpepe:" data-emoji=":okpepe:" src="img/emojis/okpepe.png">
+                
+                    <img class="chat-emoji" title=":sadpepe:" data-emoji=":sadpepe:" src="img/emojis/sadpepe.png">
+                
+
+                
+                    <img class="chat-emoji" title=":gaben:" data-emoji=":gaben:" src="img/emojis/gaben.png">
+                
+                    <img class="chat-emoji" title=":kappa:" data-emoji=":kappa:" src="img/emojis/kappa.png">
+                
+                    <img class="chat-emoji" title=":kappapride:" data-emoji=":kappapride:" src="img/emojis/kappapride.png">
+                
+                    <img class="chat-emoji" title=":kim:" data-emoji=":kim:" src="img/emojis/kim.png">
+                
+                    <img class="chat-emoji" title=":pogchamp:" data-emoji=":pogchamp:" src="img/emojis/pogchamp.png">
+                
+                    <img class="chat-emoji" title=":shaq:" data-emoji=":shaq:" src="img/emojis/shaq.png">
+                
+
+                
+                    <img class="chat-emoji" title=":alert:" data-emoji=":alert:" src="img/emojis/alert.gif">
+                
+                    <img class="chat-emoji" title=":awp:" data-emoji=":awp:" src="img/emojis/awp.gif">
+                
+                    <img class="chat-emoji" title=":bananadance:" data-emoji=":bananadance:" src="img/emojis/bananadance.gif">
+                
+                    <img class="chat-emoji" title=":carlton:" data-emoji=":carlton:" src="img/emojis/carlton.gif">
+                
+                    <img class="chat-emoji" title=":fortdance:" data-emoji=":fortdance:" src="img/emojis/fortdance.gif">
+                
+                    <img class="chat-emoji" title=":grenade:" data-emoji=":grenade:" src="img/emojis/grenade.gif">
+                
+                    <img class="chat-emoji" title=":lolizard:" data-emoji=":lolizard:" src="img/emojis/lolizard.gif">
+                
+                    <img class="chat-emoji" title=":partyblob:" data-emoji=":partyblob:" src="img/emojis/partyblob.gif">
+                
+                    <img class="chat-emoji" title=":saxguy:" data-emoji=":saxguy:" src="img/emojis/saxguy.gif">
+                
+                    <img class="chat-emoji" title=":squidab:" data-emoji=":squidab:" src="img/emojis/squidab.gif">
+                
+                    <img class="chat-emoji" title=":turtle:" data-emoji=":turtle:" src="img/emojis/turtle.gif">
+                
+                    <img class="chat-emoji" title=":zombie:" data-emoji=":zombie:" src="img/emojis/zombie.gif">
+                
+
+                
+                    <img class="chat-emoji" title=":bet:" data-emoji=":bet:" src="img/emojis/bet.png">
+                
+                    <img class="chat-emoji" title=":cant:" data-emoji=":cant:" src="img/emojis/cant.png">
+                
+                    <img class="chat-emoji" title=":cashout:" data-emoji=":cashout:" src="img/emojis/cashout.png">
+                
+                    <img class="chat-emoji" title=":doit:" data-emoji=":doit:" src="img/emojis/doit.png">
+                
+                    <img class="chat-emoji" title=":dont:" data-emoji=":dont:" src="img/emojis/dont.png">
+                
+                    <img class="chat-emoji" title=":feelsbad:" data-emoji=":feelsbad:" src="img/emojis/feelsbad.png">
+                
+                    <img class="chat-emoji" title=":feelsgood:" data-emoji=":feelsgood:" src="img/emojis/feelsgood.png">
+                
+                    <img class="chat-emoji" title=":gg:" data-emoji=":gg:" src="img/emojis/gg.png">
+                
+                    <img class="chat-emoji" title=":gl:" data-emoji=":gl:" src="img/emojis/gl.png">
+                
+                    <img class="chat-emoji" title=":highroller:" data-emoji=":highroller:" src="img/emojis/highroller.png">
+                
+                    <img class="chat-emoji" title=":joinme:" data-emoji=":joinme:" src="img/emojis/joinme.png">
+                
+                    <img class="chat-emoji" title=":letsgo:" data-emoji=":letsgo:" src="img/emojis/letsgo.png">
+                
+                    <img class="chat-emoji" title=":win:" data-emoji=":win:" src="img/emojis/win.png">
+                
+                    <img class="chat-emoji" title=":lose:" data-emoji=":lose:" src="img/emojis/lose.png">
+                
+                    <img class="chat-emoji" title=":nice:" data-emoji=":nice:" src="img/emojis/nice.png">
+                
+                    <img class="chat-emoji" title=":sniped:" data-emoji=":sniped:" src="img/emojis/sniped.png">
+                
+                    <img class="chat-emoji" title=":midtick:" data-emoji=":midtick:" src="img/emojis/midtick.png">
+                
+                    <img class="chat-emoji" title=":lowtick:" data-emoji=":lowtick:" src="img/emojis/lowtick.png">
+                
+			</div>
+
+			<form class="flex flex-col gap-2 bg-card p-1 rounded-2" id="chat-input-form">
+				<div class="chat-reply flex flex-row justify-between items-center gap-2 mt-1 ml-2 mr-2 hidden" id="chat_reply">
+					<div class="flex flex-row items-center gap-2">
+						<i class="fa fa-reply" aria-hidden="true"></i>
+
+						<div class="inline-block">
+							<img class="avatar" src="">
+
+							<span class="name"></span>
+							<span class="message"></span>
+						</div>
+					</div>
+
+					<div class="pointer" id="chat_reply_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+				</div>
+
+				<div class="flex flex-row gap-2">
+					<input type="text" class="chat-input" placeholder="Type a message..." id="chat_message" maxlength="200" autocomplete="off">
+
+					<button type="submit" class="button button-primary shadow-2">Send</button>
+				</div>
+			</form>
+
+			<div class="flex flex-row gap-1 w-full">
+                <div class="dropdown_field top transition duration-500 ">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " id="chat_channel" value="en">
+            <div class="field_dropdown"><div class="flex flex-row items-center justify-between gap-2"><div class="flex flex-row items-center gap-1"><img class="rounded-full" src="img/lang/en.png"><span>English</span></div><div class="online flex flex-row items-center" data-channel="en">0</div></div></div>
+
+            <div class="field_element_dropdowns">
+                
+                    
+                        <div class="field_element_dropdown" value="en" data-index="0"><div class="flex flex-row items-center justify-between gap-2"><div class="flex flex-row items-center gap-1"><img class="rounded-full" src="img/lang/en.png"><span>English</span></div><div class="online flex flex-row items-center" data-channel="en">0</div></div></div>
+                    
+                        <div class="field_element_dropdown" value="ro" data-index="1"><div class="flex flex-row items-center justify-between gap-2"><div class="flex flex-row items-center gap-1"><img class="rounded-full" src="img/lang/ro.png"><span>Română</span></div><div class="online flex flex-row items-center" data-channel="ro">0</div></div></div>
+                    
+                        <div class="field_element_dropdown" value="fr" data-index="2"><div class="flex flex-row items-center justify-between gap-2"><div class="flex flex-row items-center gap-1"><img class="rounded-full" src="img/lang/fr.png"><span>Français</span></div><div class="online flex flex-row items-center" data-channel="fr">0</div></div></div>
+                    
+                        <div class="field_element_dropdown" value="ru" data-index="3"><div class="flex flex-row items-center justify-between gap-2"><div class="flex flex-row items-center gap-1"><img class="rounded-full" src="img/lang/ru.png"><span>Pусский</span></div><div class="online flex flex-row items-center" data-channel="ru">0</div></div></div>
+                    
+                        <div class="field_element_dropdown" value="de" data-index="4"><div class="flex flex-row items-center justify-between gap-2"><div class="flex flex-row items-center gap-1"><img class="rounded-full" src="img/lang/de.png"><span>German</span></div><div class="online flex flex-row items-center" data-channel="de">0</div></div></div>
+                    
+                
+            </div>
+
+           
+        </div>
+
+        <div class="field_extra">
+            <div class="field_caret">
+                <i class="fa fa-caret-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="field_bottom"></div>
+</div>
+
+				<button class="button button-card rounded-2 text-base" id="chat_emojis"><i class="fa fa-smile-o" aria-hidden="true"></i></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="pullout left flex flex-col" data-pullout="menu">
+	<div class="menu wrapper-page flex flex-col size-full">
+		<div class="flex flex-col gap-4 p-4" style="overflow: hidden; overflow-y: auto;">
+			<div class="flex flex-col gap-4">
+				
+                    <a class="" href="casino/lobby.html">
+                        <div class="item head flex items-center ">
+                            <img src="img/menu/casino.png">
+                            <div class="ml-1">Casino</div>
+                        </div>
+                    </a>
+                
+
+                
+                    <a class="" href="roulette.html">
+                        <div class="item head flex items-center ">
+                            <img src="img/menu/roulette.png">
+                            <div class="ml-1">Roulette</div>
+                        </div>
+                    </a>
+                
+                    <a class="" href="crash.html">
+                        <div class="item head flex items-center ">
+                            <img src="img/menu/crash.png">
+                            <div class="ml-1">Crash</div>
+                        </div>
+                    </a>
+                
+                    <a class="" href="jackpot.html">
+                        <div class="item head flex items-center ">
+                            <img src="img/menu/jackpot.png">
+                            <div class="ml-1">Jackpot</div>
+                        </div>
+                    </a>
+                
+                    <a class="" href="coinflip.html">
+                        <div class="item head flex items-center ">
+                            <img src="img/menu/coinflip.png">
+                            <div class="ml-1">Coinflip</div>
+                        </div>
+                    </a>
+                
+                    <a class="" href="dice.html">
+                        <div class="item head flex items-center ">
+                            <img src="img/menu/dice.png">
+                            <div class="ml-1">Dice</div>
+                        </div>
+                    </a>
+                
+                    <a class="" href="unboxing.html">
+                        <div class="item head flex items-center ">
+                            <img src="img/menu/unboxing.png">
+                            <div class="ml-1">Unboxing</div>
+                        </div>
+                    </a>
+                
+                    <a class="" href="casebattle/list/active.html">
+                        <div class="item head flex items-center ">
+                            <img src="img/menu/casebattle.png">
+                            <div class="ml-1">Case Battle</div>
+                        </div>
+                    </a>
+                
+                    <a class="" href="upgrader.html">
+                        <div class="item head flex items-center active">
+                            <img src="img/menu/upgrader.png">
+                            <div class="ml-1">Upgrader</div>
+                        </div>
+                    </a>
+                
+                    <a class="" href="minesweeper.html">
+                        <div class="item head flex items-center ">
+                            <img src="img/menu/minesweeper.png">
+                            <div class="ml-1">Minesweeper</div>
+                        </div>
+                    </a>
+                
+                    <a class="" href="tower.html">
+                        <div class="item head flex items-center ">
+                            <img src="img/menu/tower.png">
+                            <div class="ml-1">Tower</div>
+                        </div>
+                    </a>
+                
+                    <a class="" href="plinko.html">
+                        <div class="item head flex items-center ">
+                            <img src="img/menu/plinko.png">
+                            <div class="ml-1">Plinko</div>
+                        </div>
+                    </a>
+                
+			</div>
+
+			<div class="flex flex-col gap-2">
+                
+				<a href="deposit.html"><div class="item ">Deposit</div></a>
+                
+                
+				<a href="withdraw.html"><div class="item ">Withdraw</div></a>
+                
+				<a href="fair.html"><div class="item ">Provably Fair</div></a>
+				<a href="faq.html"><div class="item ">FAQ</div></a>
+				<a href="tos.html"><div class="item ">Terms Of Service</div></a>
+				<a href="login-1.html"><div class="item ">Support</div></a>
+				<a href="leaderboard.html"><div class="item ">Leaderboard</div></a>
+				<a href="rewards.html"><div class="item ">Rewards</div></a>
+				<a href="affiliates.html"><div class="item ">Affiliates</div></a>
+				<a href="login-2.html"><div class="item text-success ">Profile</div></a>
+
+				<div class="item"><div class="text-success pointer" data-modal="show" data-id="#modal_dailycases_cases">Daily Cases</div></div>
+
+                
+
+                
+				    <a href="login-10.html?returnUrl=/upgrader"><div class="item"><div class="text-success pointer">Sign In</div></div></a>
+				
+
+				<div class="flex gap-1 mt-2 text-xl">
+					<a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+                <div class="main-panel">
+                    <div class="body flex flex-col w-full p-4">
+                        
+<script>var upgraderGame_inventory = null;</script>
+
+<div class="flex flex-col items-center">
+	<div class="flex flex-row w-full" style="max-width: 1200px;">
+		<div class="flex flex-col gap-2 w-full">
+			<div class="flex flex-row items-center justify-between size-full responsive">
+				<div class="upgrader-side flex flex-col justify-between gap-2 h-full pt-4 pb-1" id="upgrader_myside">
+					<div class="flex flex-col gap-2 p-2 bg-secondary" style="width: 400px; height: 330px; border-radius: 0.5rem 0 0 0.5rem">
+						<div class="relative overflow-hidden h-full">
+							<div class="flex flex-col items-center justify-between gap-2 h-full relative">
+								<div class="flex flex-col items-center justify-center size-full">
+									<div class="upgrader-items items-center w-full" id="upgrader_myitems_selected"></div>
+								</div>
+
+								<div class="flex flex-row justify-between items-center bg-card rounded-1 gap-2 w-full p-2">
+									<div class="flex flex-col gap-1 text-left">
+										<div class="upgrader-brand truncate">Choose your item</div>
+										<div class="upgrader-name truncate">Item, that you want to upgrade</div>
+									</div>
+
+                                    <div class="flex flex-row items-center justify-center gap-1">
+                                        <div class="coin main"></div>
+                                        <span class="upgrader-price">0.00</span>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="flex flex-row justify-center items-center gap-2 px-2">
+						<button class="button button-accent shadow-2 w-full upgrader-multiplier active" data-multiplier="0">1.5x</button>
+						<button class="button button-accent shadow-2 w-full upgrader-multiplier" data-multiplier="1">2x</button>
+						<button class="button button-accent shadow-2 w-full upgrader-multiplier" data-multiplier="2">5x</button>
+						<button class="button button-accent shadow-2 w-full upgrader-multiplier" data-multiplier="3">10x</button>
+					</div>
+
+					<div class="flex flex-row justify-center items-center gap-2 px-2">
+						<button class="button button-primary shadow-2 w-full" id="upgrader_mode">Triangle Mode</button>
+						<button class="button button-primary shadow-2 w-full" id="upgrader_roll">Roll Under</button>
+					</div>
+				</div>
+
+				<div class="flex flex-col justify-between items-center bg-card size-full rounded-2 pt-4 border-2 border-secondary" style="max-width: 400px;">
+					<div class="flex flex-col items-center justify-center size-full">
+						<div class="upgrader-spinner-content flex justify-center items-center relative" id="upgrader_spinner">
+							<div class="upgrader-pointer flex justify-center items-start absolute top-0 bottom-0 left-0 right-0" id="upgrader_spinner_1"></div>
+
+							<div class="upgrader-spinner flex justify-center items-center">
+								<div class="upgrader-info flex flex-col gap-1 justify-center items-center">
+									<div class="flex flex-col gap-1 justify-center items-center">
+										<div class="upgrader-brand truncate"><span id="upgrader_chance">0.00</span>%</div>
+										<div class="upgrader-name truncate">Upgrader chance</div>
+									</div>
+
+									<div class="flex flex-col gap-1 justify-center items-center">
+										<div class="upgrader-brand text-success truncate">YOU WON</div>
+									</div>
+
+									<div class="flex flex-col gap-1 justify-center items-center">
+										<div class="upgrader-brand text-danger truncate">YOU LOST</div>
+									</div>
+								</div>
+
+								<div class="size-full" id="upgrader_spinner_2">
+									<div class="upgrader-progress flex justify-center items-center size-full transition duration-500" id="upgrader_progress" style="--upgrader-progress-start: 0%; --upgrader-progress-end: 0%; --upgrader-rotate: 0deg;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-secondary bg-opacity-50 w-full p-4">
+						<div class="slider_field transition duration-500">
+							<div class="field_container">
+								<div class="field_content">
+									<input type="range" class="field_element_input" id="upgrader_betamount" min="0.00" max="1000.00" step="0.01" value="0.00">
+
+									<div class="field_cursor_content">
+										<div class="field_cursor" data-fixed="2">
+											<div class="field_cursor_text">0</div>
+										</div>
+									</div>
+
+									<div class="field_label active transition duration-500">Amount</div>
+								</div>
+
+								<div class="field_extra"></div>
+							</div>
+
+							<div class="field_bottom">
+								<div class="flex justify-between">
+									<div>0.00</div>
+									<div>1000.00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="upgrader-side flex flex-col justify-between gap-2 h-full pt-4 pb-1" id="upgrader_siteside">
+					<div class="flex flex-col gap-2 p-2 bg-secondary" style="width: 400px; height: 330px; border-radius: 0.5rem 0 0 0.5rem">
+						<div class="rounded-1 relative overflow-hidden h-full">
+							<div class="flex flex-col items-center justify-between gap-2 h-full relative">
+								<div class="flex flex-col items-center justify-center size-full">
+									<div class="upgrader-items items-center w-full" id="upgrader_siteitems_selected"></div>
+								</div>
+
+								<div class="flex flex-row justify-between items-center bg-card rounded-1 gap-2 w-full p-2">
+									<div class="flex flex-row items-center justify-center gap-1">
+                                        <div class="coin main"></div>
+                                        <span class="upgrader-price">0.00</span>
+                                    </div>
+
+									<div class="flex flex-col gap-1 text-right">
+										<div class="upgrader-brand truncate">Choose item</div>
+										<div class="upgrader-name truncate">Item, that you want to receive</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="flex flex-row justify-center items-center gap-2 px-2">
+						<button class="button button-primary shadow-2 w-full" id="upgrader_bet">Upgrade</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-row gap-1 w-full responsive">
+				<div class="upgrader-inventory flex flex-col gap-1 bg-secondary w-full rounded-2 p-2">
+					<div class="flex flex-row items-center justify-between gap-2 px-2 border-b-2 border-card">
+						<div class="font-bold text-base">Your Items</div>
+
+						<div class="flex flex-row responsive gap-1">
+                            <div class="dropdown_field bottom transition duration-500 ">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " id="upgrader_myitems_game" value="cs2">
+            <div class="field_dropdown">Counter-Strike 2</div>
+
+            <div class="field_element_dropdowns">
+                
+                    
+                        <div class="field_element_dropdown" value="cs2" data-index="0">Counter-Strike 2</div>
+                    
+                        <div class="field_element_dropdown" value="rust" data-index="1">Rust</div>
+                    
+                        <div class="field_element_dropdown" value="irl" data-index="2">IRL</div>
+                    
+                        <div class="field_element_dropdown" value="roblox" data-index="3">Roblox</div>
+                    
+                        <div class="field_element_dropdown" value="growtopia" data-index="4">Growtopia</div>
+                    
+                
+            </div>
+
+           
+                <div class="field_label active transition duration-500">Game</div>
+            
+        </div>
+
+        <div class="field_extra">
+            <div class="field_caret">
+                <i class="fa fa-caret-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="field_bottom"></div>
+</div>
+
+                            <div class="dropdown_field bottom transition duration-500 ">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " id="upgrader_myitems_order" value="0">
+            <div class="field_dropdown">Latest</div>
+
+            <div class="field_element_dropdowns">
+                
+                    
+                        <div class="field_element_dropdown" value="0" data-index="0">Latest</div>
+                    
+                        <div class="field_element_dropdown" value="1" data-index="1">Name A-Z</div>
+                    
+                        <div class="field_element_dropdown" value="2" data-index="2">Name Z-A</div>
+                    
+                        <div class="field_element_dropdown" value="3" data-index="3">Price acending</div>
+                    
+                        <div class="field_element_dropdown" value="4" data-index="4">Price descending</div>
+                    
+                
+            </div>
+
+           
+                <div class="field_label active transition duration-500">Order by</div>
+            
+        </div>
+
+        <div class="field_extra">
+            <div class="field_caret">
+                <i class="fa fa-caret-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="field_bottom"></div>
+</div>
+						</div>
+					</div>
+
+					<div id="upgrader_myitems_list">
+						<div class="in-grid flex justify-center items-center text-base p-4 history_message">No items found</div>
+					</div>
+
+					<div class="flex items-center justify-center bg-secondary p-2 border-t-2 border-card">
+						<div class="pagination-content flex flex-row gap-2 w-full" id="pagination_upgrader_myitems">
+							<div class="flex flex-row gap-2 justify-between items-center w-full">
+								<div class="pagination-item flex items-center justify-center" data-page="1">«</div>
+
+								<div class="bg-card rounded-2 border-2 border-card px-2 flex flex-row items-center justify-center h-full">1/1</div>
+
+								<div class="pagination-item flex items-center justify-center" data-page="1">»</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="upgrader-inventory flex flex-col gap-1 bg-secondary w-full rounded-2 p-2">
+					<div class="flex flex-row items-center justify-between gap-2 px-2 border-b-2 border-card">
+						<div class="font-bold text-base">Upgrade</div>
+
+						<div class="flex flex-row responsive gap-1">
+							<div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " id="upgrader_siteitems_search">
+
+            
+                <div class="field_label transition duration-500">Search Item</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+    </div>
+</div>
+
+                            <div class="dropdown_field bottom transition duration-500 ">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " id="upgrader_siteitems_order" value="2">
+            <div class="field_dropdown">Price acending</div>
+
+            <div class="field_element_dropdowns">
+                
+                    
+                        <div class="field_element_dropdown" value="0" data-index="0">Name A-Z</div>
+                    
+                        <div class="field_element_dropdown" value="1" data-index="1">Name Z-A</div>
+                    
+                        <div class="field_element_dropdown" value="2" data-index="2">Price acending</div>
+                    
+                        <div class="field_element_dropdown" value="3" data-index="3">Price descending</div>
+                    
+                
+            </div>
+
+           
+                <div class="field_label active transition duration-500">Order by</div>
+            
+        </div>
+
+        <div class="field_extra">
+            <div class="field_caret">
+                <i class="fa fa-caret-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="field_bottom"></div>
+</div>
+						</div>
+					</div>
+
+					<div id="upgrader_siteitems_list">
+						<div class="in-grid flex justify-center items-center text-base p-4 history_message">No items found</div>
+					</div>
+
+					<div class="flex items-center justify-center bg-secondary p-2 border-t-2 border-card">
+						<div class="pagination-content flex flex-row gap-2 w-full" id="pagination_upgrader_siteitems">
+							<div class="flex flex-row gap-2 justify-between items-center w-full">
+								<div class="pagination-item flex items-center justify-center" data-page="1">«</div>
+
+								<div class="bg-card rounded-2 border-2 border-card px-2 flex flex-row items-center justify-center h-full">1/1</div>
+
+								<div class="pagination-item flex items-center justify-center" data-page="1">»</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+                    </div>
+
+                    
+                        <div class="bet-history flex flex-col items-center gap-2">
+	<div class="bet-select flex flex-row items-center justify-center">
+		<button class="button history-load active" data-type="all_bets">All bets</button>
+		<button class="button history-load" data-type="big_bets">Big bets</button>
+		<button class="button history-load" data-type="game_bets">Game bets</button>
+		<button class="button history-load" data-type="my_bets">My bets</button>
+	</div>
+
+	<div class="table-container w-full">
+		<div class="table-header">
+			<div class="table-row">
+				<div class="table-column text-left">User</div>
+				<div class="table-column text-left">Game</div>
+				<div class="table-column text-left">Wager</div>
+				<div class="table-column text-left">Multiplier</div>
+				<div class="table-column text-right">Payout</div>
+			</div>
+		</div>
+
+		<div class="table-body" id="history_list">
+			
+                <div class="item table-row">
+    <div class="table-column text-left">
+        <div class="flex items-center gap-1">
+            <div class="skeleton skeleton-card avatar-small-box"></div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+
+    <div class="table-column text-right"><div class="skeleton skeleton-card text-medium-box"></div></div>
+</div>
+            
+                <div class="item table-row">
+    <div class="table-column text-left">
+        <div class="flex items-center gap-1">
+            <div class="skeleton skeleton-card avatar-small-box"></div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+
+    <div class="table-column text-right"><div class="skeleton skeleton-card text-medium-box"></div></div>
+</div>
+            
+                <div class="item table-row">
+    <div class="table-column text-left">
+        <div class="flex items-center gap-1">
+            <div class="skeleton skeleton-card avatar-small-box"></div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+
+    <div class="table-column text-right"><div class="skeleton skeleton-card text-medium-box"></div></div>
+</div>
+            
+                <div class="item table-row">
+    <div class="table-column text-left">
+        <div class="flex items-center gap-1">
+            <div class="skeleton skeleton-card avatar-small-box"></div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+
+    <div class="table-column text-right"><div class="skeleton skeleton-card text-medium-box"></div></div>
+</div>
+            
+                <div class="item table-row">
+    <div class="table-column text-left">
+        <div class="flex items-center gap-1">
+            <div class="skeleton skeleton-card avatar-small-box"></div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+
+    <div class="table-column text-right"><div class="skeleton skeleton-card text-medium-box"></div></div>
+</div>
+            
+                <div class="item table-row">
+    <div class="table-column text-left">
+        <div class="flex items-center gap-1">
+            <div class="skeleton skeleton-card avatar-small-box"></div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+
+    <div class="table-column text-right"><div class="skeleton skeleton-card text-medium-box"></div></div>
+</div>
+            
+                <div class="item table-row">
+    <div class="table-column text-left">
+        <div class="flex items-center gap-1">
+            <div class="skeleton skeleton-card avatar-small-box"></div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+
+    <div class="table-column text-right"><div class="skeleton skeleton-card text-medium-box"></div></div>
+</div>
+            
+                <div class="item table-row">
+    <div class="table-column text-left">
+        <div class="flex items-center gap-1">
+            <div class="skeleton skeleton-card avatar-small-box"></div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+
+    <div class="table-column text-right"><div class="skeleton skeleton-card text-medium-box"></div></div>
+</div>
+            
+                <div class="item table-row">
+    <div class="table-column text-left">
+        <div class="flex items-center gap-1">
+            <div class="skeleton skeleton-card avatar-small-box"></div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+
+    <div class="table-column text-right"><div class="skeleton skeleton-card text-medium-box"></div></div>
+</div>
+            
+                <div class="item table-row">
+    <div class="table-column text-left">
+        <div class="flex items-center gap-1">
+            <div class="skeleton skeleton-card avatar-small-box"></div>
+
+            <div class="skeleton skeleton-card text-medium-box"></div>
+        </div>
+    </div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+    <div class="table-column text-left"><div class="skeleton skeleton-card text-medium-box"></div></div>
+
+    <div class="table-column text-right"><div class="skeleton skeleton-card text-medium-box"></div></div>
+</div>
+            
+		</div>
+	</div>
+</div>
+                    
+
+                    <div class="footer">
+	<div class="flex flex-col gap-6">
+		<div class="footer-top flex flex-row justify-between gap-6 responsive">
+			<div class="footer-logo flex flex-col gap-4">
+				<div class="justify-center">
+					<a class="justify-center flex" href="index.htm">
+						<img src="img/logo.png">
+					</a>
+				</div>
+
+				<div>Your favorite place to trade & win skins!</div>
+			</div>
+
+			<div class="footer-grid flex flex-row gap-2">
+				<div class="column flex flex-col items-start gap-4">
+					<div class="title text-lg font-bold">Support</div>
+
+					<div class="flex flex-col text-left gap-2">
+						<a class="text-muted-foreground" href="faq.html">FAQ</a>
+						<a class="text-muted-foreground" href="tos.html">Terms of Service</a>
+						<a class="text-muted-foreground" href="login-1.html">Support</a>
+					</div>
+				</div>
+
+				<div class="column flex flex-col items-start gap-4">
+					<div class="title text-lg font-bold">Games</div>
+
+					<div class="flex flex-col text-left gap-2">
+                    
+                        
+                            <a class="text-muted-foreground" href="roulette.html">Roulette</a>
+                        
+                    
+                        
+                            <a class="text-muted-foreground" href="crash.html">Crash</a>
+                        
+                    
+                        
+                            <a class="text-muted-foreground" href="jackpot.html">Jackpot</a>
+                        
+                    
+                        
+                            <a class="text-muted-foreground" href="coinflip.html">Coinflip</a>
+                        
+                    
+                        
+                            <a class="text-muted-foreground" href="dice.html">Dice</a>
+                        
+                    
+                        
+                            <a class="text-muted-foreground" href="unboxing.html">Unboxing</a>
+                        
+                    
+                        
+                            <a class="text-muted-foreground" href="casebattle/list/active.html">Case Battle</a>
+                        
+                    
+                        
+                            <a class="text-muted-foreground" href="upgrader.html">Upgrader</a>
+                        
+                    
+                        
+                            <a class="text-muted-foreground" href="minesweeper.html">Minesweeper</a>
+                        
+                    
+                        
+                            <a class="text-muted-foreground" href="tower.html">Tower</a>
+                        
+                    
+                        
+                            <a class="text-muted-foreground" href="plinko.html">Plinko</a>
+                        
+                    
+					</div>
+				</div>
+
+                <div class="column flex flex-col items-start gap-4">
+					<div class="title text-lg font-bold">Informations</div>
+
+					<div class="flex flex-col text-left gap-2">
+						<a class="text-muted-foreground" href="fair.html">Provably Fair</a>
+						<a class="text-muted-foreground" href="leaderboard.html">Leaderboard</a>
+						<a class="text-muted-foreground" href="rewards.html">Rewards</a>
+						<a class="text-muted-foreground" href="affiliates.html">Affiliates</a>
+					</div>
+				</div>
+
+				<div class="column flex flex-col items-start gap-4">
+					<div class="title text-lg font-bold">Context</div>
+
+					<div class="flex flex-col text-left gap-2">
+						<a class="text-muted-foreground" href="#" target="_blank"><i class="fa fa-twitter mr-2" aria-hidden="true"></i> Twitter</a>
+						<a class="text-muted-foreground" href="#" target="_blank"><i class="fa fa-steam mr-2" aria-hidden="true"></i> Steam</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-bottom flex justify-between items-center responsive gap-2 pt-2 border-t-2 border-card">
+			<div class="flex flex-row items-center gap-4">
+				<div class="bg-primary bg-opacity-50 py-1 px-2 rounded-1 font-bold">+18</div>
+				<div class="text-muted-foreground">© 2025 Betonu.com. All rights reserved.</div>
+			</div>
+
+			<img src="img/fair.png">
+		</div>
+	</div>
+</div>
+                </div>
+            </div>
+        </div>
+	<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'986bb162ba46f0de',t:'MTc1OTE1MTEzNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

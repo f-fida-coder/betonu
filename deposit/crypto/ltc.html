@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Deposit Litecoin | Betonu.com</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+
+		<link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16">
+		<link href="../../ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="../../css%20%281%29/globals.css" rel="stylesheet">
+		<link href="../../css%20%281%29/bouncer.css" rel="stylesheet">
+		<link href="../../ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+
+		<script src="../../ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="../../ajax/libs/toastr.js/latest/toastr.min.js"></script>
+		<script src="../../gh/davidshimjs/qrcodejs%40gh-pages/qrcode.min.js"></script>
+	</head>
+
+	<body>
+		<div class="flex flex-col size-full">
+			<div class="header">
+				<a href="../../index.htm" class="logo flex justify-center items-center">
+					<img src="../../img/logo.png">
+				</a>
+
+				<div class="navigation flex flex-row items-center justify-between">
+					<div class="flex flex-row justify-center gap-2 h-full">
+						<a class="h-full" href="../../index.htm">
+							<button type="button" class="button button-card shadow-2 p-2 h-full flex flex-row gap-2 items-center justify-center">
+								<img src="../../img/home.png">
+							</button>
+						</a>
+					</div>
+
+					<div class="flex flex-row justify-center gap-2 h-full">
+						<div class="flex flex-row justify-center gap-2 h-full">
+							<a class="h-full" href="../../deposit.html">
+								<button type="button" class="button button-success shadow-2 p-2 h-full flex flex-row gap-2 items-center justify-center">
+									<img src="../../img/deposit.png">
+									<span>Deposit</span>
+								</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrapper-page flex flex-row" id="page">
+				<div class="main-panel">
+					<div class="body flex flex-col w-full p-4">
+						<div class="crypto-panel flex flex-col gap-2 w-8 responsive">
+							<div class="flex flex-col gap-1">
+								<div class="text-xl font-bold mb-2">Deposit with Litecoin</div>
+								<div class="text-xs text-muted-foreground">Send Litecoin to the address below to deposit coins to your account.</div>
+							</div>
+
+							<div class="flex flex-col gap-2 bg-card bg-opacity-50 text-left rounded-2 border-2 border-secondary p-4">
+								<div class="flex flex-col gap-2">
+									<div class="text-base font-bold">Litecoin Deposit Address</div>
+
+									<div class="flex flex-col gap-1">
+										<div class="text-xs text-muted-foreground">Send Litecoin to this address. Your account will be credited after 6 network confirmations.</div>
+										<div class="text-xs text-muted-foreground">Minimum deposit: 0.1 LTC (~$7)</div>
+									</div>
+
+									<div class="bg-dark rounded-2 border-2 border-card p-4 text-center">
+										<div class="text-lg font-mono text-primary mb-2" id="ltc-address">LdYmBN5wqfFEF3FdfwCRCavYn4pF1dXaZk</div>
+										<button class="button button-primary shadow-2" onclick="copyLtcAddress()">Copy Address</button>
+									</div>
+
+									<div class="flex justify-center mt-4">
+										<div id="ltc-qrcode" class="bg-white p-4 rounded-2"></div>
+									</div>
+								</div>
+
+								<div class="bg-primary bg-opacity-20 rounded-2 p-3 mt-4">
+									<div class="text-sm">
+										<strong>Litecoin Deposit Info:</strong>
+										<ul class="list-disc list-inside mt-2 space-y-1">
+											<li>Only send Litecoin (LTC) to this address</li>
+											<li>Faster confirmation times than Bitcoin (2.5 minutes per block)</li>
+											<li>Lower transaction fees compared to Bitcoin</li>
+											<li>Deposits typically confirm within 15-30 minutes</li>
+											<li>Exchange rate: 1 LTC ≈ $70 ≈ 70 coins</li>
+										</ul>
+									</div>
+								</div>
+
+								<button class="button button-success shadow-2 mt-4" onclick="generateNewLtcAddress()">
+									Generate New Address
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function generateLtcQRCode() {
+				const qrcode = new QRCode(document.getElementById("ltc-qrcode"), {
+					text: document.getElementById("ltc-address").textContent,
+					width: 200,
+					height: 200,
+					colorDark: "#000000",
+					colorLight: "#ffffff",
+				});
+			}
+
+			function copyLtcAddress() {
+				const address = document.getElementById("ltc-address").textContent;
+				navigator.clipboard.writeText(address).then(function() {
+					toastr.success('Litecoin address copied to clipboard!');
+				}, function() {
+					toastr.error('Failed to copy address');
+				});
+			}
+
+			function generateNewLtcAddress() {
+				const addresses = [
+					'LdYmBN5wqfFEF3FdfwCRCavYn4pF1dXaZk',
+					'LQTpS3VhkTF5fKnWNy4UQY9Un4D9p2eK8L',
+					'LMnFYz2BcQ45HTc8FNL1dXeYAw7UnYzF6X'
+				];
+				const randomAddress = addresses[Math.floor(Math.random() * addresses.length)];
+				document.getElementById("ltc-address").textContent = randomAddress;
+				
+				document.getElementById("ltc-qrcode").innerHTML = "";
+				generateLtcQRCode();
+				
+				toastr.info('New Litecoin address generated!');
+			}
+
+			document.addEventListener('DOMContentLoaded', function() {
+				generateLtcQRCode();
+			});
+		</script>
+	</body>
+</html>

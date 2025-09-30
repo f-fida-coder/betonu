@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--  META  -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Deposit Ethereum | Betonu.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+
+        <link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="../../img/favicon-96x96.png" sizes="96x96">
+
+        <!--  CSS  -->
+        <link href="../../ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css%20%281%29/globals.css" rel="stylesheet">
+        <link href="../../css%20%281%29/bouncer.css" rel="stylesheet">
+        <link href="../../ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+
+        <!--  JAVASCRIPT  -->
+        <script src="../../ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="../../ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="../../gh/davidshimjs/qrcodejs%40gh-pages/qrcode.min.js"></script>
+        <script type="text/javascript" src="../../js/components.js"></script>
+        <script type="text/javascript" src="../../js/app.js"></script>
+	</head>
+
+	<body>
+        <div class="flex flex-col size-full">
+            <div class="header">
+                <a href="../../index.htm" class="logo flex justify-center items-center">
+                    <img src="../../img/logo.png">
+                </a>
+
+                <div class="navigation flex flex-row items-center justify-between">
+                    <div class="flex flex-row justify-center gap-2 h-full">
+                        <a class="h-full" href="../../index.htm">
+                            <button type="button" class="button button-card shadow-2 p-2 h-full flex flex-row gap-2 items-center justify-center">
+                                <img src="../../img/home.png">
+                            </button>
+                        </a>
+                    </div>
+
+                    <div class="flex flex-row justify-center gap-2 h-full">
+                        <div class="flex flex-row justify-center gap-2 h-full">
+                            <a class="h-full" href="../../deposit.html">
+                                <button type="button" class="button button-success shadow-2 p-2 h-full flex flex-row gap-2 items-center justify-center">
+                                    <img src="../../img/deposit.png">
+                                    <span>Deposit</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper-page flex flex-row" id="page">
+                <div class="main-panel">
+                    <div class="body flex flex-col w-full p-4">
+                        <div class="crypto-panel flex flex-col gap-2 w-8 responsive">
+                            <div class="flex flex-col gap-1">
+                                <div class="text-xl font-bold mb-2">Deposit with Ethereum</div>
+                                <div class="text-xs text-muted-foreground">Send Ethereum to the address below to deposit coins to your account.</div>
+                            </div>
+
+                            <div class="flex flex-col gap-2 bg-card bg-opacity-50 text-left rounded-2 border-2 border-secondary p-4">
+                                <div class="flex flex-col gap-2">
+                                    <div class="text-base font-bold">Ethereum Deposit Address</div>
+
+                                    <div class="flex flex-col gap-1">
+                                        <div class="text-xs text-muted-foreground">Send Ethereum to this address. Your account will be credited after 12 network confirmations.</div>
+                                        <div class="text-xs text-muted-foreground">Minimum deposit: 0.01 ETH (~$30)</div>
+                                    </div>
+
+                                    <div class="bg-dark rounded-2 border-2 border-card p-4 text-center">
+                                        <div class="text-lg font-mono text-primary mb-2" id="eth-address">0x742d35Cc6635C0532925a3b8D400331746413C3F</div>
+                                        <button class="button button-primary shadow-2" onclick="copyEthAddress()">Copy Address</button>
+                                    </div>
+
+                                    <div class="flex justify-center mt-4">
+                                        <div id="eth-qrcode" class="bg-white p-4 rounded-2"></div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-primary bg-opacity-20 rounded-2 p-3 mt-4">
+                                    <div class="text-sm">
+                                        <strong>Important:</strong>
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li>Only send Ethereum (ETH) to this address</li>
+                                            <li>Do not send ERC-20 tokens or other cryptocurrencies</li>
+                                            <li>Deposits typically confirm within 15-45 minutes</li>
+                                            <li>Gas fees are paid by sender (you)</li>
+                                            <li>This address is unique to your account</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <button class="button button-success shadow-2 mt-4" onclick="generateNewEthAddress()">
+                                    Generate New Address
+                                </button>
+                            </div>
+
+                            <div class="flex flex-col gap-2 bg-card bg-opacity-50 text-left rounded-2 border-2 border-secondary p-4 mt-4">
+                                <div class="text-base font-bold">Current Ethereum Rates</div>
+                                <div class="bg-dark rounded-2 p-3">
+                                    <div class="flex justify-between">
+                                        <span>1 ETH =</span>
+                                        <span class="text-success">~$3,200 USD</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>0.01 ETH =</span>
+                                        <span class="text-success">~32 Coins</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>0.1 ETH =</span>
+                                        <span class="text-success">~320 Coins</span>
+                                    </div>
+                                </div>
+                                <div class="text-xs text-muted-foreground text-center">
+                                    * Rates are approximate and may vary based on market conditions
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Generate QR code for the Ethereum address
+            function generateEthQRCode() {
+                const qrcode = new QRCode(document.getElementById("eth-qrcode"), {
+                    text: document.getElementById("eth-address").textContent,
+                    width: 200,
+                    height: 200,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                });
+            }
+
+            // Copy address to clipboard
+            function copyEthAddress() {
+                const address = document.getElementById("eth-address").textContent;
+                navigator.clipboard.writeText(address).then(function() {
+                    toastr.success('Ethereum address copied to clipboard!');
+                }, function() {
+                    toastr.error('Failed to copy address');
+                });
+            }
+
+            // Generate new address (demo function)
+            function generateNewEthAddress() {
+                const addresses = [
+                    '0x742d35Cc6635C0532925a3b8D400331746413C3F',
+                    '0x8ba1f109551bD432803012645Hac136c22C57B3A',
+                    '0x1234567890123456789012345678901234567890'
+                ];
+                const randomAddress = addresses[Math.floor(Math.random() * addresses.length)];
+                document.getElementById("eth-address").textContent = randomAddress;
+                
+                // Regenerate QR code
+                document.getElementById("eth-qrcode").innerHTML = "";
+                generateEthQRCode();
+                
+                toastr.info('New Ethereum address generated!');
+            }
+
+            // Initialize QR code when page loads
+            document.addEventListener('DOMContentLoaded', function() {
+                generateEthQRCode();
+            });
+        </script>
+	</body>
+</html>

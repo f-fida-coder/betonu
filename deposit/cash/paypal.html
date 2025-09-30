@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--  META  -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Deposit with PayPal | Betonu.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+
+        <link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="../../img/favicon-96x96.png" sizes="96x96">
+
+        <!--  CSS  -->
+        <link href="../../ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css?family=Roboto:400,300,500,400italic,500italic,700,700italic" rel="stylesheet">
+        <link href="../../ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+
+        <link href="../../css%20%281%29/globals.css" rel="stylesheet">
+        <link href="../../css%20%281%29/bouncer.css" rel="stylesheet">
+
+        <!--  JAVASCRIPT  -->
+        <script src="../../ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="../../ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script type="text/javascript" src="../../js/components.js"></script>
+        <script type="text/javascript" src="../../js/app.js"></script>
+	</head>
+
+	<body>
+        <div class="flex flex-col size-full">
+            <div class="header">
+                <a href="../../index.htm" class="logo flex justify-center items-center">
+                    <img src="../../img/logo.png">
+                </a>
+
+                <div class="navigation flex flex-row items-center justify-between">
+                    <div class="flex flex-row justify-center gap-2 h-full">
+                        <a class="h-full" href="../../index.htm">
+                            <button type="button" class="button button-card shadow-2 p-2 h-full flex flex-row gap-2 items-center justify-center">
+                                <img src="../../img/home.png">
+                            </button>
+                        </a>
+                    </div>
+
+                    <div class="bg-dark rounded-1 border-2 border-card px-2 flex flex-row items-center gap-4 relative h-full">
+                        <div class="balances pointer flex flex-row gap-2 items-center justify-center h-full">
+                            <div class="balance flex flex-row items-center justify-center gap-1" data-type="total">
+                                <div class="coin main"></div>
+                                <span class="amount">0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row justify-center gap-2 h-full">
+                        <div class="flex flex-row justify-center gap-2 h-full">
+                            <a class="h-full" href="../../deposit.html">
+                                <button type="button" class="button button-success shadow-2 p-2 h-full flex flex-row gap-2 items-center justify-center">
+                                    <img src="../../img/deposit.png">
+                                    <span>Deposit</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper-page flex flex-row" id="page">
+                <div class="main-panel">
+                    <div class="body flex flex-col w-full p-4">
+                        <div class="crypto-panel flex flex-col gap-2 w-8 responsive">
+                            <div class="flex flex-col gap-1">
+                                <div class="text-xl font-bold mb-2">Deposit with PayPal</div>
+                                <div class="text-xs text-muted-foreground">Quick and secure deposits using your PayPal account.</div>
+                            </div>
+
+                            <div class="flex flex-col gap-2 bg-card bg-opacity-50 text-left rounded-2 border-2 border-secondary p-4">
+                                <div class="flex flex-col gap-4">
+                                    <div class="text-base font-bold">PayPal Deposit</div>
+
+                                    <div class="flex justify-center">
+                                        <img src="../../img/payments/cash/paypal.png" alt="PayPal" style="height: 80px;">
+                                    </div>
+
+                                    <div class="input_field transition duration-500" data-border="#de4c41">
+                                        <div class="field_container">
+                                            <div class="field_content">
+                                                <input type="number" class="field_element_input" id="paypal_amount" placeholder="25" min="5" max="2000">
+                                                <div class="field_label transition duration-500">Deposit Amount (USD)</div>
+                                            </div>
+                                        </div>
+                                        <div class="field_bottom">
+                                            <div class="text-xs text-muted-foreground">Minimum: $5 | Maximum: $2,000</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-primary bg-opacity-20 rounded-2 p-3">
+                                        <div class="text-sm">
+                                            <strong>PayPal Deposit Benefits:</strong>
+                                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                                <li>Instant deposits - coins credited immediately</li>
+                                                <li>Secure PayPal buyer protection</li>
+                                                <li>No additional processing fees</li>
+                                                <li>Use your PayPal balance or linked cards</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-2">
+                                        <div class="text-sm font-bold">Deposit Summary:</div>
+                                        <div class="bg-dark rounded-2 p-3">
+                                            <div class="flex justify-between">
+                                                <span>Deposit Amount:</span>
+                                                <span id="paypal-amount">$0.00</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span>Processing Fee:</span>
+                                                <span class="text-success">Free</span>
+                                            </div>
+                                            <hr class="my-2 border-card">
+                                            <div class="flex justify-between font-bold">
+                                                <span>Total:</span>
+                                                <span id="paypal-total">$0.00</span>
+                                            </div>
+                                            <div class="flex justify-between mt-1 text-sm text-muted-foreground">
+                                                <span>Coins to receive:</span>
+                                                <span id="paypal-coins">0.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-2">
+                                        <button type="button" class="button button-primary shadow-2" id="paypal-button" style="background: #0070ba; border-color: #0070ba;">
+                                            <i class="fa fa-paypal mr-2"></i>
+                                            Pay with PayPal
+                                        </button>
+                                        
+                                        <div class="text-center text-xs text-muted-foreground">
+                                            You will be redirected to PayPal to complete your payment securely
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2 bg-card bg-opacity-50 text-left rounded-2 border-2 border-secondary p-4 mt-4">
+                                <div class="text-base font-bold">How it Works</div>
+                                <div class="flex flex-col gap-3">
+                                    <div class="flex items-start gap-3">
+                                        <div class="bg-primary rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">1</div>
+                                        <div>
+                                            <div class="font-semibold">Enter Amount</div>
+                                            <div class="text-sm text-muted-foreground">Choose how much you want to deposit</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <div class="bg-primary rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">2</div>
+                                        <div>
+                                            <div class="font-semibold">PayPal Checkout</div>
+                                            <div class="text-sm text-muted-foreground">Click "Pay with PayPal" to be redirected to secure PayPal checkout</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <div class="bg-primary rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">3</div>
+                                        <div>
+                                            <div class="font-semibold">Complete Payment</div>
+                                            <div class="text-sm text-muted-foreground">Log in to PayPal and confirm your payment</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <div class="bg-success rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">✓</div>
+                                        <div>
+                                            <div class="font-semibold">Instant Credit</div>
+                                            <div class="text-sm text-muted-foreground">Your coins are credited immediately after successful payment</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Update amount breakdown
+            document.getElementById('paypal_amount').addEventListener('input', updatePayPalBreakdown);
+
+            function updatePayPalBreakdown() {
+                const amount = parseFloat(document.getElementById('paypal_amount').value) || 0;
+                const coins = amount; // 1 USD = 1 coin
+
+                document.getElementById('paypal-amount').textContent = '$' + amount.toFixed(2);
+                document.getElementById('paypal-total').textContent = '$' + amount.toFixed(2);
+                document.getElementById('paypal-coins').textContent = coins.toFixed(2);
+
+                // Enable/disable PayPal button
+                const button = document.getElementById('paypal-button');
+                if (amount >= 5 && amount <= 2000) {
+                    button.disabled = false;
+                    button.style.opacity = '1';
+                } else {
+                    button.disabled = true;
+                    button.style.opacity = '0.5';
+                }
+            }
+
+            // Handle PayPal button click
+            document.getElementById('paypal-button').addEventListener('click', function() {
+                const amount = parseFloat(document.getElementById('paypal_amount').value);
+                
+                if (!amount || amount < 5 || amount > 2000) {
+                    toastr.error('Please enter an amount between $5 and $2,000');
+                    return;
+                }
+
+                // Simulate PayPal redirect and processing
+                const button = this;
+                button.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i>Redirecting to PayPal...';
+                button.disabled = true;
+
+                setTimeout(function() {
+                    // Simulate successful payment
+                    toastr.success('PayPal payment completed successfully!');
+                    button.innerHTML = '<i class="fa fa-check mr-2"></i>Payment Successful';
+                    
+                    setTimeout(function() {
+                        toastr.success('Your account has been credited with ' + amount + ' coins.');
+                        setTimeout(function() {
+                            window.location.href = '../../index.htm';
+                        }, 1500);
+                    }, 1000);
+                }, 2000);
+            });
+
+            // Initialize
+            updatePayPalBreakdown();
+        </script>
+	</body>
+</html>

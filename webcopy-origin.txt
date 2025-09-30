@@ -1,0 +1,1612 @@
+Uri: https://avatars.steamstatic.com/bf49609b84de69cfd968222ec1b6a6b7797ce006_full.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\bf49609b84de69cfd968222ec1b6a6b7797ce006_full.jpg
+Content Type: image/jpeg
+
+Uri: https://avatars.steamstatic.com/df3e79615205ebb8cd1592adf14128c516fafcf5_full.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\df3e79615205ebb8cd1592adf14128c516fafcf5_full.jpg
+Content Type: image/jpeg
+
+Uri: https://cdn.discordapp.com/avatars/1351623250811031572/a798059118012d6f7ca1987ede4082cd?size=100
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\avatars\1351623250811031572\a798059118012d6f7ca1987ede4082cd
+Content Type: image/png
+
+Uri: https://cdn.discordapp.com/avatars/165633819766947841/7e628f27e432a0c89c66ea2acda1831d?size=100
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\avatars\165633819766947841\7e628f27e432a0c89c66ea2acda1831d
+Content Type: image/png
+
+Uri: https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@gh-pages/qrcode.min.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\gh\davidshimjs\qrcodejs@gh-pages\qrcode.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\Chart.js\2.4.0\Chart.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\font-awesome\4.7.0\css\font-awesome.min.css
+Content Type: text/css
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\font-awesome\4.7.0\fonts\fontawesome-webfont-1.eot
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\font-awesome\4.7.0\fonts\fontawesome-webfont.eot
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\font-awesome\4.7.0\fonts\fontawesome-webfont.svg
+Content Type: image/svg+xml
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\font-awesome\4.7.0\fonts\fontawesome-webfont.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\font-awesome\4.7.0\fonts\fontawesome-webfont.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\font-awesome\4.7.0\fonts\fontawesome-webfont.woff
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\jquery-cookie\1.4.1\jquery.cookie.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\jquery\3.3.1\jquery.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\socket.io\4.5.1\socket.io.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.min.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\tinysort\2.3.6\tinysort.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\toastr.js\latest\toastr.min.css
+Content Type: text/css
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\ajax\libs\toastr.js\latest\toastr.min.js
+Content Type: application/javascript
+
+Uri: https://demo.vgowitch.com/
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\index.htm
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/affiliates
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\affiliates.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casebattle/create
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casebattle\create.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casebattle/list/active
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casebattle\list\active.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casebattle/list/finished
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casebattle\list\finished.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casebattle/list/my
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casebattle\list\my.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/lobby
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\lobby.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/egt_digital_40_burning_hot_clover_chance
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\egt_digital_40_burning_hot_clover_chance.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/egt_digital_40_burning_hot_clover_chance/demo
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\egt_digital_40_burning_hot_clover_chance\demo.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/egt_digital_shining_crown_clover_chance
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\egt_digital_shining_crown_clover_chance.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/egt_digital_shining_crown_clover_chance/demo
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\egt_digital_shining_crown_clover_chance\demo.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/hacksaw_gaming_le_bandit
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\hacksaw_gaming_le_bandit.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/hacksaw_gaming_le_bandit/demo
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\hacksaw_gaming_le_bandit\demo.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/hacksaw_gaming_rip_city
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\hacksaw_gaming_rip_city.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/hacksaw_gaming_rip_city/demo
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\hacksaw_gaming_rip_city\demo.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/hacksaw_gaming_wanted_dead_or_a_wild
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\hacksaw_gaming_wanted_dead_or_a_wild.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/hacksaw_gaming_wanted_dead_or_a_wild/demo
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\hacksaw_gaming_wanted_dead_or_a_wild\demo.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/pragmatic_play_fruit_party
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\pragmatic_play_fruit_party.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/pragmatic_play_fruit_party/demo
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\pragmatic_play_fruit_party\demo.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/pragmatic_play_gates_of_olympus
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\pragmatic_play_gates_of_olympus.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/pragmatic_play_gates_of_olympus/demo
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\pragmatic_play_gates_of_olympus\demo.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/pragmatic_play_sugar_rush
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\pragmatic_play_sugar_rush.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/pragmatic_play_sugar_rush/demo
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\pragmatic_play_sugar_rush\demo.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/pragmatic_play_sweet_bonanza
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\pragmatic_play_sweet_bonanza.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/pragmatic_play_sweet_bonanza/demo
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\pragmatic_play_sweet_bonanza\demo.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/pragmatic_play_the_dog_house
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\pragmatic_play_the_dog_house.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/casino/slots/pragmatic_play_the_dog_house/demo
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\casino\slots\pragmatic_play_the_dog_house\demo.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/coinflip
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\coinflip.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/crash
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\crash.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/css/bouncer.css
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\css (1)\bouncer.css
+Content Type: text/css
+
+Uri: https://demo.vgowitch.com/css/globals.css
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\css (1)\globals.css
+Content Type: text/css
+
+Uri: https://demo.vgowitch.com/deposit
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\deposit.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/dice
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\dice.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/fair
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\fair.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/faq
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\faq.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/fonts/Ubuntu-Regular.ttf
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\fonts\Ubuntu-Regular.ttf
+Content Type: font/ttf
+
+Uri: https://demo.vgowitch.com/img/avatar.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\avatar.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/banner/affiliates.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\banner\affiliates.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/banner/casino.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\banner\casino.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/banner/crypto.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\banner\crypto.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/coinflip/coin0.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\coinflip\coin0.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/coinflip/coin1.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\coinflip\coin1.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/coins.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\coins.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/deposit.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\deposit.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/dice/over.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\dice\over.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/dice/under.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\dice\under.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/100.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\100.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/alert.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\alert.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/emojis/alien.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\alien.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/astonished.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\astonished.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/awp.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\awp.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/emojis/bananadance.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\bananadance.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/emojis/bell.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\bell.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/bet.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\bet.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/birthday.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\birthday.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/broken_heart.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\broken_heart.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/cant.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\cant.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/carlton.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\carlton.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/emojis/cashout.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\cashout.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/clap.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\clap.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/clown.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\clown.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/cold_face.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\cold_face.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/cold_sweat.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\cold_sweat.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/crown.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\crown.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/crypepe.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\crypepe.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/doit.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\doit.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/dont.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\dont.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/exploding_head.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\exploding_head.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/face_monocle.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\face_monocle.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/face_vomiting.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\face_vomiting.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/feelsbad.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\feelsbad.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/feelsgood.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\feelsgood.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/fire.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\fire.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/firinpepe.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\firinpepe.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/first_place.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\first_place.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/fortdance.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\fortdance.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/emojis/gaben.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\gaben.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/gg.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\gg.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/ghost.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\ghost.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/gift.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\gift.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/gl.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\gl.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/grenade.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\grenade.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/emojis/grimacing.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\grimacing.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/grin.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\grin.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/happepe.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\happepe.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/heart.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\heart.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/heart_eyes.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\heart_eyes.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/highroller.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\highroller.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/hot_face.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\hot_face.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/hugging.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\hugging.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/innocent.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\innocent.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/jack_o_lantern.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\jack_o_lantern.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/joinme.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\joinme.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/joy.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\joy.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/kappa.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\kappa.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/kappapride.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\kappapride.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/kim.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\kim.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/kissing_heart.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\kissing_heart.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/letsgo.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\letsgo.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/lolizard.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\lolizard.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/emojis/lose.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\lose.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/lowtick.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\lowtick.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/midtick.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\midtick.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/moneybag.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\moneybag.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/money_mouth.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\money_mouth.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/monkachrist.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\monkachrist.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/muscle.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\muscle.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/nerd.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\nerd.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/nice.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\nice.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/okpepe.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\okpepe.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/ok_hand.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\ok_hand.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/partyblob.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\partyblob.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/emojis/partying_face.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\partying_face.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/peace.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\peace.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/pensive.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\pensive.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/pleading_face.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\pleading_face.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/pogchamp.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\pogchamp.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/poop.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\poop.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/punch.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\punch.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/rage.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\rage.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/raised_hands.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\raised_hands.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/relaxed.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\relaxed.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/robot.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\robot.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/rofl.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\rofl.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/rolling_eyes.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\rolling_eyes.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/sadpepe.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\sadpepe.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/saxguy.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\saxguy.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/emojis/scream_cat.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\scream_cat.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/shaq.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\shaq.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/skull.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\skull.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/sleeping.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\sleeping.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/smile.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\smile.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/smiley.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\smiley.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/smiley_cat.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\smiley_cat.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/smiling_hearts.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\smiling_hearts.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/smiling_imp.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\smiling_imp.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/sniped.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\sniped.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/sob.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\sob.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/squidab.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\squidab.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/emojis/star_struck.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\star_struck.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/sunglasses.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\sunglasses.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/tada.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\tada.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/thinking.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\thinking.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/thumbsup.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\thumbsup.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/trophy.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\trophy.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/turtle.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\turtle.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/emojis/wave.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\wave.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/weary.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\weary.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/win.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\win.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/wink.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\wink.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/woozy_face.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\woozy_face.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/zany_face.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\zany_face.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/emojis/zombie.gif
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\emojis\zombie.gif
+Content Type: image/gif
+
+Uri: https://demo.vgowitch.com/img/fair.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\fair.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/favicon-16x16.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\favicon-16x16.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/favicon-32x32.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\favicon-32x32.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/favicon-96x96.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\favicon-96x96.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/games.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/games/original/casebattle.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games\original\casebattle.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/games/original/coinflip.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games\original\coinflip.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/games/original/crash.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games\original\crash.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/games/original/dice.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games\original\dice.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/games/original/jackpot.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games\original\jackpot.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/games/original/minesweeper.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games\original\minesweeper.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/games/original/plinko.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games\original\plinko.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/games/original/roulette.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games\original\roulette.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/games/original/tower.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games\original\tower.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/games/original/unboxing.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games\original\unboxing.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/games/original/upgrader.jpg
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\games\original\upgrader.jpg
+Content Type: image/jpeg
+
+Uri: https://demo.vgowitch.com/img/home.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\home.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/hot.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\hot.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/knife.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\knife.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/lang/de.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\lang\de.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/lang/en.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\lang\en.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/lang/fr.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\lang\fr.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/lang/ro.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\lang\ro.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/lang/ru.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\lang\ru.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/live.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\live.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/logo.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\logo.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/logo_mini.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\logo_mini.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/medal.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\medal.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/casebattle.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\casebattle.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/casino.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\casino.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/coinflip.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\coinflip.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/crash.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\crash.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/dice.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\dice.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/jackpot.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\jackpot.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/minesweeper.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\minesweeper.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/plinko.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\plinko.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/roulette.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\roulette.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/tower.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\tower.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/unboxing.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\unboxing.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/menu/upgrader.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\menu\upgrader.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/minesweeper/bomb.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\minesweeper\bomb.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/minesweeper/default.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\minesweeper\default.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/minesweeper/gem.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\minesweeper\gem.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/cash/card.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\cash\card.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/cash/paypal.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\cash\paypal.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/bch.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\bch.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/bnbbsc.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\bnbbsc.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/btc.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\btc.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/doge.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\doge.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/eth.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\eth.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/ltc.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\ltc.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/shibbsc.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\shibbsc.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/sol.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\sol.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/ton.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\ton.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/trx.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\trx.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/usdc.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\usdc.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/usdtbsc.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\usdtbsc.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/usdterc20.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\usdterc20.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/usdtmatic.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\usdtmatic.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/usdtsol.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\usdtsol.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/usdttrc20.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\usdttrc20.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/crypto/xrp.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\crypto\xrp.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/p2p/cs2.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\p2p\cs2.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/p2p/dota2.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\p2p\dota2.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/p2p/rust.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\p2p\rust.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/p2p/tf2.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\p2p\tf2.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/steam/cs2.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\steam\cs2.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/steam/dota2.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\steam\dota2.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/steam/rust.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\steam\rust.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/payments/steam/tf2.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\payments\steam\tf2.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/rewards.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\rewards.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/roulette/bait.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\roulette\bait.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/roulette/black.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\roulette\black.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/roulette/green.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\roulette\green.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/roulette/red.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\roulette\red.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/slots.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\slots.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/social/discord_icon.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\social\discord_icon.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/social/facebook_icon.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\social\facebook_icon.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/social/google_icon.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\social\google_icon.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/social/steam_icon.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\social\steam_icon.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/social/twitter_icon.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\social\twitter_icon.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/swords1.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\swords1.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/swords2.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\swords2.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/upload.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\upload.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/usd.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\usd.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/img/withdraw.png
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\img\withdraw.png
+Content Type: image/png
+
+Uri: https://demo.vgowitch.com/jackpot
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\jackpot.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/js/app.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\js\app.js
+Content Type: application/javascript
+
+Uri: https://demo.vgowitch.com/js/auth.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\js\auth.js
+Content Type: application/javascript
+
+Uri: https://demo.vgowitch.com/js/components.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\js\components.js
+Content Type: application/javascript
+
+Uri: https://demo.vgowitch.com/leaderboard
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\leaderboard.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/account/inventory
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-2.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/casebattle/list/active
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-9.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/coinflip
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-6.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/crash
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-4.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/dice
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-7.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/fair
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-15.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/faq
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-16.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/jackpot
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-5.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/minesweeper
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-11.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/plinko
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-13.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/roulette
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-3.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/support/new
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-1.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/tos
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-17.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/tower
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-12.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/unboxing
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-8.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/upgrader
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-10.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/login?returnUrl=/withdraw
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\login-14.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/minesweeper
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\minesweeper.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/plinko
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\plinko.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/rewards
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\rewards.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/roulette
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\roulette.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/tos
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\tos.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/tower
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\tower.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/unboxing
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\unboxing.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/upgrader
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\upgrader.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/bch
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\bch.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/bnbbsc
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\bnbbsc.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/btc
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\btc.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/doge
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\doge.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/eth
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\eth.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/ltc
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\ltc.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/shibbsc
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\shibbsc.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/sol
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\sol.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/ton
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\ton.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/trx
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\trx.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/usdc
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\usdc.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/usdtbsc
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\usdtbsc.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/usdterc20
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\usdterc20.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/usdtmatic
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\usdtmatic.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/usdtsol
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\usdtsol.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/usdttrc20
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\usdttrc20.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/crypto/xrp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\crypto\xrp.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/p2p/cs2
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\p2p\cs2.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/p2p/dota2
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\p2p\dota2.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/p2p/rust
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\p2p\rust.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/p2p/tf2
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\p2p\tf2.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/steam/cs2
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\steam\cs2.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/steam/dota2
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\steam\dota2.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/steam/rust
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\steam\rust.html
+Content Type: text/html
+
+Uri: https://demo.vgowitch.com/withdraw/steam/tf2
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\withdraw\steam\tf2.html
+Content Type: text/html
+
+Uri: https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,500italic,700,700italic
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\css
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/roboto/v49/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLmbXuAj-lg.ttf
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\s\roboto\v49\KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLmbXuAj-lg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/roboto/v49/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLoHQuAj-lg.ttf
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\s\roboto\v49\KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLoHQuAj-lg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/roboto/v49/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLrPQuAj-lg.ttf
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\s\roboto\v49\KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLrPQuAj-lg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/roboto/v49/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmUiA8.ttf
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\s\roboto\v49\KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmUiA8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/roboto/v49/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmUiA8.ttf
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\s\roboto\v49\KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmUiA8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/roboto/v49/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiA8.ttf
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\s\roboto\v49\KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiA8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/roboto/v49/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYjalmUiA8.ttf
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\s\roboto\v49\KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYjalmUiA8.ttf
+Content Type: font/ttf
+
+Uri: https://gator.drakon.casino/storage/drakon/40-Burning-Hot----Clover-Chance.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\40-Burning-Hot----Clover-Chance.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/40-Super-Hot----Clover-Chance.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\40-Super-Hot----Clover-Chance.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/888-Dragons.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\888-Dragons.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/American-Roulette.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\American-Roulette.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Aztec-Clusters.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Aztec-Clusters.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Aztec-Temple.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Aztec-Temple.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Bet-On-Teen-Patti.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Bet-On-Teen-Patti.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Big-Bass-Bonanza.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Big-Bass-Bonanza.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Caesars-Glory.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Caesars-Glory.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Chaos-Crew.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Chaos-Crew.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Chicken-Drop.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Chicken-Drop.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Cubes.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Cubes.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Cyber-Ninja.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Cyber-Ninja.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Double-Dragon.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Double-Dragon.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Duck-Hunters.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Duck-Hunters.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Duel-at-Dawn.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Duel-at-Dawn.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/European-Roulette.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\European-Roulette.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Fire-in-the-Hole-xBomb.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Fire-in-the-Hole-xBomb.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Flaming-Hot-Extreme----Clover-Chance.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Flaming-Hot-Extreme----Clover-Chance.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Fortune-Festival.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Fortune-Festival.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Fortune-Roulette.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Fortune-Roulette.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Fruit-Party.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Fruit-Party.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Gates-of-Olympus.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Gates-of-Olympus.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Gems-Bonanza.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Gems-Bonanza.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Grand-Bonus-Baccarat.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Grand-Bonus-Baccarat.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Gravity-Auto-Roulette.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Gravity-Auto-Roulette.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Gravity-Blackjack.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Gravity-Blackjack.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Gravity-Roulette.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Gravity-Roulette.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Great-Rhino-Megaways.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Great-Rhino-Megaways.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Happy-Panda.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Happy-Panda.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Heavenly-Rich.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Heavenly-Rich.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Immersive-Roulette.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Immersive-Roulette.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Kleopatra.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Kleopatra.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Le-Bandit.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Le-Bandit.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Le-Pharaoh.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Le-Pharaoh.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Live-Baccarat-1-NC.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Live-Baccarat-1-NC.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Live-Baccarat-1.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Live-Baccarat-1.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Live-French-Roulette.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Live-French-Roulette.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Lucky-Lion.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Lucky-Lion.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Madame-Destiny.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Madame-Destiny.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Master-Joker.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Master-Joker.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Mental.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Mental.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Mini-Roulette.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Mini-Roulette.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Pray-For-Three.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Pray-For-Three.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Pro-Roulette.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Pro-Roulette.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Release-the-Kraken.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Release-the-Kraken.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Rip-City.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Rip-City.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Roulette-Lite.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Roulette-Lite.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Sakura.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Sakura.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Shining-Crown----Clover-Chance.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Shining-Crown----Clover-Chance.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/SixSixSix.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\SixSixSix.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Social-Roulette-X500.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Social-Roulette-X500.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Starlight-Princess.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Starlight-Princess.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Stone-Gaze.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Stone-Gaze.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Sugar-Rush.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Sugar-Rush.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Sweet-Bonanza.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Sweet-Bonanza.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Take-Deal-or-Risk-Blackjack.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Take-Deal-or-Risk-Blackjack.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/The-Dog-House.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\The-Dog-House.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/The-Game.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\The-Game.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Tree-of-Riches.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Tree-of-Riches.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Vampire-Night----Clover-Chance.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Vampire-Night----Clover-Chance.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Venice-Carnival.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Venice-Carnival.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Very-Hot-20.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Very-Hot-20.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Very-Hot-5.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Very-Hot-5.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/VIP-American-Roulette.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\VIP-American-Roulette.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/VIP-Blackjack.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\VIP-Blackjack.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/VIP-French-Roulette.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\VIP-French-Roulette.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Wanted-Dead-or-a-Wild.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Wanted-Dead-or-a-Wild.webp
+Content Type: image/webp
+
+Uri: https://gator.drakon.casino/storage/drakon/Zombie-Escape.webp
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\storage\drakon\Zombie-Escape.webp
+Content Type: image/webp
+
+Uri: https://lh3.googleusercontent.com/a/ACg8ocIx8LtD2KLzlgYAe8CqxsnOJ2qTigkW0MwpvjzDTfxoKl2wJQ=s96-c
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\a\ACg8ocIx8LtD2KLzlgYAe8CqxsnOJ2qTigkW0MwpvjzDTfxoKl2wJQ=s96-c
+Content Type: image/png
+
+Uri: https://lh3.googleusercontent.com/a/ACg8ocJDF6-IopxLvucXZuvXCLZV5LLGiAVC5IFM69UXjhTyIcOlPjwn=s96-c
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\a\ACg8ocJDF6-IopxLvucXZuvXCLZV5LLGiAVC5IFM69UXjhTyIcOlPjwn=s96-c
+Content Type: image/jpeg
+
+Uri: https://lh3.googleusercontent.com/a/ACg8ocJvlrHSBsMEeMVuT93FbD7ZIE_hhJIjyfuEaO5nieo2qUGaUw=s96-c
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\a\ACg8ocJvlrHSBsMEeMVuT93FbD7ZIE_hhJIjyfuEaO5nieo2qUGaUw=s96-c
+Content Type: image/png
+
+Uri: https://lh3.googleusercontent.com/a/ACg8ocJ_7dwwF1YoBjlByYryvtQaIZZ0SRrTMOKklz0dIn9MaxMHjQ=s96-c
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\a\ACg8ocJ_7dwwF1YoBjlByYryvtQaIZZ0SRrTMOKklz0dIn9MaxMHjQ=s96-c
+Content Type: image/png
+
+Uri: https://lh3.googleusercontent.com/a/ACg8ocK38IVntSkkO2CIGuvV_BzylxmqGG3zNvcD5ua3chl9lBuUGQ=s96-c
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\a\ACg8ocK38IVntSkkO2CIGuvV_BzylxmqGG3zNvcD5ua3chl9lBuUGQ=s96-c
+Content Type: image/png
+
+Uri: https://lh3.googleusercontent.com/a/ACg8ocKwQ5zPzYlpMz73r0dEtJmj81ncYcMqodFjc9Opn5EjXB3u1-YA=s96-c
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\a\ACg8ocKwQ5zPzYlpMz73r0dEtJmj81ncYcMqodFjc9Opn5EjXB3u1-YA=s96-c
+Content Type: image/png
+
+Uri: https://lh3.googleusercontent.com/a/ACg8ocLroOi4dx5B4pGdQ77fJtKcV23v-sgCSvPrXy-bj1bbMX7gLA=s96-c
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\a\ACg8ocLroOi4dx5B4pGdQ77fJtKcV23v-sgCSvPrXy-bj1bbMX7gLA=s96-c
+Content Type: image/png
+
+Uri: https://lh3.googleusercontent.com/a/ACg8ocLy-D2KGwgpeS15BA0tmbDZ74wNKrGsZUYpgWkZ89IHJdUGyQ=s96-c
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\a\ACg8ocLy-D2KGwgpeS15BA0tmbDZ74wNKrGsZUYpgWkZ89IHJdUGyQ=s96-c
+Content Type: image/png
+
+Uri: https://steamcommunity.com/pointssummary/ajaxgetasyncconfig
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\pointssummary\ajaxgetasyncconfig
+Content Type: application/json
+
+Uri: https://www.google-analytics.com/analytics.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\analytics.js
+Content Type: text/javascript
+
+Uri: https://www.google.com/recaptcha/api.js
+File Name: C:\Downloaded Web Sites\demo.vgowitch.com\recaptcha\api.js
+Content Type: text/javascript
+

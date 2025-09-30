@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<!--  META  -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sign In | Betonu.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+        <meta name="keywords" content="jackpot,coinflip,csgo,cs,go,global,offensive,cs:go,vgo,csgocoinflip,csgocoinflip,csgosite,vgocoinflip,vgocoinflip,vgosite,site,vgokingdom,kingdom,bet,gambling,gamble,fair,best,great,csgoempire,csgoatse,csgo500,crypto,btc,eth,roulette,experience">
+        <meta name="description" content="Betonu.com - The best crypto place to win money!">
+        <meta name="author" content="">
+        <meta name="theme-color" content="#9370db">
+
+        <meta property="og:url" content="#">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Betonu.com">
+        <meta property="og:title" content="Betonu.com">
+        <meta property="og:description" content="Betonu.com - The best crypto place to win money!">
+        <meta property="og:image" content="#">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+        <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
+
+        <!--  CSS  -->
+        <link href="ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css?family=Roboto:400,300,500,400italic,500italic,700,700italic" rel="stylesheet">
+        <link href="ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+
+        <link href="css%20%281%29/globals.css" rel="stylesheet">
+        <link href="css%20%281%29/bouncer.css" rel="stylesheet">
+
+        <!--  JAVASCRIPT  -->
+        <script src="ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+        <script src="ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+        <script src="ajax/libs/tinysort/2.3.6/tinysort.min.js"></script>
+        <script src="ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="gh/davidshimjs/qrcodejs%40gh-pages/qrcode.min.js"></script>
+
+        <script src="ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+        <script src='recaptcha/api.js'></script>
+        <script src="analytics.js"></script>
+
+        <script type="text/javascript" src="js/components.js"></script>
+        <script type="text/javascript" src="js/auth.js"></script>
+	</head>
+
+	<body>
+        <div class="auth-container flex flex-col gap-4 justify-center items-center size-full p-2">
+            <a href="index.htm"><img src="img/logo.png"></a>
+
+            <div class="w-3 responsive bg-card bg-opacity-50 rounded-2 border-2 border-card p-4">
+                <div class="flex flex-col gap-4">
+                    <div class="w-full text-center font-bold text-xl">Sign In</div>
+
+<div class="flex flex-col gap-4">
+    <form class="form_auth" autocomplete="login" method="POST" action="/auth/login?returnUrl=/casebattle/list/active">
+        <div class="flex flex-col items-center gap-2">
+            <div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="text" class="field_element_input " name="email" autocomplete="email">
+
+            
+                <div class="field_label transition duration-500">Email</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="required">This field is required</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="email">This field must be a email</div>
+            
+        
+    </div>
+</div>
+
+            <div class="input_field transition duration-500 " data-border="#de4c41">
+    <div class="field_container">
+        <div class="field_content">
+            <input type="password" class="field_element_input " name="password" autocomplete="password">
+
+            
+                <div class="field_label transition duration-500">Password</div>
+            
+        </div>
+
+        <div class="field_extra">
+            
+                
+                    <button type="button" class="button field_element_password" data-type="show"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                
+                    <button type="button" class="button field_element_password" data-type="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                
+            
+        </div>
+    </div>
+
+    <div class="field_bottom">
+        
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="required">This field is required</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="field_error" data-error="password">At least 8 characters, maximum 64 characters, one uppercase, one lowercase, one number and one symbol</div>
+            
+            
+        
+    </div>
+</div>
+
+            <div class="flex justify-start w-full mt-2">
+                <a href="/login/forgot-password?returnUrl=/casebattle/list/active"><div class="text-muted-foreground text-xs">Forgot password?</div></a>
+            </div>
+
+            <button type="submit" class="button button-primary shadow-2">Sign In</button>
+        </div>
+    </form>
+
+    <div class="title-text w-full flex items-center justify-center">or sign in with</div>
+
+    <div class="flex responsive flex-row gap-2">
+        <a class="w-full" href="/auth/steam?link=false&returnUrl=/casebattle/list/active">
+            <div class="social-login steam rounded-2 flex justify-center items-center w-full"></div>
+        </a>
+
+        <a class="w-full" href="/auth/google?link=false&returnUrl=/casebattle/list/active">
+            <div class="social-login google rounded-2 flex justify-center items-center w-full"></div>
+        </a>
+
+        <a class="w-full" href="/auth/discord?link=false&returnUrl=/casebattle/list/active">
+            <div class="social-login discord rounded-2 flex justify-center items-center w-full"></div>
+        </a>
+
+        <div class="social-login facebook rounded-2 flex justify-center items-center w-full disabled"></div>
+    </div>
+
+    <div class="flex flex-row gap-1 justify-center items-center w-full">
+        <span class="text-muted-foreground text-base">You dont't have an account?</span>
+        <a href="register.html"><div class="text-base">Create account</div></a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+	<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'986bbf8bfb3e57f8',t:'MTc1OTE1MTcxNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

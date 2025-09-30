@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--  META  -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Create Account | Betonu.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+        <meta name="keywords" content="register,signup,create account,betonu,crypto gambling,jackpot,coinflip,csgo,cs,go,global,offensive,cs:go,vgo,csgocoinflip,csgocoinflip,csgosite,vgocoinflip,vgocoinflip,vgosite,site,vgokingdom,kingdom,bet,gambling,gamble,fair,best,great,csgoempire,csgoatse,csgo500,crypto,btc,eth,roulette,experience">
+        <meta name="description" content="Create your Betonu.com account - Join the best crypto gambling platform and start winning today!">
+        <meta name="author" content="">
+        <meta name="theme-color" content="#9370db">
+
+        <meta property="og:url" content="#">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Betonu.com">
+        <meta property="og:title" content="Create Account | Betonu.com">
+        <meta property="og:description" content="Create your Betonu.com account - Join the best crypto gambling platform and start winning today!">
+        <meta property="og:image" content="#">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+        <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
+
+        <!--  CSS  -->
+        <link href="ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css?family=Roboto:400,300,500,400italic,500italic,700,700italic" rel="stylesheet">
+        <link href="ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+
+        <link href="css%20%281%29/globals.css" rel="stylesheet">
+        <link href="css%20%281%29/bouncer.css" rel="stylesheet">
+
+        <!--  JAVASCRIPT  -->
+        <script src="ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+        <script src="ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+        <script src="ajax/libs/tinysort/2.3.6/tinysort.min.js"></script>
+        <script src="ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="gh/davidshimjs/qrcodejs%40gh-pages/qrcode.min.js"></script>
+
+        <script src="ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+        <script src='recaptcha/api.js'></script>
+        <script src="analytics.js"></script>
+
+        <script type="text/javascript" src="js/components.js"></script>
+        <script type="text/javascript" src="js/auth.js"></script>
+
+        <style>
+            .strength-meter {
+                width: 100%;
+                height: 4px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 2px;
+                margin-top: 8px;
+                overflow: hidden;
+            }
+
+            .strength-bar {
+                height: 100%;
+                width: 0%;
+                transition: all 0.3s ease;
+                border-radius: 2px;
+            }
+
+            .strength-weak { background: #ff4444; }
+            .strength-medium { background: #ffaa00; }
+            .strength-strong { background: #00aa00; }
+
+            .strength-text {
+                font-size: 12px;
+                margin-top: 4px;
+                text-align: right;
+            }
+
+            .welcome-bonus {
+                background: linear-gradient(45deg, #4caf50, #45a049);
+                border-radius: 12px;
+                padding: 15px;
+                margin: 20px 0;
+                text-align: center;
+                border: 2px solid rgba(76, 175, 80, 0.3);
+            }
+
+            .welcome-bonus h3 {
+                margin: 0 0 8px 0;
+                color: white;
+                font-size: 16px;
+            }
+
+            .welcome-bonus p {
+                margin: 0;
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 14px;
+            }
+
+            .terms-checkbox {
+                margin: 15px 0;
+            }
+
+            .terms-checkbox input[type="checkbox"] {
+                margin-right: 10px;
+                transform: scale(1.2);
+            }
+
+            .terms-checkbox label {
+                font-size: 14px;
+                color: #b0b3c1;
+                line-height: 1.4;
+            }
+
+            .terms-checkbox a {
+                color: #4caf50;
+                text-decoration: none;
+            }
+
+            .terms-checkbox a:hover {
+                text-decoration: underline;
+            }
+
+            .promo-section {
+                background: rgba(15, 52, 96, 0.6);
+                border-radius: 12px;
+                padding: 20px;
+                margin: 20px 0;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            @media (max-width: 768px) {
+                .auth-container {
+                    padding: 10px;
+                }
+                
+                .w-3.responsive {
+                    width: 100%;
+                    max-width: 400px;
+                }
+            }
+
+            .feature-highlight {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 10px 0;
+                font-size: 14px;
+                color: #b0b3c1;
+            }
+
+            .feature-highlight i {
+                color: #4caf50;
+                width: 16px;
+            }
+        </style>
+	</head>
+
+	<body>
+        <div class="auth-container flex flex-col gap-4 justify-center items-center size-full p-2">
+            <a href="index.htm"><img src="img/logo.png"></a>
+
+            <div class="w-3 responsive bg-card bg-opacity-50 rounded-2 border-2 border-card p-4">
+                <div class="flex flex-col gap-4">
+                    <div class="w-full text-center font-bold text-xl">Create Your Account</div>
+
+                    <div class="welcome-bonus">
+                        <h3><i class="fa fa-gift"></i> Welcome Bonus</h3>
+                        <p>Get <strong>100 FREE COINS</strong> when you create your account!</p>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <form class="form_auth" autocomplete="off" method="POST" action="/auth/register" id="registerForm">
+                            <div class="flex flex-col items-center gap-2">
+                                <div class="input_field transition duration-500" data-border="#de4c41">
+                                    <div class="field_container">
+                                        <div class="field_content">
+                                            <input type="text" class="field_element_input" name="username" autocomplete="username" required>
+                                            <div class="field_label transition duration-500">Username</div>
+                                        </div>
+                                        <div class="field_extra"></div>
+                                    </div>
+                                    <div class="field_bottom">
+                                        <div class="field_error" data-error="required">Username is required</div>
+                                        <div class="field_error" data-error="username">Username must be 3-20 characters, alphanumeric only</div>
+                                    </div>
+                                </div>
+
+                                <div class="input_field transition duration-500" data-border="#de4c41">
+                                    <div class="field_container">
+                                        <div class="field_content">
+                                            <input type="email" class="field_element_input" name="email" autocomplete="email" required>
+                                            <div class="field_label transition duration-500">Email Address</div>
+                                        </div>
+                                        <div class="field_extra"></div>
+                                    </div>
+                                    <div class="field_bottom">
+                                        <div class="field_error" data-error="required">Email is required</div>
+                                        <div class="field_error" data-error="email">Please enter a valid email address</div>
+                                    </div>
+                                </div>
+
+                                <div class="input_field transition duration-500" data-border="#de4c41">
+                                    <div class="field_container">
+                                        <div class="field_content">
+                                            <input type="password" class="field_element_input" name="password" autocomplete="new-password" required id="passwordInput">
+                                            <div class="field_label transition duration-500">Password</div>
+                                        </div>
+                                        <div class="field_extra">
+                                            <button type="button" class="button field_element_password" data-type="show"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                            <button type="button" class="button field_element_password" data-type="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="field_bottom">
+                                        <div class="field_error" data-error="required">Password is required</div>
+                                        <div class="field_error" data-error="password">At least 8 characters, one uppercase, one lowercase, one number and one symbol</div>
+                                        <div class="strength-meter">
+                                            <div class="strength-bar" id="strengthBar"></div>
+                                        </div>
+                                        <div class="strength-text" id="strengthText"></div>
+                                    </div>
+                                </div>
+
+                                <div class="input_field transition duration-500" data-border="#de4c41">
+                                    <div class="field_container">
+                                        <div class="field_content">
+                                            <input type="password" class="field_element_input" name="confirmPassword" autocomplete="new-password" required>
+                                            <div class="field_label transition duration-500">Confirm Password</div>
+                                        </div>
+                                        <div class="field_extra"></div>
+                                    </div>
+                                    <div class="field_bottom">
+                                        <div class="field_error" data-error="required">Please confirm your password</div>
+                                        <div class="field_error" data-error="match">Passwords do not match</div>
+                                    </div>
+                                </div>
+
+                                <div class="input_field transition duration-500" data-border="#de4c41">
+                                    <div class="field_container">
+                                        <div class="field_content">
+                                            <input type="text" class="field_element_input" name="promoCode" autocomplete="off">
+                                            <div class="field_label transition duration-500">Promo Code (Optional)</div>
+                                        </div>
+                                        <div class="field_extra">
+                                            <button type="button" class="button button-success" id="applyPromo">
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="field_bottom">
+                                        <div class="field_success" id="promoSuccess" style="display: none;">Promo code applied! +50 bonus coins</div>
+                                    </div>
+                                </div>
+
+                                <div class="terms-checkbox">
+                                    <label>
+                                        <input type="checkbox" name="agreeTerms" required>
+                                        I agree to the <a href="tos.html" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a>
+                                    </label>
+                                </div>
+
+                                <div class="terms-checkbox">
+                                    <label>
+                                        <input type="checkbox" name="ageConfirm" required>
+                                        I confirm that I am 18+ years old and legally allowed to gamble
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="button button-primary shadow-2 w-full">
+                                    <i class="fa fa-user-plus"></i> Create Account
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="title-text w-full flex items-center justify-center">or sign up with</div>
+
+                        <div class="flex responsive flex-row gap-2">
+                            <a class="w-full" href="/auth/steam?link=false&returnUrl=/">
+                                <div class="social-login steam rounded-2 flex justify-center items-center w-full"></div>
+                            </a>
+
+                            <a class="w-full" href="/auth/google?link=false&returnUrl=/">
+                                <div class="social-login google rounded-2 flex justify-center items-center w-full"></div>
+                            </a>
+
+                            <a class="w-full" href="/auth/discord?link=false&returnUrl=/">
+                                <div class="social-login discord rounded-2 flex justify-center items-center w-full"></div>
+                            </a>
+
+                            <div class="social-login facebook rounded-2 flex justify-center items-center w-full disabled"></div>
+                        </div>
+
+                        <div class="promo-section">
+                            <h3 style="margin: 0 0 15px 0; color: #4caf50; font-size: 16px;">
+                                <i class="fa fa-star"></i> Why Join Betonu?
+                            </h3>
+                            
+                            <div class="feature-highlight">
+                                <i class="fa fa-shield"></i>
+                                <span>Provably fair games with transparent algorithms</span>
+                            </div>
+                            
+                            <div class="feature-highlight">
+                                <i class="fa fa-flash"></i>
+                                <span>Instant crypto deposits and withdrawals</span>
+                            </div>
+                            
+                            <div class="feature-highlight">
+                                <i class="fa fa-gift"></i>
+                                <span>Daily bonuses and rewards program</span>
+                            </div>
+                            
+                            <div class="feature-highlight">
+                                <i class="fa fa-comments"></i>
+                                <span>24/7 live chat support</span>
+                            </div>
+                            
+                            <div class="feature-highlight">
+                                <i class="fa fa-users"></i>
+                                <span>Active community with chat rain events</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row gap-1 justify-center items-center w-full">
+                            <span class="text-muted-foreground text-base">Already have an account?</span>
+                            <a href="login.html"><div class="text-base">Sign In</div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                // Password strength meter
+                $('#passwordInput').on('input', function() {
+                    const password = $(this).val();
+                    const strength = checkPasswordStrength(password);
+                    updateStrengthMeter(strength);
+                });
+
+                function checkPasswordStrength(password) {
+                    let score = 0;
+                    
+                    if (password.length >= 8) score++;
+                    if (password.match(/[a-z]/)) score++;
+                    if (password.match(/[A-Z]/)) score++;
+                    if (password.match(/[0-9]/)) score++;
+                    if (password.match(/[^a-zA-Z0-9]/)) score++;
+                    
+                    return score;
+                }
+
+                function updateStrengthMeter(strength) {
+                    const bar = $('#strengthBar');
+                    const text = $('#strengthText');
+                    
+                    bar.removeClass('strength-weak strength-medium strength-strong');
+                    
+                    if (strength < 3) {
+                        bar.addClass('strength-weak').css('width', (strength * 20) + '%');
+                        text.text('Weak').css('color', '#ff4444');
+                    } else if (strength < 5) {
+                        bar.addClass('strength-medium').css('width', (strength * 20) + '%');
+                        text.text('Medium').css('color', '#ffaa00');
+                    } else {
+                        bar.addClass('strength-strong').css('width', '100%');
+                        text.text('Strong').css('color', '#00aa00');
+                    }
+                }
+
+                // Promo code application
+                $('#applyPromo').click(function() {
+                    const promoCode = $('input[name="promoCode"]').val().trim();
+                    
+                    if (promoCode) {
+                        // Simulate promo code validation
+                        const validCodes = ['WELCOME50', 'BONUS100', 'NEWUSER', 'CRYPTO2024'];
+                        
+                        if (validCodes.includes(promoCode.toUpperCase())) {
+                            $('#promoSuccess').show();
+                            $(this).html('<i class="fa fa-check"></i>').addClass('button-success');
+                            toastr.success('Promo code applied successfully!', 'Success');
+                        } else {
+                            toastr.error('Invalid promo code. Try WELCOME50 or BONUS100', 'Invalid Code');
+                        }
+                    } else {
+                        toastr.warning('Please enter a promo code first', 'No Code Entered');
+                    }
+                });
+
+                // Form validation
+                $('#registerForm').on('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const username = $('input[name="username"]').val().trim();
+                    const email = $('input[name="email"]').val().trim();
+                    const password = $('input[name="password"]').val();
+                    const confirmPassword = $('input[name="confirmPassword"]').val();
+                    const agreeTerms = $('input[name="agreeTerms"]').is(':checked');
+                    const ageConfirm = $('input[name="ageConfirm"]').is(':checked');
+
+                    // Validation
+                    if (!username || username.length < 3) {
+                        toastr.error('Username must be at least 3 characters long', 'Invalid Username');
+                        return;
+                    }
+
+                    if (!email || !email.includes('@')) {
+                        toastr.error('Please enter a valid email address', 'Invalid Email');
+                        return;
+                    }
+
+                    if (!password || password.length < 8) {
+                        toastr.error('Password must be at least 8 characters long', 'Invalid Password');
+                        return;
+                    }
+
+                    if (password !== confirmPassword) {
+                        toastr.error('Passwords do not match', 'Password Mismatch');
+                        return;
+                    }
+
+                    if (!agreeTerms) {
+                        toastr.error('Please agree to the Terms of Service', 'Terms Required');
+                        return;
+                    }
+
+                    if (!ageConfirm) {
+                        toastr.error('You must be 18+ to create an account', 'Age Verification');
+                        return;
+                    }
+
+                    // Success simulation
+                    toastr.success('Account created successfully! Welcome to Betonu!', 'Welcome!');
+                    
+                    setTimeout(() => {
+                        toastr.info('Redirecting to login page...', 'Success');
+                        setTimeout(() => {
+                            window.location.href = 'login.html';
+                        }, 2000);
+                    }, 1500);
+                });
+
+                // Configure toastr
+                toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": true,
+                    "progressBar": true,
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
+
+                // Welcome message
+                setTimeout(() => {
+                    toastr.info('Join thousands of players winning crypto daily!', 'Welcome to Betonu', {
+                        timeOut: 4000
+                    });
+                }, 1000);
+            });
+        </script>
+
+	<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'986bb11c2e5cf0de',t:'MTc1OTE1MTEyMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
