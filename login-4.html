@@ -47,10 +47,30 @@
 
         <script type="text/javascript" src="js/components.js"></script>
         <script type="text/javascript" src="js/auth.js"></script>
-	</head>
+	        <style>
+            /* Mobile Back Button */
+            @media (max-width: 768px) {
+                .mobile-back-button {
+                    display: block !important;
+                }
+                
+                .auth-container {
+                    padding-top: 60px !important;
+                }
+            }
+        </style>
+	        </head>
 
 	<body>
-        <div class="auth-container flex flex-col gap-4 justify-center items-center size-full p-2">
+                    <!-- Mobile Back Button -->
+            <div class="mobile-back-button" style="display: none; position: absolute; top: 20px; left: 20px; z-index: 1000;">
+                <a href="index.htm" class="flex items-center gap-2 text-white hover:text-primary transition-colors">
+                    <i class="fa fa-arrow-left text-lg"></i>
+                    <span class="text-sm">Back to Home</span>
+                </a>
+            </div>
+            
+            <div class="auth-container flex flex-col gap-4 justify-center items-center size-full p-2">
             <a href="index.htm"><img src="img/logo.png"></a>
 
             <div class="w-3 responsive bg-card bg-opacity-50 rounded-2 border-2 border-card p-4">
