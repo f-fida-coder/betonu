@@ -1,0 +1,103 @@
+/* Additional fixes for reduced sidebar width */
+
+/* Force the new width with !important to override any styles and prevent JavaScript override */
+html body .sidebar {
+  width: var(--sidebar-width) !important;
+  max-width: var(--sidebar-width) !important;
+  min-width: var(--sidebar-width) !important;
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Ensure main panel is properly positioned with reduced sidebar */
+html body .main-panel {
+  margin-left: var(--sidebar-width) !important;
+  width: calc(100% - var(--sidebar-width)) !important;
+  max-width: calc(100% - var(--sidebar-width)) !important;
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Fix for any JavaScript that might be trying to adjust the width */
+html body .wrapper-page {
+  display: flex !important;
+  width: 100% !important;
+}
+
+/* Original icon size preserved */
+/* .sidebar-nav a i {
+  width: 20px;
+  height: 20px;
+} */
+
+/* Original section title preserved */
+/* .sidebar-section-title {
+  padding: 0 20px 10px;
+  font-size: 12px;
+} */
+
+/* When sidebar is hidden */
+.sidebar.hidden + .sidebar-overlay + .main-panel {
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+
+/* Mobile view exceptions */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100% !important;
+  }
+  
+  .main-panel {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
+/* Late-loading fix to prevent any layout jumps - with hardcoded values and no transitions */
+@media (min-width: 769px) {
+  html body .sidebar {
+    width: 202.5px !important;
+    max-width: 202.5px !important;
+    min-width: 202.5px !important;
+    left: 0 !important;
+    position: fixed !important;
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+  
+  html body .main-panel {
+    margin-left: 202.5px !important;
+    width: calc(100% - 202.5px) !important;
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    padding-left: 0 !important; /* Ensure no padding */
+  }
+  
+  /* Move content closer to sidebar */
+  html body .main-panel > .content,
+  html body .main-panel > .container,
+  html body .main-panel > .body {
+    padding-left: 0 !important;
+    margin-left: -15px !important;
+  }
+  
+  /* Adjust card and grid layouts */
+  html body .main-panel .card,
+  html body .main-panel .grid {
+    margin-left: -10px !important;
+  }
+
+  /* Override any wrapper animations */
+  html body .wrapper-page,
+  html body .wrapper-page > *,
+  html body .content,
+  html body .container {
+    transition: none !important;
+    animation: none !important;
+  }
+}

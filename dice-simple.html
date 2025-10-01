@@ -56,10 +56,6 @@
         <link href="css_files/enhanced-sidebar.css" rel="stylesheet">
         <link href="css_files/fixed-layout.css" rel="stylesheet">
         <link href="css_files/game-page-fixes.css" rel="stylesheet">
-        <!-- Add Dice CSS -->
-        <link href="css_files/dice-game.css" rel="stylesheet">
-        <!-- Add Responsive CSS -->
-        <link href="css_files/responsive.css" rel="stylesheet">
 
         <!--  JAVASCRIPT  -->
         <script src="ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -92,9 +88,6 @@
         <script type="text/javascript" src="js/width-lock.js"></script>
         <script type="text/javascript" src="js/sidebar-enhancement.js"></script>
         <script type="text/javascript" src="js/layout-consistency.js"></script>
-        <!-- Add Dice JS -->
-        <script type="text/javascript" src="js/dice-game.js"></script>
-        <script type="text/javascript" src="js/dice-debug.js"></script>
 	</head>
 
 	<body>
@@ -138,11 +131,6 @@
             </div>
             <!-- Sidebar Overlay for Mobile -->
             <div class="sidebar-overlay" data-toggle="sidebar"></div>
-            
-            <!-- Mobile Menu Toggle Button -->
-            <button class="mobile-menu-toggle" data-toggle="sidebar">
-                <i class="fa fa-bars"></i>
-            </button>
             
             <!-- Main Content -->
             <div class="main-panel">
@@ -216,129 +204,34 @@
                 </div>
 
                 <div class="body flex flex-col w-full p-4">
-                    <!-- Dice Game Container with proper IDs and classes -->
-                    <div class="bg-secondary rounded-2 p-4 dice-game-container">
+                    <div class="bg-secondary rounded-2 p-4">
                         <h1 class="text-2xl font-bold mb-4">Dice Game</h1>
-                        
-                        <div class="bg-dark rounded-2 p-4 dice-container card-container">
-                            <!-- Dice Controls -->
-                            <div class="flex flex-col md:flex-row gap-4">
-                                <div class="w-full md:w-1/2">
-                                    <div class="mb-4">
+                        <div class="bg-dark rounded-2 p-4">
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="text-4xl font-bold mb-4">Simple Dice Game</div>
+                                <div class="mb-4">Place your bet, choose under/over, and test your luck!</div>
+                                
+                                <!-- Simple Dice Controls -->
+                                <div class="flex flex-col md:flex-row gap-4 w-full max-w-lg mb-6">
+                                    <div class="w-full md:w-1/2">
                                         <label class="block mb-2">Bet Amount</label>
-                                        <div class="relative">
-                                            <input type="text" id="dice_amount" value="1.00" class="w-full p-2 bg-card rounded">
-                                            <div class="absolute right-0 top-0 h-full flex">
-                                                <button id="dice_amount_half" class="p-2">1/2</button>
-                                                <button id="dice_amount_double" class="p-2">2x</button>
-                                                <button id="dice_amount_max" class="p-2">Max</button>
-                                            </div>
-                                        </div>
+                                        <input type="text" value="1.00" class="w-full p-2 bg-card rounded">
                                     </div>
-                                    
-                                    <div class="mb-4">
+                                    <div class="w-full md:w-1/2">
                                         <label class="block mb-2">Win Chance (%)</label>
-                                        <input type="text" id="dice_chance" value="50.00" class="w-full p-2 bg-card rounded mb-2">
-                                        <input type="range" id="dice_chanceslider" min="0.01" max="98" value="50" step="0.01" class="w-full form-range">
+                                        <input type="text" value="50.00" class="w-full p-2 bg-card rounded">
                                     </div>
-                                    
-                                    <div class="mb-4">
-                                        <div class="flex justify-between">
-                                            <div>
-                                                <label class="block mb-2">Payout (×)</label>
-                                                <input type="text" id="dice_payout" value="2.00" class="w-1/2 p-2 bg-card rounded" readonly>
-                                            </div>
-                                            <div>
-                                                <label class="block mb-2">Profit</label>
-                                                <input type="text" id="dice_profit" value="1.00" class="w-1/2 p-2 bg-card rounded" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="mb-4" id="dice_mode" data-mode="under">
-                                        <label class="block mb-2">Bet Mode</label>
-                                        <div class="bet-select">
-                                            <a href="#" class="active" data-type="under">Roll Under</a>
-                                            <a href="#" data-type="over">Roll Over</a>
-                                        </div>
-                                    </div>
-                                    
-                                    <button id="dice_bet" class="button button-primary shadow-2 py-4 px-8 text-xl w-full">ROLL UNDER 50.00</button>
                                 </div>
                                 
-                                <div class="w-full md:w-1/2">
-                                    <div class="mb-4">
-                                        <div class="dice-range bg-dark">
-                                            <div class="dice-range-fill bg-primary h-8" id="dice_range" style="width: 50%"></div>
-                                            <div class="dice-pointer absolute w-2 h-8 bg-white" id="dice_pointer" style="left: 50%; transform: translateX(-50%)"></div>
-                                        </div>
+                                <!-- Roll Button -->
+                                <button class="button button-primary shadow-2 py-4 px-8 text-xl">ROLL UNDER 50.00</button>
+                                
+                                <!-- Simple Results -->
+                                <div class="mt-8 p-4 bg-card rounded-2 w-full max-w-lg">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold">Last Roll: <span class="text-primary">--</span></div>
+                                        <div class="text-xl mt-2">Result: <span class="text-primary">--</span></div>
                                     </div>
-                                    
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <span>0</span>
-                                        <span id="dice_target">50.00</span>
-                                        <span>100</span>
-                                    </div>
-                                    
-                                    <div class="mb-4 bg-card rounded-2 p-4">
-                                        <div class="dice-spinner-container">
-                                            <div class="dice-spinner">
-                                                <div class="dice-spinner-content"></div>
-                                            </div>
-                                            <div class="dice-spinner">
-                                                <div class="dice-spinner-content"></div>
-                                            </div>
-                                            <div class="dice-spinner">
-                                                <div class="dice-spinner-content"></div>
-                                            </div>
-                                            <div class="dice-spinner">
-                                                <div class="dice-spinner-content"></div>
-                                            </div>
-                                            <div class="dice-spinner">
-                                                <div class="dice-spinner-content"></div>
-                                            </div>
-                                        </div>
-                                        <div class="text-center mt-4">
-                                            <div class="dice-number" id="dice_number">00.00</div>
-                                            <div id="dice_result">
-                                                <div class="text-sm text-secondary">Result</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div id="dice_cashout" class="dice-cashout rounded-2 p-4 bg-card">
-                                        <div class="flex justify-between">
-                                            <div>
-                                                <div class="text-lg font-bold" id="dice_cashout_number">00.00</div>
-                                                <div class="text-sm text-secondary">Number</div>
-                                            </div>
-                                            <div>
-                                                <div class="text-lg font-bold text-success" id="dice_cashout_profit">+0.00</div>
-                                                <div class="text-sm text-secondary">Profit</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- History Table -->
-                            <div class="mt-8">
-                                <h3 class="font-bold mb-2">History</h3>
-                                <div class="bg-card rounded-2 overflow-hidden">
-                                    <table class="w-full">
-                                        <thead>
-                                            <tr class="border-b border-card">
-                                                <th class="text-left p-2">User</th>
-                                                <th class="text-right p-2">Number</th>
-                                                <th class="text-right p-2">Bet</th>
-                                                <th class="text-right p-2">Payout</th>
-                                                <th class="text-right p-2">Profit</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="dice_history">
-                                            <!-- History items will be inserted here by JS -->
-                                        </tbody>
-                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -347,9 +240,11 @@
             </div>
         </div>
 
-        <!-- Debug Element to show page is working -->
         <script>
+            // Basic dice functionality
             document.addEventListener('DOMContentLoaded', function() {
+                console.log("Basic dice game initialized");
+                
                 // Add a visible element to confirm the page is working
                 const notification = document.createElement('div');
                 notification.style.position = 'fixed';
@@ -368,49 +263,17 @@
                     notification.style.display = 'none';
                 }, 5000);
                 
-                // Force display of dice container
-                document.querySelectorAll('.dice-container, .card-container, .dice-game-container').forEach(function(el) {
-                    el.style.opacity = '1';
-                    el.style.display = 'block';
-                    el.style.visibility = 'visible';
+                // Simple roll functionality
+                document.querySelector('.button-primary').addEventListener('click', function() {
+                    const result = Math.random() * 100;
+                    const resultFixed = result.toFixed(2);
+                    const winChance = parseFloat(document.querySelectorAll('input')[1].value);
+                    const isWin = result < winChance;
+                    
+                    document.querySelector('.text-primary:first-child').textContent = resultFixed;
+                    document.querySelector('.text-primary:last-child').textContent = isWin ? 'WIN!' : 'LOSS';
+                    document.querySelector('.text-primary:last-child').style.color = isWin ? 'green' : 'red';
                 });
-                
-                // Mobile menu functionality
-                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-                const sidebar = document.querySelector('.sidebar');
-                const sidebarOverlay = document.querySelector('.sidebar-overlay');
-                
-                if (mobileMenuToggle && sidebar && sidebarOverlay) {
-                    // Toggle sidebar on menu button click
-                    mobileMenuToggle.addEventListener('click', function() {
-                        sidebar.classList.toggle('mobile-open');
-                        sidebarOverlay.classList.toggle('active');
-                    });
-                    
-                    // Close sidebar when clicking overlay
-                    sidebarOverlay.addEventListener('click', function() {
-                        sidebar.classList.remove('mobile-open');
-                        sidebarOverlay.classList.remove('active');
-                    });
-                    
-                    // Close sidebar when clicking navigation items
-                    sidebar.querySelectorAll('a').forEach(function(link) {
-                        link.addEventListener('click', function() {
-                            if (window.innerWidth <= 767) {
-                                sidebar.classList.remove('mobile-open');
-                                sidebarOverlay.classList.remove('active');
-                            }
-                        });
-                    });
-                    
-                    // Handle resize events
-                    window.addEventListener('resize', function() {
-                        if (window.innerWidth > 767) {
-                            sidebar.classList.remove('mobile-open');
-                            sidebarOverlay.classList.remove('active');
-                        }
-                    });
-                }
             });
         </script>
     </body>

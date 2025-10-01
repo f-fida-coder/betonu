@@ -1,0 +1,108 @@
+/* Fixed Layout Issues 
+ * This CSS file addresses layout issues:
+ * 1. Fixes overlapping/cutting on right side
+ * 2. Increases sidebar width
+ * 3. Ensures consistent layout across pages
+ */
+
+:root {
+  --sidebar-width: 250px !important; /* Increased from 202.5px */
+  --content-max-width: 1200px;
+}
+
+/* Critical sidebar width fixes with !important to override any inline styles */
+.sidebar {
+  width: var(--sidebar-width) !important;
+  min-width: var(--sidebar-width) !important;
+  max-width: var(--sidebar-width) !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+/* Ensure main panel correctly accounts for sidebar width */
+.main-panel {
+  margin-left: var(--sidebar-width) !important;
+  width: calc(100% - var(--sidebar-width)) !important;
+  max-width: calc(100% - var(--sidebar-width)) !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+  padding-right: 15px !important; /* Prevent content from touching the edge */
+}
+
+/* Add a max-width to content container to prevent stretching on large screens */
+.content-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix any nested containers that might cause horizontal scroll */
+.container, .body, .content {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+/* Fix for mobile devices - ensure sidebar collapses properly */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+  
+  .main-panel {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+  }
+}
+
+/* Fix overflow issues in main wrapper */
+.wrapper-page {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+/* Ensure sidebar links have appropriate spacing and content */
+.sidebar-section-title {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sidebar-nav a {
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Fix any iframe or embedded content that might cause overflow */
+iframe, embed, object {
+  max-width: 100%;
+}
+
+/* Address potential table overflow issues */
+table {
+  max-width: 100%;
+  display: block;
+  overflow-x: auto;
+}
+
+/* Fix modal positioning */
+.modal-dialog {
+  max-width: 95vw;
+}

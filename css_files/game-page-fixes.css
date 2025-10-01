@@ -1,0 +1,75 @@
+/* 
+ * Page Layout Fixes for Game Pages
+ * This CSS ensures proper structure and appearance for game pages like dice.html
+ */
+
+body {
+  overflow-x: hidden !important;
+}
+
+/* Ensure content inside main-panel has proper spacing */
+.main-panel .content-container {
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Basic structure for game interfaces */
+.dice-game, 
+.coinflip-game, 
+.crash-game,
+.roulette-game,
+.game-interface {
+  background: var(--secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Fix for any broken nav structure */
+nav.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Fix wrapping issues with responsive design */
+.responsive {
+  flex-wrap: wrap;
+}
+
+/* Ensure inputs don't overflow */
+input, select, textarea {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix possible body overflow issues */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Add some better spacing in the sidebar */
+.sidebar-nav ul {
+  padding: 0 0 10px 0;
+}
+
+/* Fix modal positioning to prevent them from creating overflow */
+.modal {
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+/* Ensure game titles look consistent */
+h1 {
+  margin: 0 0 20px 0;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--card);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--foreground);
+}

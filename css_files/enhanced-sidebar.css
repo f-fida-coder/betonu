@@ -1,0 +1,151 @@
+/* Enhanced Sidebar Links - Professional, Shining, Attractive */
+
+/* Updated Button Backgrounds and Effects */
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  background: rgba(255, 255, 255, 0.08); /* Subtle background for all buttons */
+  margin: 4px 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Shine effect on hover */
+.sidebar-nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: left 0.7s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sidebar-nav a:hover::before {
+  left: 100%;
+}
+
+.sidebar-nav a:hover {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(147, 112, 219, 0.3) 100%);
+  color: #fff;
+  transform: translateX(3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-nav a i {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.sidebar-nav a:hover i {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Add emoji decorations next to menu items */
+.sidebar-nav a[href="index.htm"]::after { content: '🏠'; margin-left: auto; opacity: 0.7; }
+.sidebar-nav a[href="casino/lobby.html"]::after { content: '🎰'; margin-left: auto; opacity: 0.7; }
+.sidebar-nav a[href="roulette.html"]::after { content: '🎮'; margin-left: auto; opacity: 0.7; }
+.sidebar-nav a[href="crash.html"]::after { content: '🏈'; margin-left: auto; opacity: 0.7; }
+.sidebar-nav a[href="coinflip.html"]::after { content: '🪙'; margin-left: auto; opacity: 0.7; }
+.sidebar-nav a[href="dice.html"]::after { content: '🎲'; margin-left: auto; opacity: 0.7; }
+.sidebar-nav a[href="unboxing.html"]::after { content: '📦'; margin-left: auto; opacity: 0.7; }
+.sidebar-nav a[href="rewards.html"]::after { content: '💰'; margin-left: auto; opacity: 0.7; }
+.sidebar-nav a[href="deposit.html"]::after { content: '🎁'; margin-left: auto; opacity: 0.7; }
+.sidebar-nav a[href="leaderboard.html"]::after { content: '👑'; margin-left: auto; opacity: 0.7; }
+.sidebar-nav a[href="faq.html"]::after { content: '🎫'; margin-left: auto; opacity: 0.7; }
+
+/* Emoji fade-in on hover */
+.sidebar-nav a::after {
+  transition: all 0.3s ease;
+  transform: translateX(-5px);
+  opacity: 0;
+}
+
+.sidebar-nav a:hover::after {
+  transform: translateX(0);
+  opacity: 0.9;
+}
+
+/* Section styles */
+.sidebar-section-title {
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-left: 3px solid var(--accent);
+  margin-left: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Active state for current page */
+.sidebar-nav a.active {
+  background: linear-gradient(90deg, var(--accent) 0%, rgba(147, 112, 219, 0.5) 100%);
+  color: white;
+  font-weight: bold;
+  transform: translateX(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-nav a.active::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Improve the chat button */
+.sidebar-chat-toggle {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  box-shadow: 0 4px 15px rgba(91, 70, 199, 0.5), 0 0 5px rgba(255, 255, 255, 0.3) inset;
+}
+
+.sidebar-chat-toggle:hover {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(91, 70, 199, 0.6), 0 0 10px rgba(255, 255, 255, 0.4) inset;
+}
+
+/* Fix border style and remove it from list items */
+.sidebar-nav li {
+  border-bottom: none;
+}
+
+/* Add subtle separator between sections */
+.sidebar-section:not(:last-child) {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.sidebar-section:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 15%;
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}

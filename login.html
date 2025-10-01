@@ -31,6 +31,9 @@
 
         <link href="css%20%281%29/globals.css" rel="stylesheet">
         <link href="css%20%281%29/bouncer.css" rel="stylesheet">
+        <link href="css%20%281%29/color-update.css" rel="stylesheet">
+        <link href="css%20%281%29/card-update.css" rel="stylesheet">
+        <link href="css/theme.css" rel="stylesheet">
 
         <!--  JAVASCRIPT  -->
         <script src="ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -60,10 +63,84 @@
                 }
             }
         </style>
+        <script type="text/javascript" src="js/ui-enhancement.js"></script>
 	</head>
 
 	<body>
-        <div class="auth-container flex flex-col gap-4 justify-center items-center size-full p-2">
+
+
+                    <li class="nav-item">
+                        <a href="index.htm" class="nav-link">
+                            <div class="icon-container"><img src="img/home.png" alt="Home"></div>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <div class="icon-container"><img src="img/games.png" alt="Games"></div>
+                            Games
+                        </a>
+                        <ul class="submenu">
+                            <li class="nav-item">
+                                <a href="roulette.html" class="nav-link">
+                                    <img src="img/menu/roulette.png" alt="Roulette">
+                                    Roulette
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="crash.html" class="nav-link">
+                                    <img src="img/menu/crash.png" alt="Crash">
+                                    Crash
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="coinflip.html" class="nav-link">
+                                    <img src="img/coinflip/coin.png" alt="Coinflip">
+                                    Coinflip
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="dice.html" class="nav-link">
+                                    <img src="img/menu/dice.png" alt="Dice">
+                                    Dice
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="jackpot.html" class="nav-link">
+                                    <img src="img/menu/jackpot.png" alt="Jackpot">
+                                    Jackpot
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="minesweeper.html" class="nav-link">
+                                    <img src="img/menu/mines.png" alt="Minesweeper">
+                                    Minesweeper
+                                    <span class="badge hot">HOT</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="casino/lobby.html" class="nav-link">
+                            <div class="icon-container"><img src="img/slots.png" alt="Casino"></div>
+                            Casino
+                            <span class="badge new">NEW</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="register.html" class="nav-link">
+                            <div class="icon-container"><i class="fa fa-user-plus"></i></div>
+                            Register
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link active">
+                            <div class="icon-container"><i class="fa fa-sign-in"></i></div>
+                            Login
+                        </a>
+                    </li>
+            <div class="auth-container flex flex-col gap-4 justify-center items-center size-full p-2">
             <!-- Mobile Back Button -->
             <div class="mobile-back-button" style="display: none; position: absolute; top: 20px; left: 20px; z-index: 1000;">
                 <a href="index.htm" class="flex items-center gap-2 text-white hover:text-primary transition-colors">
@@ -199,5 +276,6 @@
                 </div>
             </div>
         </div>
+
 	<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'986bb11c2e5cf0de',t:'MTc1OTE1MTEyMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

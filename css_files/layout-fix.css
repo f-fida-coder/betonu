@@ -1,0 +1,89 @@
+/* Layout fixes to eliminate gaps between sidebar and main content */
+
+/* Ensure wrapper page has no unwanted margins or padding */
+.wrapper-page {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  width: 100%;
+}
+
+/* Fix for main panel alignment with sidebar */
+.main-panel {
+  padding-left: 0;
+  box-sizing: border-box;
+  position: relative;
+  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+  float: right; /* Ensures content flows properly alongside sidebar */
+  transition: all 0.3s ease;
+}
+
+/* Make sure body content inside main panel has consistent padding */
+.main-panel .body {
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: -20px; /* Move content closer to sidebar */
+}
+
+/* Fix any potential float issues */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Improve content spacing with reduced sidebar width */
+.main-panel .container {
+  padding-left: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure proper nesting of flex elements */
+@media (min-width: 769px) {
+  .wrapper-page {
+    margin-top: 0;
+  }
+  
+  .main-panel {
+    flex: 1;
+    padding-left: 0;
+  }
+  
+  /* Tightly fit content against sidebar */
+  .main-panel > * {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  /* Adjust any grid containers */
+  .main-panel .grid,
+  .main-panel .container {
+    margin-left: -10px;
+  }
+}
+
+/* Fix for mobile view */
+@media (max-width: 768px) {
+  .wrapper-page {
+    margin-top: 0;
+    display: block; /* Change to block layout on mobile */
+  }
+  
+  .main-panel {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0;
+    float: none;
+  }
+  
+  /* Ensure sidebar is properly hidden on mobile unless opened */
+  .sidebar:not(.mobile-open) {
+    transform: translateX(-100%);
+  }
+  
+  /* When sidebar is open on mobile */
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+}

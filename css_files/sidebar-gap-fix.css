@@ -1,0 +1,126 @@
+/* Sidebar gap fix - completely eliminates the gap between sidebar and content */
+
+/* Force layout recalculation to remove gap between sidebar and content */
+html body {
+  overflow-x: hidden !important; /* Prevent horizontal scrolling from any gap */
+}
+
+/* Advanced technique to force content to stick to sidebar */
+@supports (display: grid) {
+  html body .wrapper-page {
+    display: grid !important;
+    grid-template-columns: 172.5px calc(100% - 172.5px) !important; /* Reduced by 30px */
+    column-gap: 0 !important;
+  }
+  
+  html body .sidebar {
+    grid-column: 1 !important;
+    width: 202.5px !important; /* Keep sidebar at original width */
+  }
+  
+  html body .main-panel {
+    grid-column: 2 !important;
+    margin-left: -30px !important; /* Increased negative margin to reduce gap */
+  }
+}
+
+/* Ensure sidebar sits properly at the edge */
+html body .sidebar {
+  width: 202.5px !important;
+  min-width: 232.5px !important;
+  max-width: 202.5px !important;
+  left: 0 !important;
+  margin-left: 0 !important;
+  margin-right: -1px !important; /* Negative margin to eliminate gap */
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Ensure main panel sits directly next to sidebar with NO GAP */
+html body .main-panel {
+  margin-left: 202.5px !important;
+  width: calc(100% - 202.5px) !important;
+  padding-left: 0 !important;
+  box-sizing: border-box !important;
+  position: absolute !important; /* Use absolute positioning to eliminate any gap */
+  left: 50.5px !important; /* Position 30px leftward to reduce gap significantly */
+  top: 0 !important;
+  right: 0 !important;
+}
+
+/* Fix for any container padding inside main panel */
+html body .main-panel > *,
+html body .main-panel .container,
+html body .main-panel .content,
+html body .main-panel .body {
+  padding-left: 0 !important;
+  margin-left: 30px !important; /* Adjust margin to compensate for the leftward shift of main panel */
+  box-sizing: border-box !important;
+}
+
+/* Ensure no unexpected margins in content */
+html body .main-panel .row,
+html body .main-panel .card,
+html body .main-panel .grid,
+html body .main-panel .col {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Create a full wrapper to ensure clean layout with no gaps */
+html body .wrapper-page {
+  display: flex !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important; /* Prevent any overflow gaps */
+  gap: 0 !important; /* Ensure no flex gap */
+}
+
+/* Force the sidebar and main panel to be direct siblings with no gap */
+html body .sidebar + .main-panel {
+  border-left: 0 !important;
+  margin-left: -1px !important; /* Negative margin to eliminate gap */
+}
+
+/* Target any first child inside containers to maintain proper spacing */
+html body .main-panel > *:first-child,
+html body .main-panel .container:first-child,
+html body .main-panel .content:first-child,
+html body .main-panel .body:first-child {
+  padding-left: 0 !important;
+  margin-left: 30px !important; /* Adjust to match the main panel shift */
+}
+
+/* Mobile exceptions */
+@media (max-width: 768px) {
+  html body .sidebar {
+    width: 100% !important;
+    position: fixed !important;
+    z-index: 999 !important;
+    transform: translateX(-100%) !important;
+  }
+  
+  html body .sidebar.mobile-open {
+    transform: translateX(0) !important;
+  }
+  
+  html body .main-panel {
+    margin-left: 0 !important;
+    width: 100% !important;
+    position: relative !important;
+    left: 0 !important;
+    min-width: 380px !important;
+  }
+  
+  html body .main-panel > *,
+  html body .main-panel .container,
+  html body .main-panel .content,
+  html body .main-panel .body {
+    margin-left: 0 !important;
+    padding-left: 10px !important;
+  }
+}

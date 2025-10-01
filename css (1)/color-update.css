@@ -1,0 +1,173 @@
+/* Purple Theme Update for existing site */
+
+:root {
+  /* Update primary color variables to vibrant purple theme */
+  --background: #2e208c; /* Deeper purple background */
+  --foreground: #ffffff; /* Keep white text for contrast */
+  --muted-foreground: rgba(255, 255, 255, 0.7);
+  --primary: #5b46c7; /* Main purple accent color */
+  --secondary: #1f1854; /* Darker purple for secondary elements */
+  --card: #352593; /* Medium purple for card backgrounds */
+  --accent: #4a37b8; /* Highlight purple */
+  
+  /* These success/warning colors can stay the same */
+  --color-success: #00c74d;
+  --color-warning: #ffc107;
+  --color-danger: #ed143d;
+  --color-info: #17a2b8;
+}
+
+/* Improve button styling */
+.button, .button:focus {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.button.button-primary {
+  background-color: var(--primary);
+  box-shadow: 0 4px 8px rgba(91, 70, 199, 0.4);
+}
+
+.button.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(91, 70, 199, 0.5);
+}
+
+/* Card styles - improve border radius and shadow */
+.card, .rounded-1, .rounded-2 {
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Header adjustments */
+.header {
+  background-color: var(--secondary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation improvements */
+.header .item.head:hover, 
+.pullout .menu .item.head:hover {
+  color: var(--primary);
+}
+
+/* Game card styling */
+.home-games .item {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.home-games .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Input field styling */
+.dropdown_field, 
+.file_field, 
+.input_field, 
+.slider_field, 
+.switch_field {
+  border-radius: 8px;
+}
+
+input, textarea, select {
+  border-radius: 8px;
+}
+
+/* Better scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Game tabs styling */
+.game-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0;
+}
+
+.game-tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.game-tab.active {
+  color: white;
+}
+
+.game-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.game-tab.active::after {
+  transform: scaleX(1);
+}
+
+/* Balance display */
+.balance-display {
+  background-color: var(--secondary);
+  border-radius: 24px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.balance-display img {
+  height: 20px;
+  width: auto;
+}
+
+.balance-amount {
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+/* User Level Badge */
+.level-badge {
+  background: linear-gradient(135deg, var(--primary) 0%, #6f38ce 100%);
+  border-radius: 16px;
+  padding: 5px 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

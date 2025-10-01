@@ -6,7 +6,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Dice | Betonu.com</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
-        
+        <meta name="keywords" content="jackpot,coinflip,csgo,cs,go,global,offensive,cs:go,vgo,csgocoinflip,csgocoinflip,csgosite,vgocoinflip,vgocoinflip,vgosite,site,vgokingdom,kingdom,bet,gambling,gamble,fair,best,great,csgoempire,csgoatse,csgo500,crypto,btc,eth,roulette,experience">
+        <meta name="description" content="Betonu.com - The best crypto place to win money!">
+        <meta name="author" content="">
+        <meta name="theme-color" content="#9370db">
+
+        <meta property="og:url" content="#">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Betonu.com">
+        <meta property="og:title" content="Betonu.com">
+        <meta property="og:description" content="Betonu.com - The best crypto place to win money!">
+        <meta property="og:image" content="#">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
         <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
         <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
@@ -20,6 +33,7 @@
                 width: 250px !important;
                 min-width: 250px !important;
                 max-width: 250px !important;
+                /* Only disable transitions for position/width properties */
                 transition-property: none !important;
             }
             .main-panel {
@@ -56,10 +70,6 @@
         <link href="css_files/enhanced-sidebar.css" rel="stylesheet">
         <link href="css_files/fixed-layout.css" rel="stylesheet">
         <link href="css_files/game-page-fixes.css" rel="stylesheet">
-        <!-- Add Dice CSS -->
-        <link href="css_files/dice-game.css" rel="stylesheet">
-        <!-- Add Responsive CSS -->
-        <link href="css_files/responsive.css" rel="stylesheet">
 
         <!--  JAVASCRIPT  -->
         <script src="ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -68,21 +78,24 @@
         <script src="ajax/libs/tinysort/2.3.6/tinysort.min.js"></script>
         <script src="ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script src="gh/davidshimjs/qrcodejs%40gh-pages/qrcode.min.js"></script>
+
         <script src="ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
         <script src='recaptcha/api.js'></script>
         <script src="analytics.js"></script>
-        
         <script>var app = {
-            "page": "dice",
-            "url": "#",
-            "name": "Betonu.com",
-            "paths": ["dice"],
-            "port": "443",
-            "secure": true,
-            "recaptcha": {
-                "public_key": "6LfUgowlAAAAAIKSFYErAiQdB7yvIK786O21ZW41"
-            }
-        };</script>
+    "page": "dice",
+    "url": "#",
+    "name": "Betonu.com",
+    "paths": [
+        "dice"
+    ],
+    "port": "443",
+    "secure": true,
+    "recaptcha": {
+        "public_key": "6LfUgowlAAAAAIKSFYErAiQdB7yvIK786O21ZW41"
+    }
+};</script>
 
         <script type="text/javascript" src="js/components.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
@@ -92,9 +105,6 @@
         <script type="text/javascript" src="js/width-lock.js"></script>
         <script type="text/javascript" src="js/sidebar-enhancement.js"></script>
         <script type="text/javascript" src="js/layout-consistency.js"></script>
-        <!-- Add Dice JS -->
-        <script type="text/javascript" src="js/dice-game.js"></script>
-        <script type="text/javascript" src="js/dice-debug.js"></script>
 	</head>
 
 	<body>
@@ -138,11 +148,6 @@
             </div>
             <!-- Sidebar Overlay for Mobile -->
             <div class="sidebar-overlay" data-toggle="sidebar"></div>
-            
-            <!-- Mobile Menu Toggle Button -->
-            <button class="mobile-menu-toggle" data-toggle="sidebar">
-                <i class="fa fa-bars"></i>
-            </button>
             
             <!-- Main Content -->
             <div class="main-panel">
@@ -215,202 +220,128 @@
                     </div>
                 </div>
 
-                <div class="body flex flex-col w-full p-4">
-                    <!-- Dice Game Container with proper IDs and classes -->
-                    <div class="bg-secondary rounded-2 p-4 dice-game-container">
+                <div class="content-container">
+                    <div class="dice-game-container bg-secondary p-4 rounded-2">
                         <h1 class="text-2xl font-bold mb-4">Dice Game</h1>
                         
-                        <div class="bg-dark rounded-2 p-4 dice-container card-container">
-                            <!-- Dice Controls -->
+                        <div class="dice-controls bg-dark p-4 rounded-2 mb-4">
                             <div class="flex flex-col md:flex-row gap-4">
-                                <div class="w-full md:w-1/2">
-                                    <div class="mb-4">
-                                        <label class="block mb-2">Bet Amount</label>
-                                        <div class="relative">
-                                            <input type="text" id="dice_amount" value="1.00" class="w-full p-2 bg-card rounded">
-                                            <div class="absolute right-0 top-0 h-full flex">
-                                                <button id="dice_amount_half" class="p-2">1/2</button>
-                                                <button id="dice_amount_double" class="p-2">2x</button>
-                                                <button id="dice_amount_max" class="p-2">Max</button>
+                                <div class="flex flex-col gap-2 w-full md:w-1/2">
+                                    <div class="flex flex-row items-center justify-between">
+                                        <span>Bet Amount:</span>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="betAmount" value="1.00">
+                                            <div class="btn-group">
+                                                <button class="button button-card shadow-1">½</button>
+                                                <button class="button button-card shadow-1">2×</button>
+                                                <button class="button button-card shadow-1">Max</button>
                                             </div>
                                         </div>
                                     </div>
                                     
-                                    <div class="mb-4">
-                                        <label class="block mb-2">Win Chance (%)</label>
-                                        <input type="text" id="dice_chance" value="50.00" class="w-full p-2 bg-card rounded mb-2">
-                                        <input type="range" id="dice_chanceslider" min="0.01" max="98" value="50" step="0.01" class="w-full form-range">
-                                    </div>
-                                    
-                                    <div class="mb-4">
-                                        <div class="flex justify-between">
-                                            <div>
-                                                <label class="block mb-2">Payout (×)</label>
-                                                <input type="text" id="dice_payout" value="2.00" class="w-1/2 p-2 bg-card rounded" readonly>
-                                            </div>
-                                            <div>
-                                                <label class="block mb-2">Profit</label>
-                                                <input type="text" id="dice_profit" value="1.00" class="w-1/2 p-2 bg-card rounded" readonly>
-                                            </div>
+                                    <div class="flex flex-row items-center justify-between">
+                                        <span>Win Chance:</span>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="winChance" value="50.00">
+                                            <span class="input-group-text">%</span>
                                         </div>
                                     </div>
                                     
-                                    <div class="mb-4" id="dice_mode" data-mode="under">
-                                        <label class="block mb-2">Bet Mode</label>
-                                        <div class="bet-select">
-                                            <a href="#" class="active" data-type="under">Roll Under</a>
-                                            <a href="#" data-type="over">Roll Over</a>
+                                    <div class="flex flex-row items-center justify-between">
+                                        <span>Payout:</span>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="payout" value="2.00" readonly>
+                                            <span class="input-group-text">×</span>
                                         </div>
                                     </div>
                                     
-                                    <button id="dice_bet" class="button button-primary shadow-2 py-4 px-8 text-xl w-full">ROLL UNDER 50.00</button>
+                                    <div class="flex flex-row items-center justify-between">
+                                        <span>Roll Under:</span>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="rollUnder" value="50.00" readonly>
+                                        </div>
+                                    </div>
                                 </div>
                                 
-                                <div class="w-full md:w-1/2">
-                                    <div class="mb-4">
-                                        <div class="dice-range bg-dark">
-                                            <div class="dice-range-fill bg-primary h-8" id="dice_range" style="width: 50%"></div>
-                                            <div class="dice-pointer absolute w-2 h-8 bg-white" id="dice_pointer" style="left: 50%; transform: translateX(-50%)"></div>
+                                <div class="flex flex-col gap-2 w-full md:w-1/2">
+                                    <div class="dice-slider bg-card p-4 rounded-2">
+                                        <div class="slider-track">
+                                            <div class="slider-fill" style="width: 50%;"></div>
+                                            <div class="slider-handle" style="left: 50%;"></div>
+                                        </div>
+                                        <div class="slider-labels flex justify-between mt-2">
+                                            <span>1</span>
+                                            <span>50</span>
+                                            <span>100</span>
                                         </div>
                                     </div>
                                     
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <span>0</span>
-                                        <span id="dice_target">50.00</span>
-                                        <span>100</span>
-                                    </div>
-                                    
-                                    <div class="mb-4 bg-card rounded-2 p-4">
-                                        <div class="dice-spinner-container">
-                                            <div class="dice-spinner">
-                                                <div class="dice-spinner-content"></div>
-                                            </div>
-                                            <div class="dice-spinner">
-                                                <div class="dice-spinner-content"></div>
-                                            </div>
-                                            <div class="dice-spinner">
-                                                <div class="dice-spinner-content"></div>
-                                            </div>
-                                            <div class="dice-spinner">
-                                                <div class="dice-spinner-content"></div>
-                                            </div>
-                                            <div class="dice-spinner">
-                                                <div class="dice-spinner-content"></div>
-                                            </div>
-                                        </div>
-                                        <div class="text-center mt-4">
-                                            <div class="dice-number" id="dice_number">00.00</div>
-                                            <div id="dice_result">
-                                                <div class="text-sm text-secondary">Result</div>
-                                            </div>
+                                    <div class="profit-calc bg-card p-2 rounded-2">
+                                        <div class="flex flex-row items-center justify-between">
+                                            <span>Profit on Win:</span>
+                                            <span class="text-success">1.00 coins</span>
                                         </div>
                                     </div>
                                     
-                                    <div id="dice_cashout" class="dice-cashout rounded-2 p-4 bg-card">
-                                        <div class="flex justify-between">
-                                            <div>
-                                                <div class="text-lg font-bold" id="dice_cashout_number">00.00</div>
-                                                <div class="text-sm text-secondary">Number</div>
-                                            </div>
-                                            <div>
-                                                <div class="text-lg font-bold text-success" id="dice_cashout_profit">+0.00</div>
-                                                <div class="text-sm text-secondary">Profit</div>
-                                            </div>
-                                        </div>
+                                    <div class="mt-2">
+                                        <button class="button button-primary shadow-2 w-full py-3 text-lg font-bold">ROLL UNDER 50</button>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- History Table -->
-                            <div class="mt-8">
-                                <h3 class="font-bold mb-2">History</h3>
-                                <div class="bg-card rounded-2 overflow-hidden">
-                                    <table class="w-full">
-                                        <thead>
-                                            <tr class="border-b border-card">
-                                                <th class="text-left p-2">User</th>
-                                                <th class="text-right p-2">Number</th>
-                                                <th class="text-right p-2">Bet</th>
-                                                <th class="text-right p-2">Payout</th>
-                                                <th class="text-right p-2">Profit</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="dice_history">
-                                            <!-- History items will be inserted here by JS -->
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                        </div>
+                        
+                        <div class="dice-results bg-dark p-4 rounded-2">
+                            <h3 class="text-lg font-bold mb-2">Recent Rolls</h3>
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="bg-card">
+                                        <th class="p-2">User</th>
+                                        <th class="p-2">Bet</th>
+                                        <th class="p-2">Target</th>
+                                        <th class="p-2">Roll</th>
+                                        <th class="p-2">Payout</th>
+                                        <th class="p-2">Profit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-card">
+                                        <td class="p-2">Player1</td>
+                                        <td class="p-2">1.00</td>
+                                        <td class="p-2">Under 50.00</td>
+                                        <td class="p-2">37.21</td>
+                                        <td class="p-2">2.00×</td>
+                                        <td class="p-2 text-success">+1.00</td>
+                                    </tr>
+                                    <tr class="border-b border-card">
+                                        <td class="p-2">Player2</td>
+                                        <td class="p-2">5.00</td>
+                                        <td class="p-2">Under 25.00</td>
+                                        <td class="p-2">82.67</td>
+                                        <td class="p-2">4.00×</td>
+                                        <td class="p-2 text-danger">-5.00</td>
+                                    </tr>
+                                    <tr class="border-b border-card">
+                                        <td class="p-2">Player3</td>
+                                        <td class="p-2">10.00</td>
+                                        <td class="p-2">Under 75.00</td>
+                                        <td class="p-2">42.18</td>
+                                        <td class="p-2">1.33×</td>
+                                        <td class="p-2 text-success">+3.33</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Debug Element to show page is working -->
         <script>
+            // Basic dice functionality
             document.addEventListener('DOMContentLoaded', function() {
-                // Add a visible element to confirm the page is working
-                const notification = document.createElement('div');
-                notification.style.position = 'fixed';
-                notification.style.top = '10px';
-                notification.style.left = '50%';
-                notification.style.transform = 'translateX(-50%)';
-                notification.style.background = 'green';
-                notification.style.color = 'white';
-                notification.style.padding = '10px';
-                notification.style.borderRadius = '5px';
-                notification.style.zIndex = '9999';
-                notification.textContent = 'Dice Game Content Loaded Successfully';
-                document.body.appendChild(notification);
-                
-                setTimeout(function() {
-                    notification.style.display = 'none';
-                }, 5000);
-                
-                // Force display of dice container
-                document.querySelectorAll('.dice-container, .card-container, .dice-game-container').forEach(function(el) {
-                    el.style.opacity = '1';
-                    el.style.display = 'block';
-                    el.style.visibility = 'visible';
-                });
-                
-                // Mobile menu functionality
-                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-                const sidebar = document.querySelector('.sidebar');
-                const sidebarOverlay = document.querySelector('.sidebar-overlay');
-                
-                if (mobileMenuToggle && sidebar && sidebarOverlay) {
-                    // Toggle sidebar on menu button click
-                    mobileMenuToggle.addEventListener('click', function() {
-                        sidebar.classList.toggle('mobile-open');
-                        sidebarOverlay.classList.toggle('active');
-                    });
-                    
-                    // Close sidebar when clicking overlay
-                    sidebarOverlay.addEventListener('click', function() {
-                        sidebar.classList.remove('mobile-open');
-                        sidebarOverlay.classList.remove('active');
-                    });
-                    
-                    // Close sidebar when clicking navigation items
-                    sidebar.querySelectorAll('a').forEach(function(link) {
-                        link.addEventListener('click', function() {
-                            if (window.innerWidth <= 767) {
-                                sidebar.classList.remove('mobile-open');
-                                sidebarOverlay.classList.remove('active');
-                            }
-                        });
-                    });
-                    
-                    // Handle resize events
-                    window.addEventListener('resize', function() {
-                        if (window.innerWidth > 767) {
-                            sidebar.classList.remove('mobile-open');
-                            sidebarOverlay.classList.remove('active');
-                        }
-                    });
-                }
+                // This is just a placeholder for the real dice functionality
+                // that would be implemented in the main app.js
+                console.log("Dice game initialized");
             });
         </script>
     </body>

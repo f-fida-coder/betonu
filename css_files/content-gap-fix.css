@@ -1,0 +1,57 @@
+/* Content gap fix - moves content closer to sidebar */
+
+/* Target all direct children of main panel */
+.main-panel > * {
+  padding-left: 0 !important;
+  margin-left: -15px !important; /* Move content closer to sidebar */
+}
+
+/* Target specific content containers */
+.main-panel .container,
+.main-panel .content,
+.main-panel .body,
+.main-panel .wrapper {
+  padding-left: 0 !important;
+  margin-left: -15px !important;
+}
+
+/* Target inner elements */
+.main-panel .row,
+.main-panel .card,
+.main-panel .grid,
+.main-panel .col {
+  margin-left: 0 !important;
+}
+
+/* Fix padding for any content that might have specific padding */
+.main-panel .container-fluid,
+.main-panel [class^="container-"] {
+  padding-left: 0 !important;
+}
+
+/* Ensure text content isn't too close to edge */
+.main-panel p,
+.main-panel h1,
+.main-panel h2,
+.main-panel h3,
+.main-panel h4,
+.main-panel h5,
+.main-panel h6 {
+  padding-left: 5px !important;
+}
+
+/* Fix for tables to align with content */
+.main-panel table {
+  margin-left: 0 !important;
+}
+
+/* Mobile exceptions */
+@media (max-width: 768px) {
+  .main-panel > *,
+  .main-panel .container,
+  .main-panel .content,
+  .main-panel .body {
+    margin-left: 0 !important;
+    padding-left: 10px !important;
+  }
+}
