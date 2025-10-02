@@ -22,17 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add data attributes to links for SVG fallbacks
   function addIconAttributes() {
     const iconMap = {
-      'index.htm': { type: 'home', icon: 'fa fa-home' },
-      'casino/lobby.html': { type: 'globe', icon: 'fa fa-globe' },
-      'roulette.html': { type: 'refresh', icon: 'fa fa-refresh' },
-      'crash.html': { type: 'trophy', icon: 'fa fa-trophy' },
-      'coinflip.html': { type: 'dollar', icon: 'fa fa-dollar' },
-      'dice.html': { type: 'cube', icon: 'fa fa-cube' },
-      'unboxing.html': { type: 'box', icon: 'fa fa-box' },
-      'rewards.html': { type: 'star', icon: 'fa fa-star' },
-      'deposit.html': { type: 'money', icon: 'fa fa-money' },
-      'leaderboard.html': { type: 'trophy', icon: 'fa fa-trophy' },
-      'faq.html': { type: 'tag', icon: 'fa fa-tag' }
+      'index.htm': { type: 'home', icon: 'fas fa-home' },
+      'casino/lobby.html': { type: 'globe', icon: 'fas fa-globe' },
+      'roulette.html': { type: 'refresh', icon: 'fas fa-sync-alt' },
+      'crash.html': { type: 'trophy', icon: 'fas fa-trophy' },
+      'coinflip.html': { type: 'dollar', icon: 'fas fa-dollar-sign' },
+      'dice.html': { type: 'cube', icon: 'fas fa-dice' },
+      'unboxing.html': { type: 'box', icon: 'fas fa-box' },
+      'rewards.html': { type: 'star', icon: 'fas fa-star' },
+      'deposit.html': { type: 'money', icon: 'fas fa-money-bill-wave' },
+      'leaderboard.html': { type: 'trophy', icon: 'fas fa-trophy' },
+      'faq.html': { type: 'tag', icon: 'fas fa-tags' }
     };
     
     Object.entries(iconMap).forEach(([href, data]) => {
