@@ -70,23 +70,22 @@
   filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.5)) brightness(1.2);
 }
 
-/* Add emoji decorations next to menu items with glow effect */
-.sidebar-nav a[href="index.htm"]::after { content: '🏠'; margin-left: auto; }
-.sidebar-nav a[href="casino/lobby.html"]::after { content: '🎰'; margin-left: auto; }
-.sidebar-nav a[href="roulette.html"]::after { content: '🎮'; margin-left: auto; }
-.sidebar-nav a[href="crash.html"]::after { content: '🏈'; margin-left: auto; }
-.sidebar-nav a[href="coinflip.html"]::after { content: '🪙'; margin-left: auto; }
-.sidebar-nav a[href="dice.html"]::after { content: '🎲'; margin-left: auto; }
-.sidebar-nav a[href="unboxing.html"]::after { content: '📦'; margin-left: auto; }
-.sidebar-nav a[href="rewards.html"]::after { content: '💰'; margin-left: auto; }
-.sidebar-nav a[href="deposit.html"]::after { content: '🎁'; margin-left: auto; }
-.sidebar-nav a[href="leaderboard.html"]::after { content: '👑'; margin-left: auto; }
-.sidebar-nav a[href="faq.html"]::after { content: '🎫'; margin-left: auto; }
+/* Add FontAwesome icons as decorations next to menu items */
+.sidebar-nav a[href="index.htm"]::after { content: "\f015"; font-family: 'FontAwesome'; margin-left: auto; }
+.sidebar-nav a[href="casino/lobby.html"]::after { content: "\f0ac"; font-family: 'FontAwesome'; margin-left: auto; }
+.sidebar-nav a[href="roulette.html"]::after { content: "\f021"; font-family: 'FontAwesome'; margin-left: auto; }
+.sidebar-nav a[href="crash.html"]::after { content: "\f091"; font-family: 'FontAwesome'; margin-left: auto; }
+.sidebar-nav a[href="coinflip.html"]::after { content: "\f154"; font-family: 'FontAwesome'; margin-left: auto; }
+.sidebar-nav a[href="dice.html"]::after { content: "\f6d1"; font-family: 'FontAwesome'; margin-left: auto; }
+.sidebar-nav a[href="unboxing.html"]::after { content: "\f49e"; font-family: 'FontAwesome'; margin-left: auto; }
+.sidebar-nav a[href="rewards.html"]::after { content: "\f005"; font-family: 'FontAwesome'; margin-left: auto; }
+.sidebar-nav a[href="deposit.html"]::after { content: "\f0d6"; font-family: 'FontAwesome'; margin-left: auto; }
+.sidebar-nav a[href="leaderboard.html"]::after { content: "\f521"; font-family: 'FontAwesome'; margin-left: auto; }
+.sidebar-nav a[href="faq.html"]::after { content: "\f02b"; font-family: 'FontAwesome'; margin-left: auto; }
 
-/* Badge indicator for new items */
-.sidebar-nav a[href="casino/lobby.html"]::before,
-.sidebar-nav a[href="rewards.html"]::before {
-  content: 'NEW';
+/* Badge indicator for new items - more compatible approach */
+.sidebar-nav a[href="casino/lobby.html"] .new-badge,
+.sidebar-nav a[href="rewards.html"] .new-badge {
   position: absolute;
   top: -5px;
   right: -5px;

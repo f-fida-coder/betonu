@@ -152,8 +152,7 @@
 }
 
 /* Hot indicator for specific menu items */
-.sidebar-nav a[href="dice.html"]::before {
-  content: 'HOT';
+.sidebar-nav a[href="dice.html"] .hot-badge {
   position: absolute;
   top: -5px;
   right: -5px;
