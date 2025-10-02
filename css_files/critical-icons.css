@@ -1,0 +1,55 @@
+/* Inline critical CSS for icons to prevent FOUC */
+.sidebar-nav a i {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 28px !important;
+  height: 28px !important;
+  margin-right: 10px !important;
+  text-align: center !important;
+  font-size: 18px !important;
+}
+
+.sidebar-nav a[href="index.htm"] i {
+  color: #ffd700 !important;
+}
+
+.sidebar-nav a[href="casino/lobby.html"] i {
+  color: #ff7f50 !important;
+}
+
+.sidebar-nav a[href="roulette.html"] i {
+  color: #ff3e3e !important;
+}
+
+.sidebar-nav a[href="crash.html"] i {
+  color: #3cb371 !important;
+}
+
+.sidebar-nav a[href="coinflip.html"] i {
+  color: #ffd700 !important;
+}
+
+.sidebar-nav a[href="dice.html"] i {
+  color: #9370db !important;
+}
+
+.sidebar-nav a[href="unboxing.html"] i {
+  color: #1e90ff !important;
+}
+
+.sidebar-nav a[href="rewards.html"] i {
+  color: #ffa500 !important;
+}
+
+.sidebar-nav a[href="deposit.html"] i {
+  color: #32cd32 !important;
+}
+
+.sidebar-nav a[href="leaderboard.html"] i {
+  color: #ff8c00 !important;
+}
+
+.sidebar-nav a[href="faq.html"] i {
+  color: #9370db !important;
+}

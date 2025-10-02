@@ -93,10 +93,42 @@
         <link href="css_files/sidebar-icons.css" rel="stylesheet">
         <link href="css_files/logo-fix.css" rel="stylesheet">
         <link href="css_files/netlify-compatibility.css" rel="stylesheet">
+        <link href="css_files/cdn-icons.css" rel="stylesheet">
         <link href="css_files/fixed-layout.css" rel="stylesheet">
         <link href="css_files/game-page-fixes.css" rel="stylesheet">
         <!-- Add Responsive CSS -->
         <link href="css_files/responsive.css" rel="stylesheet">
+        
+        <!-- Critical CSS for icons - inline to prevent FOUC -->
+        <style>
+          /* Critical icons styling */
+          .sidebar-nav a i {
+            display: inline-block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            width: 28px !important;
+            height: 28px !important;
+            margin-right: 10px !important;
+            text-align: center !important;
+            font-size: 18px !important;
+          }
+          .sidebar-nav a[href="index.htm"] i { color: #ffd700 !important; }
+          .sidebar-nav a[href="casino/lobby.html"] i { color: #ff7f50 !important; }
+          .sidebar-nav a[href="roulette.html"] i { color: #ff3e3e !important; }
+          .sidebar-nav a[href="crash.html"] i { color: #3cb371 !important; }
+          .sidebar-nav a[href="coinflip.html"] i { color: #ffd700 !important; }
+          .sidebar-nav a[href="dice.html"] i { color: #9370db !important; }
+          .sidebar-nav a[href="unboxing.html"] i { color: #1e90ff !important; }
+          .sidebar-nav a[href="rewards.html"] i { color: #ffa500 !important; }
+          .sidebar-nav a[href="deposit.html"] i { color: #32cd32 !important; }
+          .sidebar-nav a[href="leaderboard.html"] i { color: #ff8c00 !important; }
+          .sidebar-nav a[href="faq.html"] i { color: #9370db !important; }
+        </style>
+        
+        <!-- Direct CDN FontAwesome links for Netlify compatibility -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
 
         <!-- Immediate sidebar fix to prevent animations -->
         <script type="text/javascript" src="js/sidebar-fix.js"></script>
@@ -104,6 +136,8 @@
         <script type="text/javascript" src="js/logo-fix.js"></script>
         <!-- Netlify compatibility fixes for icons -->
         <script type="text/javascript" src="js/netlify-sidebar-fix.js"></script>
+        <!-- Enhanced reliable icons system -->
+        <script type="text/javascript" src="js/reliable-icons.js"></script>
         
         <!--  JAVASCRIPT  -->
         <script src="ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -2331,27 +2365,27 @@
                         <div class="sidebar-section">
                             <div class="sidebar-section-title">Main</div>
                             <ul>
-                                <li><a href="index.htm"><i></i>Home</a></li>
-                                <li><a href="casino/lobby.html"><i></i>Casino<span class="new-badge">NEW</span></a></li>
-                                <li><a href="roulette.html"><i></i>Live</a></li>
+                                <li><a href="index.htm" data-icon-type="home"><i class="fa fa-home"></i>Home</a></li>
+                                <li><a href="casino/lobby.html" data-icon-type="globe"><i class="fa fa-globe"></i>Casino<span class="new-badge">NEW</span></a></li>
+                                <li><a href="roulette.html" data-icon-type="refresh"><i class="fa fa-refresh"></i>Live</a></li>
                             </ul>
                         </div>
                         <div class="sidebar-section">
                             <div class="sidebar-section-title">Games</div>
                             <ul>
-                                <li><a href="crash.html"><i></i>Sports</a></li>
-                                <li><a href="coinflip.html"><i></i>Coinflip</a></li>
-                                <li><a href="dice.html"><i></i>Dice<span class="hot-badge">HOT</span></a></li>
-                                <li><a href="unboxing.html"><i></i>Boxes</a></li>
+                                <li><a href="crash.html" data-icon-type="trophy"><i class="fa fa-trophy"></i>Sports</a></li>
+                                <li><a href="coinflip.html" data-icon-type="dollar"><i class="fa fa-dollar"></i>Coinflip</a></li>
+                                <li><a href="dice.html" data-icon-type="cube"><i class="fa fa-cube"></i>Dice<span class="hot-badge">HOT</span></a></li>
+                                <li><a href="unboxing.html" data-icon-type="box"><i class="fa fa-box"></i>Boxes</a></li>
                             </ul>
                         </div>
                         <div class="sidebar-section">
                             <div class="sidebar-section-title">Promo</div>
                             <ul>
-                                <li><a href="rewards.html"><i></i>Rakeback<span class="new-badge">NEW</span></a></li>
-                                <li><a href="deposit.html"><i></i>Free Bonus</a></li>
-                                <li><a href="leaderboard.html"><i></i>VIP</a></li>
-                                <li><a href="faq.html"><i></i>Codes</a></li>
+                                <li><a href="rewards.html" data-icon-type="star"><i class="fa fa-star"></i>Rakeback<span class="new-badge">NEW</span></a></li>
+                                <li><a href="deposit.html" data-icon-type="money"><i class="fa fa-money"></i>Free Bonus</a></li>
+                                <li><a href="leaderboard.html" data-icon-type="trophy"><i class="fa fa-trophy"></i>VIP</a></li>
+                                <li><a href="faq.html" data-icon-type="tag"><i class="fa fa-tag"></i>Codes</a></li>
                             </ul>
                         </div>
                     </nav>
