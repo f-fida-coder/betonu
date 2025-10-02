@@ -1,0 +1,71 @@
+/* CDN-based FontAwesome - No local files needed */
+
+/* Make sure all icons use the Font Awesome from CDN properly */
+.fa,
+.fas,
+.far,
+.fal,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/* Ensure sidebar icons display correctly */
+.sidebar-nav a i {
+  display: inline-block !important;
+  width: 28px !important;
+  height: 28px !important;
+  margin-right: 10px !important;
+  text-align: center !important;
+  line-height: 28px !important;
+  font-size: 18px !important;
+  vertical-align: middle !important;
+}
+
+/* Icon colors */
+.sidebar-nav a[href="index.htm"] i { color: #ffd700 !important; }
+.sidebar-nav a[href="casino/lobby.html"] i { color: #ff7f50 !important; }
+.sidebar-nav a[href="roulette.html"] i { color: #ff3e3e !important; }
+.sidebar-nav a[href="crash.html"] i { color: #3cb371 !important; }
+.sidebar-nav a[href="coinflip.html"] i { color: #ffd700 !important; }
+.sidebar-nav a[href="dice.html"] i { color: #9370db !important; }
+.sidebar-nav a[href="unboxing.html"] i { color: #1e90ff !important; }
+.sidebar-nav a[href="rewards.html"] i { color: #ffa500 !important; }
+.sidebar-nav a[href="deposit.html"] i { color: #32cd32 !important; }
+.sidebar-nav a[href="leaderboard.html"] i { color: #ff8c00 !important; }
+.sidebar-nav a[href="faq.html"] i { color: #9370db !important; }
+
+/* Hover effect */
+.sidebar-nav a:hover i {
+  transform: scale(1.2) !important;
+  text-shadow: 0 0 5px currentColor !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Badge styling */
+.sidebar-nav a .hot-badge,
+.sidebar-nav a .new-badge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 9px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.sidebar-nav a .hot-badge {
+  background: linear-gradient(135deg, #ff7f50, #ff3e3e);
+  color: white;
+}
+
+.sidebar-nav a .new-badge {
+  background: linear-gradient(135deg, #3cb371, #32cd32);
+  color: white;
+}
