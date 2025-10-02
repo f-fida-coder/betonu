@@ -3,12 +3,40 @@
 /* Ensure FontAwesome is properly loaded with all necessary fallbacks */
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-/* Ensure icon visibility in sidebar links */
+/* Ensure icon visibility in sidebar links - more aggressive approach */
+.sidebar-nav a i {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 28px !important;
+  height: 28px !important;
+  text-align: center !important;
+  line-height: 28px !important;
+  font-size: 18px !important;
+  margin-right: 15px !important;
+  position: relative !important;
+}
+
 .sidebar-nav a i:before {
   display: inline-block !important;
   visibility: visible !important;
+  opacity: 1 !important;
   font-family: 'FontAwesome', sans-serif !important;
+  content: attr(data-icon) !important; /* Backup method */
 }
+
+/* Force icon visibility */
+.sidebar-nav a[href="index.htm"] i:before { content: "\f015" !important; }
+.sidebar-nav a[href="casino/lobby.html"] i:before { content: "\f0ac" !important; }
+.sidebar-nav a[href="roulette.html"] i:before { content: "\f021" !important; }
+.sidebar-nav a[href="crash.html"] i:before { content: "\f091" !important; }
+.sidebar-nav a[href="coinflip.html"] i:before { content: "\f154" !important; }
+.sidebar-nav a[href="dice.html"] i:before { content: "\f6d1" !important; }
+.sidebar-nav a[href="unboxing.html"] i:before { content: "\f49e" !important; }
+.sidebar-nav a[href="rewards.html"] i:before { content: "\f005" !important; }
+.sidebar-nav a[href="deposit.html"] i:before { content: "\f0d6" !important; }
+.sidebar-nav a[href="leaderboard.html"] i:before { content: "\f521" !important; }
+.sidebar-nav a[href="faq.html"] i:before { content: "\f02b" !important; }
 
 /* Icon colors that work reliably on all platforms */
 .sidebar-nav a[href="index.htm"] i { color: #ffd700 !important; }

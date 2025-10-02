@@ -1,0 +1,41 @@
+<!-- Critical inline styles for icon visibility on Netlify -->
+<style>
+/* Ensuring icon visibility with highest priority inline styles */
+.sidebar-nav a i {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 28px !important;
+  height: 28px !important;
+  text-align: center !important;
+  line-height: 28px !important;
+  font-size: 18px !important;
+  color: inherit !important;
+}
+
+/* Force FontAwesome icon display */
+.sidebar-nav a[href="index.htm"] i:before { content: "\f015" !important; font-family: 'FontAwesome' !important; }
+.sidebar-nav a[href="casino/lobby.html"] i:before { content: "\f0ac" !important; font-family: 'FontAwesome' !important; }
+.sidebar-nav a[href="roulette.html"] i:before { content: "\f021" !important; font-family: 'FontAwesome' !important; }
+.sidebar-nav a[href="crash.html"] i:before { content: "\f091" !important; font-family: 'FontAwesome' !important; }
+.sidebar-nav a[href="coinflip.html"] i:before { content: "\f154" !important; font-family: 'FontAwesome' !important; }
+.sidebar-nav a[href="dice.html"] i:before { content: "\f6d1" !important; font-family: 'FontAwesome' !important; }
+.sidebar-nav a[href="unboxing.html"] i:before { content: "\f49e" !important; font-family: 'FontAwesome' !important; }
+.sidebar-nav a[href="rewards.html"] i:before { content: "\f005" !important; font-family: 'FontAwesome' !important; }
+.sidebar-nav a[href="deposit.html"] i:before { content: "\f0d6" !important; font-family: 'FontAwesome' !important; }
+.sidebar-nav a[href="leaderboard.html"] i:before { content: "\f521" !important; font-family: 'FontAwesome' !important; }
+.sidebar-nav a[href="faq.html"] i:before { content: "\f02b" !important; font-family: 'FontAwesome' !important; }
+
+/* Add separate fallback for each icon */
+.sidebar-nav a[href="index.htm"] i { background-image: url('../img/home.png') !important; background-size: contain !important; background-repeat: no-repeat !important; background-position: center !important; }
+.sidebar-nav a[href="casino/lobby.html"] i { background-image: url('../img/menu/casino.png') !important; background-size: contain !important; background-repeat: no-repeat !important; background-position: center !important; }
+.sidebar-nav a[href="roulette.html"] i { background-image: url('../img/menu/roulette.png') !important; background-size: contain !important; background-repeat: no-repeat !important; background-position: center !important; }
+.sidebar-nav a[href="crash.html"] i { background-image: url('../img/menu/crash.png') !important; background-size: contain !important; background-repeat: no-repeat !important; background-position: center !important; }
+.sidebar-nav a[href="coinflip.html"] i { background-image: url('../img/menu/coinflip.png') !important; background-size: contain !important; background-repeat: no-repeat !important; background-position: center !important; }
+.sidebar-nav a[href="dice.html"] i { background-image: url('../img/menu/dice.png') !important; background-size: contain !important; background-repeat: no-repeat !important; background-position: center !important; }
+.sidebar-nav a[href="unboxing.html"] i { background-image: url('../img/menu/unboxing.png') !important; background-size: contain !important; background-repeat: no-repeat !important; background-position: center !important; }
+.sidebar-nav a[href="rewards.html"] i { background-image: url('../img/rewards.png') !important; background-size: contain !important; background-repeat: no-repeat !important; background-position: center !important; }
+.sidebar-nav a[href="deposit.html"] i { background-image: url('../img/deposit.png') !important; background-size: contain !important; background-repeat: no-repeat !important; background-position: center !important; }
+.sidebar-nav a[href="leaderboard.html"] i { background-image: url('../img/medal.png') !important; background-size: contain !important; background-repeat: no-repeat !important; background-position: center !important; }
+.sidebar-nav a[href="faq.html"] i { background-image: url('../img/fair.png') !important; background-size: contain !important; background-repeat: no-repeat !important; background-position: center !important; }
+</style>
