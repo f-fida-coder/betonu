@@ -13,9 +13,11 @@
   position: relative;
   background: rgba(255, 255, 255, 0.08); /* Subtle background for all buttons */
   margin: 4px 10px;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  border-left: 3px solid transparent;
 }
 
 /* Shine effect on hover */
@@ -29,7 +31,7 @@
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.3) 50%,
     rgba(255, 255, 255, 0) 100%
   );
   transition: left 0.7s ease;
@@ -45,96 +47,223 @@
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(147, 112, 219, 0.3) 100%);
   color: #fff;
   transform: translateX(3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-left: 3px solid #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .sidebar-nav a i {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.9;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
   z-index: 2;
   position: relative;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
 .sidebar-nav a:hover i {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.15) rotate(5deg);
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.5)) brightness(1.2);
 }
 
-/* Add emoji decorations next to menu items */
-.sidebar-nav a[href="index.htm"]::after { content: '🏠'; margin-left: auto; opacity: 0.7; }
-.sidebar-nav a[href="casino/lobby.html"]::after { content: '🎰'; margin-left: auto; opacity: 0.7; }
-.sidebar-nav a[href="roulette.html"]::after { content: '🎮'; margin-left: auto; opacity: 0.7; }
-.sidebar-nav a[href="crash.html"]::after { content: '🏈'; margin-left: auto; opacity: 0.7; }
-.sidebar-nav a[href="coinflip.html"]::after { content: '🪙'; margin-left: auto; opacity: 0.7; }
-.sidebar-nav a[href="dice.html"]::after { content: '🎲'; margin-left: auto; opacity: 0.7; }
-.sidebar-nav a[href="unboxing.html"]::after { content: '📦'; margin-left: auto; opacity: 0.7; }
-.sidebar-nav a[href="rewards.html"]::after { content: '💰'; margin-left: auto; opacity: 0.7; }
-.sidebar-nav a[href="deposit.html"]::after { content: '🎁'; margin-left: auto; opacity: 0.7; }
-.sidebar-nav a[href="leaderboard.html"]::after { content: '👑'; margin-left: auto; opacity: 0.7; }
-.sidebar-nav a[href="faq.html"]::after { content: '🎫'; margin-left: auto; opacity: 0.7; }
+/* Add emoji decorations next to menu items with glow effect */
+.sidebar-nav a[href="index.htm"]::after { content: '🏠'; margin-left: auto; }
+.sidebar-nav a[href="casino/lobby.html"]::after { content: '🎰'; margin-left: auto; }
+.sidebar-nav a[href="roulette.html"]::after { content: '🎮'; margin-left: auto; }
+.sidebar-nav a[href="crash.html"]::after { content: '🏈'; margin-left: auto; }
+.sidebar-nav a[href="coinflip.html"]::after { content: '🪙'; margin-left: auto; }
+.sidebar-nav a[href="dice.html"]::after { content: '🎲'; margin-left: auto; }
+.sidebar-nav a[href="unboxing.html"]::after { content: '📦'; margin-left: auto; }
+.sidebar-nav a[href="rewards.html"]::after { content: '💰'; margin-left: auto; }
+.sidebar-nav a[href="deposit.html"]::after { content: '🎁'; margin-left: auto; }
+.sidebar-nav a[href="leaderboard.html"]::after { content: '👑'; margin-left: auto; }
+.sidebar-nav a[href="faq.html"]::after { content: '🎫'; margin-left: auto; }
 
-/* Emoji fade-in on hover */
+/* Badge indicator for new items */
+.sidebar-nav a[href="casino/lobby.html"]::before,
+.sidebar-nav a[href="rewards.html"]::before {
+  content: 'NEW';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: linear-gradient(135deg, #ff3e3e, #ff7f00);
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 10px;
+  z-index: 3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: pulse 1.5s infinite;
+  opacity: 0.95;
+}
+
+/* Pulse animation for NEW badge */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Emoji fade-in on hover with glow effect */
 .sidebar-nav a::after {
   transition: all 0.3s ease;
-  transform: translateX(-5px);
+  transform: translateY(5px);
   opacity: 0;
+  font-size: 1.2em;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
 }
 
 .sidebar-nav a:hover::after {
-  transform: translateX(0);
-  opacity: 0.9;
+  transform: translateY(0);
+  opacity: 1;
+  animation: float 2s infinite ease-in-out;
 }
 
-/* Section styles */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Section styles with modern gradient and glow */
 .sidebar-section-title {
-  padding: 10px 20px;
-  font-size: 13px;
+  padding: 12px 20px;
+  font-size: 14px;
   font-weight: 600;
-  color: var(--accent);
+  color: #fff;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  border-left: 3px solid var(--accent);
-  margin-left: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 0 4px 4px 0;
+  letter-spacing: 2px;
+  margin: 15px 10px 10px 10px;
+  background: linear-gradient(135deg, rgba(147, 112, 219, 0.5), rgba(65, 48, 97, 0.5));
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Active state for current page */
+.sidebar-section-title::before {
+  content: '✦';
+  margin-right: 10px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar-section-title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    transparent 100%);
+  z-index: 1;
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Active state for current page with advanced effects */
 .sidebar-nav a.active {
-  background: linear-gradient(90deg, var(--accent) 0%, rgba(147, 112, 219, 0.5) 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, rgba(147, 112, 219, 0.8) 100%);
   color: white;
   font-weight: bold;
   transform: translateX(5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(147, 112, 219, 0.3);
+  border-left: 3px solid #fff;
+  position: relative;
 }
 
 .sidebar-nav a.active::after {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
-/* Improve the chat button */
+/* Add subtle pulsing border to active link */
+.sidebar-nav a.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.8), 
+    var(--accent), 
+    rgba(255, 255, 255, 0.8));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, 
+               linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: border-pulse 2s infinite;
+  opacity: 0.7;
+}
+
+@keyframes border-pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.4; }
+}
+
+/* Improve the chat button with 3D effect and animation */
 .sidebar-chat-toggle {
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-  box-shadow: 0 4px 15px rgba(91, 70, 199, 0.5), 0 0 5px rgba(255, 255, 255, 0.3) inset;
+  box-shadow: 0 4px 15px rgba(91, 70, 199, 0.5), 0 0 8px rgba(255, 255, 255, 0.4) inset;
+  transform: translateX(-50%) translateZ(0);
+  animation: float-button 3s infinite ease-in-out;
+}
+
+@keyframes float-button {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-5px); }
 }
 
 .sidebar-chat-toggle:hover {
   background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
   transform: translateX(-50%) scale(1.1);
-  box-shadow: 0 6px 20px rgba(91, 70, 199, 0.6), 0 0 10px rgba(255, 255, 255, 0.4) inset;
+  box-shadow: 0 8px 25px rgba(91, 70, 199, 0.7), 0 0 15px rgba(255, 255, 255, 0.5) inset;
+  animation: none;
+}
+
+/* Add notification dot to chat button */
+.sidebar-chat-toggle::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #ff3e3e;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  animation: pulse 1.5s infinite;
 }
 
 /* Fix border style and remove it from list items */
 .sidebar-nav li {
   border-bottom: none;
+  margin-bottom: 2px;
 }
 
-/* Add subtle separator between sections */
+/* Add subtle separator between sections with enhanced style */
 .sidebar-section:not(:last-child) {
   margin-bottom: 15px;
   position: relative;
@@ -144,8 +273,73 @@
   content: '';
   position: absolute;
   bottom: -5px;
-  left: 15%;
-  width: 70%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.05), 
+    rgba(147, 112, 219, 0.3), 
+    rgba(255, 255, 255, 0.05), 
+    transparent);
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(147, 112, 219, 0.3);
+}
+
+/* Fix logo display and add cool hover animation */
+.sidebar-logo {
+  position: relative;
+  overflow: visible;
+  padding: 15px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(147, 112, 219, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-logo img {
+  height: 80px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+}
+
+.sidebar-logo:hover img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4)) brightness(1.1);
+}
+
+.sidebar-logo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: logo-shine 5s infinite;
+  z-index: 10;
+}
+
+@keyframes logo-shine {
+  0% { left: -100%; }
+  20%, 100% { left: 100%; }
+}
+
+/* Add subtle texture to sidebar background */
+.sidebar {
+  background: var(--sidebar-bg), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMDAwIiBmaWxsLW9wYWNpdHk9IjAuMDMiPjwvcmVjdD4KPC9zdmc+');
+  background-blend-mode: overlay;
+}
+
+/* Add subtle hover effect to the entire sidebar */
+.sidebar:hover {
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.4);
 }

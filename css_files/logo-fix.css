@@ -1,0 +1,33 @@
+/* Emergency logo fix - highest priority rules */
+.sidebar-logo {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  min-height: 100px !important;
+  padding: 15px 10px !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-bottom: 2px solid rgba(147, 112, 219, 0.3) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+  overflow: visible !important;
+  text-align: center !important;
+  z-index: 15 !important;
+}
+
+.sidebar-logo img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: auto !important;
+  height: 80px !important;
+  margin: 0 auto !important;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)) !important;
+  transition: all 0.3s ease !important;
+  object-fit: contain !important;
+  max-width: 90% !important;
+}
+
+.sidebar-logo:hover img {
+  transform: scale(1.05) !important;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4)) brightness(1.1) !important;
+}

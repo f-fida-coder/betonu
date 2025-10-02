@@ -33,6 +33,7 @@
   transform: translateX(-100%);
 }
 
+/* These styles are overridden by enhanced-sidebar.css */
 .sidebar-logo {
   padding: 0px;
   text-align: center;
@@ -42,6 +43,8 @@
 .sidebar-logo img {
   height: 100px;
   width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .sidebar-nav {

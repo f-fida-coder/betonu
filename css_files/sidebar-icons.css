@@ -1,0 +1,170 @@
+/* Enhanced sidebar icons with modern style */
+
+/* Font Awesome integration for sidebar icons */
+.sidebar-nav a[href="index.htm"] i {
+  font-family: 'FontAwesome';
+  content: "\f015";
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffd700;
+}
+.sidebar-nav a[href="index.htm"] i:before {
+  content: "\f015"; /* Home */
+}
+
+.sidebar-nav a[href="casino/lobby.html"] i {
+  font-family: 'FontAwesome';
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff7f50;
+}
+.sidebar-nav a[href="casino/lobby.html"] i:before {
+  content: "\f0ac"; /* Casino/Globe */
+}
+
+.sidebar-nav a[href="roulette.html"] i {
+  font-family: 'FontAwesome';
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff3e3e;
+}
+.sidebar-nav a[href="roulette.html"] i:before {
+  content: "\f021"; /* Refresh/Spin */
+}
+
+.sidebar-nav a[href="crash.html"] i {
+  font-family: 'FontAwesome';
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3cb371;
+}
+.sidebar-nav a[href="crash.html"] i:before {
+  content: "\f091"; /* Sports/Trophy */
+}
+
+.sidebar-nav a[href="coinflip.html"] i {
+  font-family: 'FontAwesome';
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffd700;
+}
+.sidebar-nav a[href="coinflip.html"] i:before {
+  content: "\f154"; /* Dollar/Coin */
+}
+
+.sidebar-nav a[href="dice.html"] i {
+  font-family: 'FontAwesome';
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #9370db;
+}
+.sidebar-nav a[href="dice.html"] i:before {
+  content: "\f6d1"; /* Dice */
+}
+
+.sidebar-nav a[href="unboxing.html"] i {
+  font-family: 'FontAwesome';
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1e90ff;
+}
+.sidebar-nav a[href="unboxing.html"] i:before {
+  content: "\f49e"; /* Box */
+}
+
+.sidebar-nav a[href="rewards.html"] i {
+  font-family: 'FontAwesome';
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffa500;
+}
+.sidebar-nav a[href="rewards.html"] i:before {
+  content: "\f005"; /* Star */
+}
+
+.sidebar-nav a[href="deposit.html"] i {
+  font-family: 'FontAwesome';
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #32cd32;
+}
+.sidebar-nav a[href="deposit.html"] i:before {
+  content: "\f0d6"; /* Money */
+}
+
+.sidebar-nav a[href="leaderboard.html"] i {
+  font-family: 'FontAwesome';
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff8c00;
+}
+.sidebar-nav a[href="leaderboard.html"] i:before {
+  content: "\f521"; /* Crown */
+}
+
+.sidebar-nav a[href="faq.html"] i {
+  font-family: 'FontAwesome';
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #9370db;
+}
+.sidebar-nav a[href="faq.html"] i:before {
+  content: "\f02b"; /* Tag */
+}
+
+/* Icon size and styling */
+.sidebar-nav a i:before {
+  font-size: 18px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Glowing effect on hover */
+.sidebar-nav a:hover i {
+  text-shadow: 0 0 10px currentColor;
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Hot indicator for specific menu items */
+.sidebar-nav a[href="dice.html"]::before {
+  content: 'HOT';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: linear-gradient(135deg, #ff7f50, #ff3e3e);
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 10px;
+  z-index: 3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: pulse 1.5s infinite;
+  opacity: 0.95;
+}
