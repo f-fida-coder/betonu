@@ -1,5 +1,6 @@
 /* Inline critical CSS for icons to prevent FOUC */
-.sidebar-nav a i {
+.sidebar-nav a i,
+.sidebar-nav a svg {
   display: inline-block !important;
   visibility: visible !important;
   opacity: 1 !important;
@@ -10,46 +11,68 @@
   font-size: 18px !important;
 }
 
-.sidebar-nav a[href="index.htm"] i {
+.sidebar-nav a[href="index.htm"] i,
+.sidebar-nav a[href="index.htm"] svg {
   color: #ffd700 !important;
+  fill: #ffd700 !important;
 }
 
-.sidebar-nav a[href="casino/lobby.html"] i {
+.sidebar-nav a[href="casino/lobby.html"] i,
+.sidebar-nav a[href="casino/lobby.html"] svg {
   color: #ff7f50 !important;
+  fill: #ff7f50 !important;
 }
 
-.sidebar-nav a[href="roulette.html"] i {
+.sidebar-nav a[href="roulette.html"] i,
+.sidebar-nav a[href="roulette.html"] svg {
   color: #ff3e3e !important;
+  fill: #ff3e3e !important;
 }
 
-.sidebar-nav a[href="crash.html"] i {
+.sidebar-nav a[href="crash.html"] i,
+.sidebar-nav a[href="crash.html"] svg {
   color: #3cb371 !important;
+  fill: #3cb371 !important;
 }
 
-.sidebar-nav a[href="coinflip.html"] i {
+.sidebar-nav a[href="coinflip.html"] i,
+.sidebar-nav a[href="coinflip.html"] svg {
   color: #ffd700 !important;
+  fill: #ffd700 !important;
 }
 
-.sidebar-nav a[href="dice.html"] i {
+.sidebar-nav a[href="dice.html"] i,
+.sidebar-nav a[href="dice.html"] svg {
   color: #9370db !important;
+  fill: #9370db !important;
 }
 
-.sidebar-nav a[href="unboxing.html"] i {
+.sidebar-nav a[href="unboxing.html"] i,
+.sidebar-nav a[href="unboxing.html"] svg {
   color: #1e90ff !important;
+  fill: #1e90ff !important;
 }
 
-.sidebar-nav a[href="rewards.html"] i {
+.sidebar-nav a[href="rewards.html"] i,
+.sidebar-nav a[href="rewards.html"] svg {
   color: #ffa500 !important;
+  fill: #ffa500 !important;
 }
 
-.sidebar-nav a[href="deposit.html"] i {
+.sidebar-nav a[href="deposit.html"] i,
+.sidebar-nav a[href="deposit.html"] svg {
   color: #32cd32 !important;
+  fill: #32cd32 !important;
 }
 
-.sidebar-nav a[href="leaderboard.html"] i {
+.sidebar-nav a[href="leaderboard.html"] i,
+.sidebar-nav a[href="leaderboard.html"] svg {
   color: #ff8c00 !important;
+  fill: #ff8c00 !important;
 }
 
-.sidebar-nav a[href="faq.html"] i {
+.sidebar-nav a[href="faq.html"] i,
+.sidebar-nav a[href="faq.html"] svg {
   color: #9370db !important;
+  fill: #9370db !important;
 }
